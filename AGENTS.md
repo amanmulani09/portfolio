@@ -6,7 +6,7 @@ Application code lives in `src/`. Route-level views are in `src/components/pages
 
 ## Build, Test, and Development Commands
 
-- `npm ci`: install the locked dependency set (Node 20.x is required).
+- `npm ci`: install the locked dependency set (Node 24.x is required).
 - `npm run dev`: start the Vite development server with hot reload.
 - `npm run build`: run TypeScript project checks, create the production bundle, and prepare the Sites worker.
 - `npm run preview`: serve the production build on all interfaces for final review.
