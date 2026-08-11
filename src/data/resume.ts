@@ -13,123 +13,163 @@ import type {
 
 export const linkedinPosts: LinkedInPost[] = [
   {
-    slug: "llms-align-more-than-they-decide",
+    slug: "react-loop-behind-ai-agents",
     category: "AI",
-    title: "LLMs align more than they decide",
+    title: "The loop behind practical AI agents",
     excerpt:
-      "A prompt experiment showed the same model arguing opposite architecture decisions with equal confidence—and why human judgment still owns the outcome.",
+      "ReAct reduces an agent to a repeatable cycle: reason, use a tool, inspect the result, and continue—with explicit stopping conditions.",
     readTime: "4 min read",
     sections: [
       {
-        heading: "Same model, opposite answer",
+        heading: "Start with the loop",
         paragraphs: [
-          "I gave a language model an architecture choice and framed one option as my preferred direction. It produced a confident, polished argument supporting that choice. I then restarted the conversation, preferred the opposite option, and received an equally confident argument for that position.",
-          "Nothing about the underlying engineering problem changed. Only the direction implied by the prompt changed. The experiment exposed a useful distinction: a model can generate a coherent justification without independently deciding which trade-off matters most for a specific product."
+          "Most agents can be understood as a small control loop: think about the next step, act through a tool, observe the result, and repeat. ReAct makes that cycle visible instead of treating an agent as one opaque model call.",
+          "The loop matters because a language model cannot inspect live systems or change external state on its own. Tools provide those capabilities; the agent decides when to call them and uses each result as new context."
         ]
       },
       {
-        heading: "Confidence is not evaluation",
+        heading: "Tools need boundaries",
         paragraphs: [
-          "Architecture decisions depend on constraints that rarely fit inside one prompt: team experience, operational load, migration cost, data sensitivity, failure recovery, and product deadlines. A fluent answer can hide missing evidence because fluency feels like certainty.",
-          "Useful AI support should make assumptions visible, compare alternatives against explicit criteria, and identify evidence still needed. Asking for the strongest counterargument, failure modes, and conditions that would reverse the recommendation produces more value than asking for approval."
+          "Tool calling adds power and risk at the same time. Every action needs a narrow schema, minimum permissions, validated inputs, safe outputs, timeouts, and a clear record of what happened.",
+          "Scratchpads, iteration limits, and stopping conditions are not framework trivia. They prevent a useful loop from becoming an unbounded sequence of calls, cost, or unintended actions."
         ]
       },
       {
-        heading: "Keep judgment outside the model",
+        heading: "Frameworks hide the same flow",
         paragraphs: [
-          "I use models to expand the option space, pressure-test decisions, and turn unclear trade-offs into inspectable lists. Final ownership remains human. That means checking claims against documentation, measuring system behavior, and recording why a decision fits current constraints.",
-          "Models are strong collaborators when the workflow expects disagreement and verification. They become risky when persuasive language is treated as an architectural verdict."
+          "LangChain, LangGraph, Google ADK, and the OpenAI Agents SDK package this flow differently, but the core execution model remains familiar. Building the loop once in plain Python makes those abstractions easier to evaluate.",
+          "Good agent architecture is therefore less about selecting a fashionable framework and more about controlling state, tools, observations, retries, and completion criteria."
         ]
       }
     ],
     takeaways: [
-      "Ask models to compare explicit criteria, not validate a preferred answer.",
-      "Request counterarguments and reversal conditions before deciding.",
-      "Keep evidence, accountability, and final judgment with humans."
+      "Model agents as an explicit think, act, observe loop.",
+      "Give every tool narrow permissions and validated contracts.",
+      "Define iteration limits and stopping conditions before adding autonomy."
     ],
-    url: "https://www.linkedin.com/posts/amanmulani_you-are-absolutely-right-if-this-instantly-activity-7445516076865544192-LAL9",
-    linkedInReactions: null,
-    linkedInComments: null,
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7490428946996535296/",
+    linkedInReactions: 26,
+    linkedInComments: 3,
     engagementAsOf: "August 11, 2026"
   },
   {
-    slug: "tdd-for-ai-agents",
+    slug: "reliable-rag-starts-outside-the-model",
     category: "AI",
-    title: "Why agents make TDD non-negotiable",
+    title: "Reliable RAG starts outside the model",
     excerpt:
-      "Coding agents need mechanical feedback loops. Unit, integration, and end-to-end tests become executable boundaries for trustworthy implementation.",
+      "Grounded answers depend on retrieval quality, embeddings, chunking, and context management—not model fluency alone.",
     readTime: "5 min read",
     sections: [
       {
-        heading: "Agents move faster than review",
+        heading: "Ground answers in source material",
         paragraphs: [
-          "Coding agents can produce broad changes quickly, but speed increases the amount of behavior a reviewer must verify. A plausible diff is not proof that requirements, edge cases, and existing contracts still hold.",
-          "Tests give the agent a mechanical feedback loop. Instead of relying on confidence or visual inspection, the system receives a concrete signal about whether implementation matches expected behavior."
+          "An insurance customer-care assistant needs policy evidence, not a plausible answer assembled from model memory. Retrieval-augmented generation creates that grounding by finding relevant source passages before generating a response.",
+          "The model still matters, but it can only reason over context the retrieval layer supplies. Missing, noisy, or irrelevant evidence produces weak answers no matter how capable the model appears."
         ]
       },
       {
-        heading: "Tests become executable boundaries",
+        heading: "Retrieval quality is system quality",
         paragraphs: [
-          "Unit tests protect local rules. Integration tests verify databases, queues, services, and external boundaries. End-to-end tests cover the few user journeys where a silent regression would be expensive. Together, they turn product expectations into constraints an agent can inspect and rerun.",
-          "The test suite must still be designed carefully. Tests that mirror implementation details create false confidence and make refactoring harder. Strong tests describe observable behavior, permission boundaries, failure handling, and data integrity."
+          "Chunk size, overlap, embedding choice, metadata, and search strategy decide what reaches the prompt. These choices should be evaluated with representative questions and known relevant documents rather than tuned by intuition.",
+          "Context management matters after retrieval. Results need ranking, deduplication, source labels, and size limits so the model receives useful evidence without losing the question inside excess text."
         ]
       },
       {
-        heading: "A safer agent workflow",
+        heading: "Trust needs visible evidence",
         paragraphs: [
-          "Start with a failing test or a reproducible check. Ask the agent to make the smallest change that passes it. Run targeted tests first, then broader validation, and review the diff for security, scope, and unintended edits.",
-          "Agents do not remove the need for engineering judgment. They increase the value of fast, deterministic feedback and small reviewable changes."
+          "A production RAG system should expose its sources, decline when evidence is insufficient, and separate retrieved instructions from trusted system rules. Policy documents can contain stale or adversarial text, so retrieval is also a security boundary.",
+          "Reliable AI comes from measuring retrieval and generation separately. That makes failures inspectable and shows whether the fix belongs in data preparation, search, prompting, or model behavior."
         ]
       }
     ],
     takeaways: [
-      "Give agents deterministic feedback before broad autonomy.",
-      "Test behavior and privilege boundaries, not implementation shape.",
-      "Keep changes small enough for human review."
+      "Evaluate retrieval independently from final model answers.",
+      "Treat chunking, embeddings, and ranking as product decisions.",
+      "Show sources and fail safely when evidence is insufficient."
     ],
-    url: "https://www.linkedin.com/posts/amanmulani_agents-make-tdd-non-negotiable-activity-7469378177807872000-YsfU",
-    linkedInReactions: null,
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7467431422002282496/",
+    linkedInReactions: 38,
+    linkedInComments: 1,
+    engagementAsOf: "August 11, 2026"
+  },
+  {
+    slug: "frontend-production-checklist",
+    category: "Engineering",
+    title: "A production checklist for AI-speed frontend work",
+    excerpt:
+      "AI makes code generation fast; production discipline still owns configuration, performance, accessibility, observability, and rollback risk.",
+    readTime: "4 min read",
+    sections: [
+      {
+        heading: "Speed changes the bottleneck",
+        paragraphs: [
+          "AI can produce frontend code faster than a team can review and operate it. The bottleneck moves from typing code to proving that the release is configured, observable, accessible, and safe under production conditions.",
+          "A short pre-release checklist creates a repeatable boundary. It catches routine failures before they become late-night rollbacks."
+        ]
+      },
+      {
+        heading: "Protect configuration and runtime",
+        paragraphs: [
+          "Verify environment variables without hardcoding secrets, run the production build cleanly, and confirm API base URLs. Review feature flags so unfinished work cannot leak into production.",
+          "Remove debug output, keep error boundaries and fallback UI in place, and confirm analytics events. These checks reduce information leakage and make failures easier to diagnose."
+        ]
+      },
+      {
+        heading: "Ship user-facing quality",
+        paragraphs: [
+          "Code splitting, lazy loading, bundle size, image optimization, and Lighthouse checks protect performance. Alt text, labels, focus order, and keyboard navigation protect access to the product.",
+          "Fast shipping is useful only when users receive stable behavior. AI can shorten implementation time; it does not remove engineering ownership."
+        ]
+      }
+    ],
+    takeaways: [
+      "Run production builds and configuration checks before release.",
+      "Treat secrets, feature flags, and API targets as release boundaries.",
+      "Verify performance, accessibility, fallbacks, and analytics."
+    ],
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7427354072929910784/",
+    linkedInReactions: 22,
     linkedInComments: null,
     engagementAsOf: "August 11, 2026"
   },
   {
-    slug: "inside-an-ai-coding-tool",
-    category: "AI",
-    title: "What an AI coding tool did behind the scenes",
+    slug: "redis-caching-system-design",
+    category: "Engineering",
+    title: "Redis caching as a system design choice",
     excerpt:
-      "A GPT-powered image-to-SVG experiment looked like direct generation until the workflow revealed bitmap tracing, tool use, and a large token bill.",
-    readTime: "4 min read",
+      "Server-side caching can reduce database load, latency, and infrastructure cost—but only when keys, TTLs, invalidation, and access boundaries are deliberate.",
+    readTime: "5 min read",
     sections: [
       {
-        heading: "Output hid the workflow",
+        heading: "Serve hot data from memory",
         paragraphs: [
-          "I asked an AI coding tool to recreate an image as SVG. The result looked like direct vector generation, but inspecting the process showed a different path: image analysis, intermediary bitmap work, tracing, file operations, and repeated tool calls.",
-          "This matters because users see one polished output while cost, latency, and failure risk live inside the hidden workflow. Product teams need to evaluate the complete execution path, not only the final artifact."
+          "Read-heavy systems often ask the database for the same data repeatedly. Redis can absorb those hot reads in memory, lowering response time and reducing pressure on the primary data layer.",
+          "The common flow is small: check the cache, return on a hit, or fetch from the database on a miss, store the result with a TTL, and return it. That simple path can improve latency and make traffic spikes more predictable."
         ]
       },
       {
-        heading: "Tool use changes system economics",
+        heading: "Caching shifts complexity",
         paragraphs: [
-          "Agentic tools can choose useful techniques that were not spelled out in the prompt. That flexibility is powerful, but every extra step can increase tokens, compute, storage, and attack surface. A task that feels small in the interface can become expensive underneath.",
-          "Observability should capture model calls, tool calls, duration, retries, and produced artifacts. Cost limits and timeouts need to be product constraints rather than cleanup work after launch."
+          "A cache improves performance by introducing another copy of data. Keys, TTLs, invalidation, serialization, and failure behavior now become part of correctness rather than optional tuning.",
+          "Cache keys must include tenant, user, locale, permission, or version dimensions when those affect the response. Otherwise a fast cache can become a cross-user data leak."
         ]
       },
       {
-        heading: "Inspect process, not magic",
+        heading: "Design for misses and outages",
         paragraphs: [
-          "When evaluating an AI feature, I ask what tools ran, what data crossed each boundary, what persisted, and how the result can be reproduced. Those questions make quality and security review possible.",
-          "Useful AI products can still feel effortless. Engineering behind them should remain observable, bounded, and explainable."
+          "The database path remains the source of truth, so cache misses must stay correct and bounded. Add timeouts, stampede protection, observability, and sensible degradation when Redis is unavailable.",
+          "Caching is a system design choice because it affects cost, scale, consistency, and user experience together. Measure hit rate and latency, then keep only entries whose operational value exceeds their invalidation cost."
         ]
       }
     ],
     takeaways: [
-      "Measure complete agent workflow, not only final response.",
-      "Bound tool calls with cost, time, and permission limits.",
-      "Log enough execution detail to reproduce failures safely."
+      "Cache repeated, expensive reads—not everything.",
+      "Include authorization context in cache keys and policies.",
+      "Plan TTLs, invalidation, stampede control, and Redis failure behavior."
     ],
-    url: "https://www.linkedin.com/posts/amanmulani_today-i-was-playing-around-with-gpt-54-via-activity-7436795049650118656--5ci",
-    linkedInReactions: 24,
-    linkedInComments: null,
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7426844680199229440/",
+    linkedInReactions: 32,
+    linkedInComments: 1,
     engagementAsOf: "August 11, 2026"
   },
   {
@@ -167,49 +207,9 @@ export const linkedinPosts: LinkedInPost[] = [
       "Use WebSockets when both sides need frequent messages.",
       "Authenticate streams and validate replay behavior."
     ],
-    url: "https://www.linkedin.com/posts/aman-mulani_i-was-building-a-feature-where-the-ui-needed-activity-7424144231608352768-pPiR",
+    url: "https://www.linkedin.com/feed/update/urn:li:activity:7424144231608352768/",
     linkedInReactions: 82,
     linkedInComments: 11,
-    engagementAsOf: "August 11, 2026"
-  },
-  {
-    slug: "isolating-python-dependency-conflicts",
-    category: "Engineering",
-    title: "Exploring conflicting Python dependencies",
-    excerpt:
-      "A subprocess-based proof of concept exposed real trade-offs around isolation, serialization, IPC, and runtime dependency management.",
-    readTime: "5 min read",
-    sections: [
-      {
-        heading: "One process, incompatible requirements",
-        paragraphs: [
-          "Python applications sometimes need libraries whose dependency ranges cannot coexist in one environment. I explored running conflicting components in separate subprocesses, each with its own environment, while keeping one parent application responsible for orchestration.",
-          "The proof of concept worked, but it replaced a package conflict with a distributed-systems-shaped boundary. Calls now crossed processes, values needed serialization, errors needed transport, and startup behavior mattered."
-        ]
-      },
-      {
-        heading: "Isolation has a cost",
-        paragraphs: [
-          "Subprocess isolation can unblock legacy libraries or specialized runtimes. It also introduces inter-process communication, health checks, dependency provisioning, version drift, and harder debugging. Large payloads or chatty interfaces make the boundary expensive quickly.",
-          "Security changes too. Child processes should receive minimum environment access, explicit inputs, controlled working directories, and strict timeouts. Passing shell strings, broad credentials, or untrusted serialized objects creates avoidable abuse paths."
-        ]
-      },
-      {
-        heading: "Use a narrow contract",
-        paragraphs: [
-          "A stable approach treats isolated code like a small service: define a narrow typed contract, return structured errors, record versions, and make process failure recoverable. If the boundary grows, a container or separately deployed service may become easier to operate.",
-          "The experiment reinforced a broader rule: isolation solves compatibility only when communication and ownership remain simpler than fixing or replacing the dependency."
-        ]
-      }
-    ],
-    takeaways: [
-      "Treat subprocess boundaries like service boundaries.",
-      "Keep IPC typed, narrow, observable, and timeout-bound.",
-      "Never pass broad secrets or untrusted shell input to child processes."
-    ],
-    url: "https://www.linkedin.com/posts/amanmulani_softwareengineering-python-engineering-activity-7332860690837274624-FZWI",
-    linkedInReactions: null,
-    linkedInComments: null,
     engagementAsOf: "August 11, 2026"
   }
 ];

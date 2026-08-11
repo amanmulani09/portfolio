@@ -738,6 +738,10 @@
 }
 
 @media (max-width: 520px) {
+  .contact-email span {
+    font-size: clamp(0.72rem, 3.8vw, 0.86rem);
+  }
+
   .contact-composer .curved-input {
     width: calc(100% + 8px) !important;
     margin-left: -4px;

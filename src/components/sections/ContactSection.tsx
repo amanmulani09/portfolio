@@ -46,7 +46,7 @@ export function ContactSection() {
               backgroundColor="var(--surface-glass)"
               borderColor="var(--border-soft)"
               buttonColor="var(--accent-green)"
-              buttonText="Start a conversation"
+              buttonText="Draft email"
               buttonTextColor="var(--ink)"
               height={68}
               iconColor="var(--accent-green)"

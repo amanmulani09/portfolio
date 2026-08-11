@@ -33,24 +33,24 @@
       "destination": "/blog/index.html"
     },
     {
-      "source": "/blog/llms-align-more-than-they-decide",
-      "destination": "/blog/llms-align-more-than-they-decide/index.html"
+      "source": "/blog/react-loop-behind-ai-agents",
+      "destination": "/blog/react-loop-behind-ai-agents/index.html"
     },
     {
-      "source": "/blog/tdd-for-ai-agents",
-      "destination": "/blog/tdd-for-ai-agents/index.html"
+      "source": "/blog/reliable-rag-starts-outside-the-model",
+      "destination": "/blog/reliable-rag-starts-outside-the-model/index.html"
     },
     {
-      "source": "/blog/inside-an-ai-coding-tool",
-      "destination": "/blog/inside-an-ai-coding-tool/index.html"
+      "source": "/blog/frontend-production-checklist",
+      "destination": "/blog/frontend-production-checklist/index.html"
+    },
+    {
+      "source": "/blog/redis-caching-system-design",
+      "destination": "/blog/redis-caching-system-design/index.html"
     },
     {
       "source": "/blog/when-sse-beats-websockets",
       "destination": "/blog/when-sse-beats-websockets/index.html"
-    },
-    {
-      "source": "/blog/isolating-python-dependency-conflicts",
-      "destination": "/blog/isolating-python-dependency-conflicts/index.html"
     }
   ]
 }

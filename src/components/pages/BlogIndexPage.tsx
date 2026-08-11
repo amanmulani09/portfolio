@@ -7,7 +7,7 @@ export function BlogIndexPage() {
   useEffect(() => {
     const pageTitle = `Blog | ${profile.name}`;
     const description =
-      "Original notes by Aman Mulani on AI agents, model behavior, backend architecture, Python, and production engineering.";
+      "Expanded notes from Aman Mulani's LinkedIn posts on AI agents, RAG, frontend releases, Redis caching, and backend streaming.";
     const pageUrl = `${window.location.origin}/blog`;
     const setMeta = (selector: string, value: string) => {
       document.querySelector<HTMLMetaElement>(selector)?.setAttribute("content", value);
@@ -35,8 +35,8 @@ export function BlogIndexPage() {
           <span className="case-eyebrow">Writing by Aman Mulani</span>
           <h1>Field notes from building.</h1>
           <p>
-            Local, expanded editions of my LinkedIn posts—AI systems, engineering trade-offs,
-            and lessons worth keeping beyond a feed.
+            Expanded editions of posts from my LinkedIn profile—AI systems, engineering
+            trade-offs, and lessons worth keeping beyond a feed.
           </p>
           <div className="blog-page-summary">
             <span>{linkedinPosts.length} articles</span>

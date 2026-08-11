@@ -1,5 +1,5 @@
 const HTML_ACCEPT = "text/html";
-const STATIC_PAGE_PATH = /^\/(?:work\/(?:thg-commerce|push-provisioning|hmx-interactive|chitra-ai|rag-architectures|codo)|blog(?:\/(?:llms-align-more-than-they-decide|tdd-for-ai-agents|inside-an-ai-coding-tool|when-sse-beats-websockets|isolating-python-dependency-conflicts))?)\/?$/;
+const STATIC_PAGE_PATH = /^\/(?:work\/(?:thg-commerce|push-provisioning|hmx-interactive|chitra-ai|rag-architectures|codo)|blog(?:\/(?:react-loop-behind-ai-agents|reliable-rag-starts-outside-the-model|frontend-production-checklist|redis-caching-system-design|when-sse-beats-websockets))?)\/?$/;
 
 export default {
   async fetch(request, env) {

@@ -70,39 +70,39 @@ const caseStudyPages = [
 
 const blogPages = [
   {
-    slug: "llms-align-more-than-they-decide",
-    title: "LLMs Align More Than They Decide | Aman Mulani",
-    description: "A prompt experiment on model agreement, architectural judgment, counterarguments, and keeping evidence-based decisions under human ownership.",
-    source: "https://www.linkedin.com/posts/amanmulani_you-are-absolutely-right-if-this-instantly-activity-7445516076865544192-LAL9",
-    keywords: ["LLM behavior", "AI decision making", "architecture", "human oversight"]
+    slug: "react-loop-behind-ai-agents",
+    title: "The Loop Behind Practical AI Agents | Aman Mulani",
+    description: "How ReAct agents reason, call tools, observe results, and repeat within explicit permission and stopping boundaries.",
+    source: "https://www.linkedin.com/feed/update/urn:li:activity:7490428946996535296/",
+    keywords: ["ReAct agents", "tool calling", "AI agents", "agent architecture"]
   },
   {
-    slug: "tdd-for-ai-agents",
-    title: "Why Agents Make TDD Non-Negotiable | Aman Mulani",
-    description: "How unit, integration, and end-to-end tests create executable boundaries and mechanical feedback loops for AI coding agents.",
-    source: "https://www.linkedin.com/posts/amanmulani_agents-make-tdd-non-negotiable-activity-7469378177807872000-YsfU",
-    keywords: ["AI coding agents", "test-driven development", "software testing", "agent reliability"]
+    slug: "reliable-rag-starts-outside-the-model",
+    title: "Reliable RAG Starts Outside the Model | Aman Mulani",
+    description: "Why retrieval quality, embeddings, chunking, context management, and visible evidence determine whether a RAG system is trustworthy.",
+    source: "https://www.linkedin.com/feed/update/urn:li:activity:7467431422002282496/",
+    keywords: ["RAG", "retrieval engineering", "embeddings", "grounded AI"]
   },
   {
-    slug: "inside-an-ai-coding-tool",
-    title: "What an AI Coding Tool Did Behind the Scenes | Aman Mulani",
-    description: "A GPT image-to-SVG experiment exposing tool use, hidden execution paths, token cost, observability, and agent permission boundaries.",
-    source: "https://www.linkedin.com/posts/amanmulani_today-i-was-playing-around-with-gpt-54-via-activity-7436795049650118656--5ci",
-    keywords: ["AI coding tools", "agent tool use", "AI observability", "token cost"]
+    slug: "frontend-production-checklist",
+    title: "A Production Checklist for AI-Speed Frontend Work | Aman Mulani",
+    description: "A practical frontend release checklist covering configuration, secrets, performance, accessibility, analytics, feature flags, and fallbacks.",
+    source: "https://www.linkedin.com/feed/update/urn:li:activity:7427354072929910784/",
+    keywords: ["frontend production", "release checklist", "web performance", "accessibility"]
+  },
+  {
+    slug: "redis-caching-system-design",
+    title: "Redis Caching as a System Design Choice | Aman Mulani",
+    description: "Server-side Redis caching trade-offs across database load, latency, infrastructure cost, invalidation, authorization, and resilience.",
+    source: "https://www.linkedin.com/feed/update/urn:li:activity:7426844680199229440/",
+    keywords: ["Redis", "server-side caching", "system design", "backend performance"]
   },
   {
     slug: "when-sse-beats-websockets",
     title: "When Server-Sent Events Beat WebSockets | Aman Mulani",
     description: "Choosing Server-Sent Events for one-way progress, logs, notifications, and AI streaming without unnecessary WebSocket complexity.",
-    source: "https://www.linkedin.com/posts/aman-mulani_i-was-building-a-feature-where-the-ui-needed-activity-7424144231608352768-pPiR",
+    source: "https://www.linkedin.com/feed/update/urn:li:activity:7424144231608352768/",
     keywords: ["Server-Sent Events", "WebSockets", "HTTP streaming", "backend architecture"]
-  },
-  {
-    slug: "isolating-python-dependency-conflicts",
-    title: "Exploring Conflicting Python Dependencies | Aman Mulani",
-    description: "A subprocess isolation experiment and its trade-offs across dependency management, IPC, serialization, observability, and security.",
-    source: "https://www.linkedin.com/posts/amanmulani_softwareengineering-python-engineering-activity-7332860690837274624-FZWI",
-    keywords: ["Python dependencies", "subprocess isolation", "IPC", "software architecture"]
   }
 ];
 
@@ -242,7 +242,7 @@ await Promise.all(
 const blogIndexUrl = siteUrl ? new URL("blog", siteUrl).toString() : null;
 const blogIndexDocument = addPageMetadata(addAbsoluteSiteReferences(baseDocument), {
   title: "Blog | Aman Mulani",
-  description: "Original notes by Aman Mulani on AI agents, model behavior, backend architecture, Python, and production engineering.",
+  description: "Expanded notes from Aman Mulani's LinkedIn posts on AI agents, RAG, frontend releases, Redis caching, and backend streaming.",
   pageUrl: blogIndexUrl,
   schema: {
     "@context": "https://schema.org",

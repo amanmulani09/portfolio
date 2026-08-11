@@ -10,7 +10,7 @@ export function BlogSection() {
         <SectionHeading
           eyebrow="06 / Writing"
           title="Notes on AI and engineering."
-          description="Expanded editions of my LinkedIn posts on agent reliability, model behavior, backend architecture, and practical software decisions."
+          description="Expanded editions of my LinkedIn posts on agent loops, production RAG, frontend delivery, caching, and backend streaming."
         />
         <a className="blog-profile-link" href="/blog">
           Browse all articles
