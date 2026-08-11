@@ -11,6 +11,12 @@ type BlogPostPageProps = {
 export function BlogPostPage({ post }: BlogPostPageProps) {
   const currentIndex = linkedinPosts.findIndex((item) => item.slug === post.slug);
   const nextPost = linkedinPosts[(currentIndex + 1) % linkedinPosts.length];
+  const publishedLabel = new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "short",
+    timeZone: "UTC",
+    year: "numeric",
+  }).format(new Date(post.publishedAt));
 
   useEffect(() => {
     const pageTitle = `${post.title} | ${profile.name}`;
@@ -49,6 +55,7 @@ export function BlogPostPage({ post }: BlogPostPageProps) {
             <div className="blog-post-meta">
               <span>{post.category}</span>
               <span>{post.readTime}</span>
+              <span>{publishedLabel}</span>
               <span>By {profile.name}</span>
             </div>
             <h1>{post.title}</h1>

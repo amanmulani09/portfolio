@@ -137,6 +137,7 @@ export type LinkedInPost = {
   title: string;
   excerpt: string;
   readTime: string;
+  publishedAt: string;
   sections: Array<{
     heading: string;
     paragraphs: string[];

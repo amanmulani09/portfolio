@@ -10,7 +10,7 @@ export default {
       return response;
     }
 
-    const fallbackUrl = new URL("/", request.url);
+    const fallbackUrl = new URL("/404.html", request.url);
     const isStaticPage = STATIC_PAGE_PATH.test(new URL(request.url).pathname);
 
     if (isStaticPage) {

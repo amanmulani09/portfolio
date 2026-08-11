@@ -19,6 +19,7 @@ export const linkedinPosts: LinkedInPost[] = [
     excerpt:
       "ReAct reduces an agent to a repeatable cycle: reason, use a tool, inspect the result, and continue—with explicit stopping conditions.",
     readTime: "4 min read",
+    publishedAt: "2026-08-04T15:30:26.404Z",
     sections: [
       {
         heading: "Start with the loop",
@@ -59,6 +60,7 @@ export const linkedinPosts: LinkedInPost[] = [
     excerpt:
       "Grounded answers depend on retrieval quality, embeddings, chunking, and context management—not model fluency alone.",
     readTime: "5 min read",
+    publishedAt: "2026-06-02T04:26:29.172Z",
     sections: [
       {
         heading: "Ground answers in source material",
@@ -99,6 +101,7 @@ export const linkedinPosts: LinkedInPost[] = [
     excerpt:
       "AI makes code generation fast; production discipline still owns configuration, performance, accessibility, observability, and rollback risk.",
     readTime: "4 min read",
+    publishedAt: "2026-02-11T14:13:24.552Z",
     sections: [
       {
         heading: "Speed changes the bottleneck",
@@ -139,6 +142,7 @@ export const linkedinPosts: LinkedInPost[] = [
     excerpt:
       "Server-side caching can reduce database load, latency, and infrastructure cost—but only when keys, TTLs, invalidation, and access boundaries are deliberate.",
     readTime: "5 min read",
+    publishedAt: "2026-02-10T04:29:15.861Z",
     sections: [
       {
         heading: "Serve hot data from memory",
@@ -179,6 +183,7 @@ export const linkedinPosts: LinkedInPost[] = [
     excerpt:
       "For one-way progress, logs, and AI response updates, plain HTTP streaming offered a smaller operational model with automatic reconnect behavior.",
     readTime: "5 min read",
+    publishedAt: "2026-02-02T17:38:38.745Z",
     sections: [
       {
         heading: "Start with communication direction",

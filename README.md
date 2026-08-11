@@ -41,10 +41,10 @@ npm run build
 Set public production origin before building:
 
 ```bash
-VITE_SITE_URL=https://your-domain.example npm run build
+VITE_SITE_URL=https://your-custom-domain.example npm run build
 ```
 
-`VITE_SITE_URL` enables absolute canonical URLs, Open Graph URLs, sitemap generation, and crawler-readable HTML metadata for every case-study and blog route. Keep it unset until final public domain is known; publishing placeholder canonical URLs damages indexing signals.
+Production builds default to `https://aman-mulani.vercel.app/` for canonical URLs, Open Graph URLs, sitemap generation, and crawler-readable metadata. Set `VITE_SITE_URL` only when moving to a custom canonical domain; it overrides the Vercel origin.
 
 SEO output includes descriptive titles and summaries, `ProfilePage`/`Person`/`CreativeWork` structured data, `robots.txt`, `sitemap.xml`, social preview metadata, and pre-rendered route shells. Search ranking remains dependent on useful content, crawlability, authority, links, performance, and indexing; metadata alone cannot guarantee rank.
 

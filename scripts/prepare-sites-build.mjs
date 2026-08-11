@@ -9,7 +9,8 @@ const buildOutputDirectory = resolve(projectDirectory, "dist");
 const clientOutputDirectory = resolve(buildOutputDirectory, "client");
 const serverOutputDirectory = resolve(buildOutputDirectory, "server");
 const buildEnvironment = loadEnv("production", projectDirectory, "");
-const configuredSiteUrl = process.env.VITE_SITE_URL ?? buildEnvironment.VITE_SITE_URL;
+const defaultSiteUrl = "https://aman-mulani.vercel.app/";
+const configuredSiteUrl = process.env.VITE_SITE_URL || buildEnvironment.VITE_SITE_URL || defaultSiteUrl;
 
 const caseStudyPages = [
   {
@@ -23,7 +24,7 @@ const caseStudyPages = [
   {
     id: "push-provisioning",
     title: "Razorpay Push Provisioning Case Study | Aman Mulani",
-    description: "Config-driven bank card activation, token provisioning, lifecycle services, and observability work within Razorpay's public Push Provisioning and TokenHQ context.",
+    description: "Config-driven card activation, token provisioning, lifecycle services, and observability within Razorpay's public Push Provisioning context.",
     ownership: "contributor",
     sources: [
       "https://razorpay.com/blog/push-provisioning-a-new-era-in-card-tokenization/",
@@ -74,6 +75,8 @@ const blogPages = [
     title: "The Loop Behind Practical AI Agents | Aman Mulani",
     description: "How ReAct agents reason, call tools, observe results, and repeat within explicit permission and stopping boundaries.",
     source: "https://www.linkedin.com/feed/update/urn:li:activity:7490428946996535296/",
+    publishedAt: "2026-08-04T15:30:26.404Z",
+    section: "AI",
     keywords: ["ReAct agents", "tool calling", "AI agents", "agent architecture"]
   },
   {
@@ -81,6 +84,8 @@ const blogPages = [
     title: "Reliable RAG Starts Outside the Model | Aman Mulani",
     description: "Why retrieval quality, embeddings, chunking, context management, and visible evidence determine whether a RAG system is trustworthy.",
     source: "https://www.linkedin.com/feed/update/urn:li:activity:7467431422002282496/",
+    publishedAt: "2026-06-02T04:26:29.172Z",
+    section: "AI",
     keywords: ["RAG", "retrieval engineering", "embeddings", "grounded AI"]
   },
   {
@@ -88,6 +93,8 @@ const blogPages = [
     title: "A Production Checklist for AI-Speed Frontend Work | Aman Mulani",
     description: "A practical frontend release checklist covering configuration, secrets, performance, accessibility, analytics, feature flags, and fallbacks.",
     source: "https://www.linkedin.com/feed/update/urn:li:activity:7427354072929910784/",
+    publishedAt: "2026-02-11T14:13:24.552Z",
+    section: "Engineering",
     keywords: ["frontend production", "release checklist", "web performance", "accessibility"]
   },
   {
@@ -95,6 +102,8 @@ const blogPages = [
     title: "Redis Caching as a System Design Choice | Aman Mulani",
     description: "Server-side Redis caching trade-offs across database load, latency, infrastructure cost, invalidation, authorization, and resilience.",
     source: "https://www.linkedin.com/feed/update/urn:li:activity:7426844680199229440/",
+    publishedAt: "2026-02-10T04:29:15.861Z",
+    section: "Engineering",
     keywords: ["Redis", "server-side caching", "system design", "backend performance"]
   },
   {
@@ -102,6 +111,8 @@ const blogPages = [
     title: "When Server-Sent Events Beat WebSockets | Aman Mulani",
     description: "Choosing Server-Sent Events for one-way progress, logs, notifications, and AI streaming without unnecessary WebSocket complexity.",
     source: "https://www.linkedin.com/feed/update/urn:li:activity:7424144231608352768/",
+    publishedAt: "2026-02-02T17:38:38.745Z",
+    section: "Engineering",
     keywords: ["Server-Sent Events", "WebSockets", "HTTP streaming", "backend architecture"]
   }
 ];
@@ -136,9 +147,19 @@ function replaceMeta(document, attribute, key, value) {
   );
 }
 
-function addPageMetadata(sourceDocument, { title, description, pageUrl, schema }) {
+function addPageMetadata(sourceDocument, {
+  title,
+  description,
+  pageUrl,
+  schema,
+  ogType = "website",
+  publishedTime,
+  articleAuthorUrl,
+  articleSection
+}) {
   let document = sourceDocument.replace(/<title>.*?<\/title>/is, `<title>${title}</title>`);
   document = replaceMeta(document, "name", "description", description);
+  document = replaceMeta(document, "property", "og:type", ogType);
   document = replaceMeta(document, "property", "og:title", title);
   document = replaceMeta(document, "property", "og:description", description);
   document = replaceMeta(document, "name", "twitter:title", title);
@@ -148,6 +169,15 @@ function addPageMetadata(sourceDocument, { title, description, pageUrl, schema }
   if (pageUrl) {
     tags.push(`<link rel="canonical" href="${escapeAttribute(pageUrl)}" />`);
     tags.push(`<meta property="og:url" content="${escapeAttribute(pageUrl)}" />`);
+  }
+  if (publishedTime) {
+    tags.push(`<meta property="article:published_time" content="${escapeAttribute(publishedTime)}" />`);
+  }
+  if (articleAuthorUrl) {
+    tags.push(`<meta property="article:author" content="${escapeAttribute(articleAuthorUrl)}" />`);
+  }
+  if (articleSection) {
+    tags.push(`<meta property="article:section" content="${escapeAttribute(articleSection)}" />`);
   }
   if (schema) {
     const safeSchema = JSON.stringify(schema).replaceAll("<", "\\u003c");
@@ -186,6 +216,7 @@ function addAbsoluteSiteReferences(sourceDocument) {
   const socialImageUrl = new URL("og.png", siteUrl).toString();
   return sourceDocument
     .replaceAll('content="/og.png"', `content="${escapeAttribute(socialImageUrl)}"`)
+    .replace(/"url"\s*:\s*"\/"/g, `"url":${JSON.stringify(homepageUrl)}`)
     .replace(/"@id"\s*:\s*"#website"/g, `"@id":"${homepageUrl}#website"`)
     .replace(/"@id"\s*:\s*"#profile-page"/g, `"@id":"${homepageUrl}#profile-page"`)
     .replace(/"@id"\s*:\s*"#person"/g, `"@id":"${homepageUrl}#person"`);
@@ -225,6 +256,8 @@ await Promise.all(
           }
         : {}),
       ...(pageUrl ? { url: pageUrl } : {}),
+      ...(pageUrl ? { mainEntityOfPage: pageUrl } : {}),
+      ...(siteUrl ? { isPartOf: { "@id": `${siteUrl.toString()}#website` } } : {}),
       sameAs: page.sources,
       keywords: page.keywords
     };
@@ -232,7 +265,10 @@ await Promise.all(
       title: page.title,
       description: page.description,
       pageUrl,
-      schema
+      schema,
+      ogType: "article",
+      articleAuthorUrl: siteUrl?.toString(),
+      articleSection: "Case study"
     });
     await mkdir(pageDirectory, { recursive: true });
     await writeFile(resolve(pageDirectory, "index.html"), pageDocument);
@@ -250,7 +286,18 @@ const blogIndexDocument = addPageMetadata(addAbsoluteSiteReferences(baseDocument
     name: "Aman Mulani — AI and Engineering Notes",
     inLanguage: "en-IN",
     author: siteUrl ? { "@id": `${siteUrl.toString()}#person` } : { "@type": "Person", name: "Aman Mulani" },
-    ...(blogIndexUrl ? { url: blogIndexUrl } : {})
+    ...(blogIndexUrl ? { url: blogIndexUrl } : {}),
+    ...(siteUrl
+      ? {
+          isPartOf: { "@id": `${siteUrl.toString()}#website` },
+          blogPost: blogPages.map((page) => ({
+            "@type": "BlogPosting",
+            headline: page.title.replace(" | Aman Mulani", ""),
+            url: new URL(`blog/${page.slug}`, siteUrl).toString(),
+            datePublished: page.publishedAt
+          }))
+        }
+      : {})
   }
 });
 const blogIndexDirectory = resolve(clientOutputDirectory, "blog");
@@ -267,8 +314,19 @@ await Promise.all(
       headline: page.title.replace(" | Aman Mulani", ""),
       description: page.description,
       inLanguage: "en-IN",
-      author: siteUrl ? { "@id": `${siteUrl.toString()}#person` } : { "@type": "Person", name: "Aman Mulani" },
+      author: siteUrl
+        ? {
+            "@type": "Person",
+            "@id": `${siteUrl.toString()}#person`,
+            name: "Aman Mulani",
+            url: siteUrl.toString(),
+            sameAs: "https://www.linkedin.com/in/aman-mulani/"
+          }
+        : { "@type": "Person", name: "Aman Mulani" },
+      datePublished: page.publishedAt,
+      articleSection: page.section,
       ...(pageUrl ? { url: pageUrl, mainEntityOfPage: pageUrl } : {}),
+      ...(blogIndexUrl ? { isPartOf: blogIndexUrl } : {}),
       sameAs: page.source,
       keywords: page.keywords
     };
@@ -276,14 +334,23 @@ await Promise.all(
       title: page.title,
       description: page.description,
       pageUrl,
-      schema
+      schema,
+      ogType: "article",
+      publishedTime: page.publishedAt,
+      articleAuthorUrl: siteUrl?.toString(),
+      articleSection: page.section
     });
     await mkdir(pageDirectory, { recursive: true });
     await writeFile(resolve(pageDirectory, "index.html"), pageDocument);
   }),
 );
 
-const notFoundDocument = homepageDocument.replace(
+const notFoundDocument = addPageMetadata(addAbsoluteSiteReferences(baseDocument), {
+  title: "Page not found | Aman Mulani",
+  description: "The requested page could not be found on Aman Mulani's portfolio.",
+  pageUrl: null,
+  schema: null
+}).replace(
   'name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"',
   'name="robots" content="noindex, follow"',
 );

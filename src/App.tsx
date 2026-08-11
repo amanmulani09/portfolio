@@ -15,7 +15,7 @@ import {
   ProjectsShowroom,
   SkillsConstellation
 } from "./components/sections";
-import { getLinkedInPost, projects } from "./data/resume";
+import { getLinkedInPost, profile, projects } from "./data/resume";
 import { useThemePreference } from "./hooks/useThemePreference";
 import { ScrollProgress } from "./components/ui/ScrollProgress";
 
@@ -51,11 +51,20 @@ function App() {
   useEffect(() => {
     if (!isNotFound) return;
 
-    document.title = `Page not found | ${document.title.split("|")[0].trim()}`;
-    document.querySelector<HTMLMetaElement>('meta[name="description"]')?.setAttribute(
-      "content",
-      "The requested page could not be found on Aman Mulani's portfolio."
-    );
+    const description = "The requested page could not be found on Aman Mulani's portfolio.";
+    const setMeta = (selector: string, value: string) => {
+      document.querySelector<HTMLMetaElement>(selector)?.setAttribute("content", value);
+    };
+
+    document.title = `Page not found | ${profile.name}`;
+    setMeta('meta[name="description"]', description);
+    setMeta('meta[name="robots"]', "noindex, follow");
+    setMeta('meta[property="og:title"]', `Page not found | ${profile.name}`);
+    setMeta('meta[property="og:description"]', description);
+    setMeta('meta[name="twitter:title"]', `Page not found | ${profile.name}`);
+    setMeta('meta[name="twitter:description"]', description);
+    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.remove();
+    document.querySelector<HTMLMetaElement>('meta[property="og:url"]')?.remove();
   }, [isNotFound]);
 
   return (
