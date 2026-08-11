@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aman Mulani is an AI Engineer building production LLM products, RAG pipelines, autonomous agents, and full-stack systems."
+    />
+    <meta name="author" content="Aman Mulani" />
+    <meta id="theme-color-meta" name="theme-color" content="#07100d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aman Mulani | AI Engineer · Agents & Production RAG" />
+    <meta
+      property="og:description"
+      content="AI gets complicated. I make the product reliable. Explore production work across agents, RAG, multimodal analysis, and secure automation."
+    />
+    <meta property="og:site_name" content="Aman Mulani Portfolio" />
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:image:width" content="1731" />
+    <meta property="og:image:height" content="909" />
+    <meta property="og:image:alt" content="Aman Mulani portfolio — AI products, agents, and production RAG." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aman Mulani | AI Engineer · Agents & Production RAG" />
+    <meta name="twitter:description" content="AI gets complicated. I make the product reliable." />
+    <meta name="twitter:image" content="/og.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "#website",
+            "name": "Aman Mulani",
+            "alternateName": "Aman Mulani Portfolio",
+            "description": "An AI engineering portfolio focused on production LLM products, RAG pipelines, autonomous agents, observability, and full-stack delivery.",
+            "inLanguage": "en-IN",
+            "publisher": { "@id": "#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "#person",
+            "name": "Aman Mulani",
+            "jobTitle": "AI Engineer",
+            "description": "AI Engineer building production LLM products, RAG pipelines, autonomous agents, and full-stack systems.",
+            "email": "mailto:mulaniaman0504@gmail.com",
+            "sameAs": [
+              "https://www.linkedin.com/in/aman-mulani-6b122314b/",
+              "https://github.com/amanmulani09"
+            ],
+            "knowsAbout": [
+              "Large language models",
+              "Retrieval-augmented generation",
+              "Autonomous agents",
+              "FastAPI",
+              "Python",
+              "TypeScript",
+              "Observability",
+              "Production AI"
+            ]
+          }
+        ]
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Aman Mulani | AI Engineer · Agents & Production RAG</title>
+    <script>
+      (() => {
+        try {
+          const key = "aman-ai-portfolio-theme";
+          const storedTheme = window.localStorage.getItem(key);
+          const theme = storedTheme === "dark" || storedTheme === "light"
+            ? storedTheme
+            : window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+          document.getElementById("theme-color-meta")?.setAttribute("content", theme === "light" ? "#f0f4e9" : "#07100d");
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

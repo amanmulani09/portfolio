@@ -1,0 +1,71 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --max-width: 1200px;
+  --page-bg: #0a0f0d;
+  --page-bg-deep: #070b09;
+  --surface: #101613;
+  --surface-2: #151c18;
+  --surface-3: #1a231e;
+  --surface-glass: rgba(13, 19, 16, 0.9);
+  --paper: #eef3e9;
+  --text-heading: #f2f5ef;
+  --text-primary: #dce3dc;
+  --text-muted: #a5b0a7;
+  --text-soft: #7f8c83;
+  --text-faint: #626d66;
+  --ink: #0a100d;
+  --accent-green: #b6dc7b;
+  --accent-cyan: #82aaa1;
+  --accent-pink: #a98698;
+  --accent-orange: #b99a70;
+  --accent-blue: #859cb5;
+  --border-subtle: rgba(226, 235, 226, 0.085);
+  --border-soft: rgba(226, 235, 226, 0.135);
+  --border-strong: rgba(226, 235, 226, 0.22);
+  --grid-line: rgba(182, 220, 123, 0.025);
+  --shadow-soft: 0 28px 72px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 18px 44px rgba(0, 0, 0, 0.16);
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-fast: 160ms;
+  --motion-standard: 220ms;
+  --mono: "SFMono-Regular", "Cascadia Code", "Roboto Mono", Consolas, monospace;
+
+  background: var(--page-bg);
+  color: var(--text-primary);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --page-bg: #f3f4f0;
+  --page-bg-deep: #e9ece6;
+  --surface: #fafbf8;
+  --surface-2: #ecefe9;
+  --surface-3: #e0e5dd;
+  --surface-glass: rgba(247, 249, 245, 0.92);
+  --paper: #101713;
+  --text-heading: #152019;
+  --text-primary: #25332a;
+  --text-muted: #536158;
+  --text-soft: #6c786f;
+  --text-faint: #859087;
+  --ink: #f8faf6;
+  --accent-green: #4e7525;
+  --accent-cyan: #436e65;
+  --accent-pink: #7d5b6d;
+  --accent-orange: #80643f;
+  --accent-blue: #516881;
+  --border-subtle: rgba(23, 42, 29, 0.085);
+  --border-soft: rgba(23, 42, 29, 0.135);
+  --border-strong: rgba(23, 42, 29, 0.22);
+  --grid-line: rgba(78, 117, 37, 0.035);
+  --shadow-soft: 0 28px 66px rgba(38, 52, 42, 0.1);
+  --shadow-card: 0 18px 40px rgba(38, 52, 42, 0.08);
+}
