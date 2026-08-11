@@ -4,9 +4,7 @@ export type ProjectId =
   | "hmx-interactive"
   | "chitra-ai"
   | "rag-architectures"
-  | "codo"
-  | "pgkhata"
-  | "shodh";
+  | "codo";
 
 export type PortfolioIconName =
   | "bot"

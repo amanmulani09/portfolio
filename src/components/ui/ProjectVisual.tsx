@@ -3,7 +3,6 @@ import {
   Bot,
   Check,
   CreditCard,
-  Database,
   Globe2,
   Image as ImageIcon,
   Mail,
@@ -23,6 +22,137 @@ type ProjectVisualProps = {
   projectId: ProjectId;
   large?: boolean;
 };
+
+function ThgCommerceVisual() {
+  return (
+    <div className="visual-board storefront-board">
+      <div className="visual-window-bar">
+        <span className="visual-window-title">THG Commerce / storefront delivery</span>
+        <span className="visual-status-pill">Production</span>
+      </div>
+      <div className="storefront-shell">
+        <div className="storefront-nav">
+          <span className="storefront-logo">THG</span>
+          <span>Store</span>
+          <span>Markets</span>
+          <span>Ops</span>
+          <Globe2 size={13} aria-hidden="true" />
+        </div>
+        <div className="storefront-hero">
+          <div>
+            <small>GLOBAL COMMERCE</small>
+            <strong>Ship with confidence.</strong>
+            <span>Explore</span>
+          </div>
+          <div className="product-silhouette">
+            <i />
+            <i />
+            <i />
+          </div>
+        </div>
+        <div className="storefront-products">
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
+      <div className="performance-chip">
+        <ShieldCheck size={13} aria-hidden="true" />
+        Config validated
+        <strong>Release ready</strong>
+      </div>
+    </div>
+  );
+}
+
+function PushProvisioningVisual() {
+  return (
+    <div className="visual-board personify-board">
+      <div className="visual-window-bar">
+        <span className="visual-window-title">Push Provisioning / token journey</span>
+        <span className="visual-status-pill">RBI compliant</span>
+      </div>
+      <div className="journey-surface">
+        <span className="journey-connector connector-a" />
+        <span className="journey-connector connector-b" />
+        <span className="journey-connector connector-c" />
+        <div className="journey-step journey-trigger">
+          <CreditCard size={14} aria-hidden="true" />
+          <span>Bank card</span>
+          <small>Activate</small>
+        </div>
+        <div className="journey-step journey-audience">
+          <ShieldCheck size={14} aria-hidden="true" />
+          <span>Verify</span>
+          <small>OTP + consent</small>
+        </div>
+        <div className="journey-step journey-agent">
+          <Settings2 size={14} aria-hidden="true" />
+          <span>Provision</span>
+          <small>Configured flow</small>
+        </div>
+        <div className="journey-channels">
+          <span><CreditCard size={13} aria-hidden="true" /></span>
+          <span><Globe2 size={13} aria-hidden="true" /></span>
+          <span><Check size={13} aria-hidden="true" /></span>
+        </div>
+      </div>
+      <div className="visual-insight-row">
+        <span>Bank</span>
+        <span>TokenHQ</span>
+        <span className="insight-live"><i />Merchants ready</span>
+      </div>
+    </div>
+  );
+}
+
+function HmxInteractiveVisual() {
+  return (
+    <div className="visual-board vibelabs-board">
+      <div className="visual-window-bar">
+        <span className="visual-window-title">HMX / real-time 3D configurator</span>
+        <span className="visual-status-pill ai-pill">
+          <MousePointer2 size={11} aria-hidden="true" />
+          Interactive
+        </span>
+      </div>
+      <div className="ai-workspace">
+        <div className="ai-input-card">
+          <div className="product-orb"><i /></div>
+          <span>Product scene</span>
+          <small>Mobile-first WebGL</small>
+          <span className="visual-button">
+            <Settings2 size={12} aria-hidden="true" />
+            Configure
+          </span>
+        </div>
+        <div className="ai-flow-line"><i /></div>
+        <div className="ai-output-grid">
+          <div className="ai-output copy-output">
+            <span><Settings2 size={13} aria-hidden="true" />Options</span>
+            <i />
+            <i />
+            <i />
+            <small><Check size={10} aria-hidden="true" />State synced</small>
+          </div>
+          <div className="ai-output image-output">
+            <span><ImageIcon size={13} aria-hidden="true" />Materials</span>
+            <div className="generated-image"><i /></div>
+          </div>
+          <div className="ai-output video-output">
+            <span><Globe2 size={13} aria-hidden="true" />Browser</span>
+            <div className="video-frame"><Play size={14} fill="currentColor" aria-hidden="true" /></div>
+          </div>
+        </div>
+      </div>
+      <div className="visual-insight-row">
+        <span>Sharp Kitchen</span>
+        <span>Royal Enfield</span>
+        <strong>Any device</strong>
+      </div>
+    </div>
+  );
+}
 
 function CodoVisual() {
   return (
@@ -188,103 +318,6 @@ function ChitraVisual() {
   );
 }
 
-function PgKhataVisual() {
-  return (
-    <div className="visual-board hydrafacial-board">
-      <div className="visual-window-bar">
-        <span className="visual-window-title">PG operations / mobile PWA</span>
-        <span className="visual-status-pill location-pill">
-          <Settings2 size={11} aria-hidden="true" />
-          PWA / online
-        </span>
-      </div>
-      <div className="locator-shell">
-        <div className="locator-search">
-          <CreditCard size={13} aria-hidden="true" />
-          <span>tenant · room · rent</span>
-          <span className="visual-button icon-only">
-            <ShieldCheck size={12} aria-hidden="true" />
-          </span>
-        </div>
-        <div className="map-art">
-          <span className="map-road road-one" />
-          <span className="map-road road-two" />
-          <span className="map-road road-three" />
-          <span className="map-block block-one" />
-          <span className="map-block block-two" />
-          <span className="map-block block-three" />
-          <span className="map-pin pin-one">
-            <Database size={13} aria-hidden="true" />
-          </span>
-          <span className="map-pin pin-two">
-            <Database size={13} aria-hidden="true" />
-          </span>
-          <span className="map-pin pin-three">
-            <Database size={13} aria-hidden="true" />
-          </span>
-        </div>
-        <div className="provider-card">
-          <span className="provider-image" />
-          <span>
-            <strong>Tenant record</strong>
-            <small>typed · protected</small>
-          </span>
-          <span className="visual-button">
-            Ready
-          </span>
-        </div>
-      </div>
-      <div className="visual-insight-row">
-        <span>React</span>
-        <span>FastAPI</span>
-        <strong>PostgreSQL</strong>
-      </div>
-    </div>
-  );
-}
-
-function ShodhVisual() {
-  return (
-    <div className="visual-board storefront-board">
-      <div className="visual-window-bar">
-        <span className="visual-window-title">shodh / website scan</span>
-        <span className="visual-status-pill">CLI</span>
-      </div>
-      <div className="storefront-shell">
-        <div className="storefront-nav">
-          <span className="storefront-logo">404</span>
-          <span>Pages</span>
-          <span>Links</span>
-          <span>CSV</span>
-          <Search size={13} aria-hidden="true" />
-        </div>
-        <div className="storefront-hero">
-          <div>
-            <small>WEBSITE SCANNER</small>
-            <strong>Find broken links.</strong>
-            <span>Scan</span>
-          </div>
-          <div className="product-silhouette">
-            <i />
-            <i />
-            <i />
-          </div>
-        </div>
-        <div className="storefront-products">
-          <span />
-          <span />
-          <span />
-        </div>
-      </div>
-      <div className="performance-chip">
-        <Globe2 size={13} aria-hidden="true" />
-        Crawl complete
-        <strong>CSV ready</strong>
-      </div>
-    </div>
-  );
-}
-
 export function ProjectVisual({ projectId, large = false }: ProjectVisualProps) {
   return (
     <div
@@ -292,11 +325,12 @@ export function ProjectVisual({ projectId, large = false }: ProjectVisualProps) 
       role="img"
       aria-label={`Abstract interface visualization for the ${projectId} case study`}
     >
+      {projectId === "thg-commerce" ? <ThgCommerceVisual /> : null}
+      {projectId === "push-provisioning" ? <PushProvisioningVisual /> : null}
+      {projectId === "hmx-interactive" ? <HmxInteractiveVisual /> : null}
       {projectId === "chitra-ai" ? <ChitraVisual /> : null}
       {projectId === "rag-architectures" ? <RagArchitecturesVisual /> : null}
       {projectId === "codo" ? <CodoVisual /> : null}
-      {projectId === "pgkhata" ? <PgKhataVisual /> : null}
-      {projectId === "shodh" ? <ShodhVisual /> : null}
     </div>
   );
 }

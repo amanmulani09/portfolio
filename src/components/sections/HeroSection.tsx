@@ -17,9 +17,9 @@ export function HeroSection() {
           </div>
 
           <h1>
-            AI should do <em>real work.</em>
+            I build <em>AI products</em>
             <br />
-            I build the product that makes it <span>happen.</span>
+            people can <span>depend on.</span>
           </h1>
 
           <p className="hero-summary">{profile.introduction}</p>

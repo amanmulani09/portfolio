@@ -13,34 +13,58 @@ const configuredSiteUrl = process.env.VITE_SITE_URL ?? buildEnvironment.VITE_SIT
 
 const caseStudyPages = [
   {
+    id: "thg-commerce",
+    title: "THG Commerce Storefront Case Study | Aman Mulani",
+    description: "Résumé-backed storefront, RAG knowledge retrieval, release validation, and production engineering work within THG Ingenuity's public commerce platform context.",
+    ownership: "contributor",
+    sources: ["https://www.thgingenuity.com/commerce"],
+    keywords: ["THG Commerce", "ecommerce engineering", "RAG", "release validation"]
+  },
+  {
+    id: "push-provisioning",
+    title: "Razorpay Push Provisioning Case Study | Aman Mulani",
+    description: "Config-driven bank card activation, token provisioning, lifecycle services, and observability work within Razorpay's public Push Provisioning and TokenHQ context.",
+    ownership: "contributor",
+    sources: [
+      "https://razorpay.com/blog/push-provisioning-a-new-era-in-card-tokenization/",
+      "https://razorpay.com/blog/razorpay-token-hq-card-tokenisation-solution/"
+    ],
+    keywords: ["Push Provisioning", "card tokenization", "Razorpay", "FastAPI"]
+  },
+  {
+    id: "hmx-interactive",
+    title: "HMX Interactive 3D Commerce Case Study | Aman Mulani",
+    description: "Mobile-first React, TypeScript, Canvas, and WebGL product experiences represented by HMX Media's public Sharp Kitchen and Royal Enfield case studies.",
+    ownership: "contributor",
+    sources: [
+      "https://www.hmxmedia.com/case-studies/sharp-kitchen/",
+      "https://www.hmxmedia.com/case-studies/royal-enfield/"
+    ],
+    keywords: ["WebGL", "3D configurator", "React", "HMX Media"]
+  },
+  {
     id: "chitra-ai",
     title: "Chitra.ai Multi-Agent System Case Study | Aman Mulani",
     description: "Multi-agent video and audio analysis pipeline built with FastAPI, GPT-4o, Whisper, Pydantic, Docker, and staged CI/CD.",
+    ownership: "creator",
+    sources: ["https://github.com/amanmulani09/chitra.ai"],
     keywords: ["multi-agent systems", "video analysis", "FastAPI", "GPT-4o"]
   },
   {
     id: "rag-architectures",
     title: "RAG Architecture Lab Case Study | Aman Mulani",
     description: "Public RAG implementation lab covering hybrid search, reranking, injection boundaries, vector repositories, and layered service design.",
+    ownership: "creator",
+    sources: ["https://github.com/amanmulani09/RAG"],
     keywords: ["RAG architecture", "hybrid search", "reranking", "retrieval engineering"]
   },
   {
     id: "codo",
     title: "Codo AI Code Review Case Study | Aman Mulani",
     description: "GitHub App that reviews pull requests, posts focused inline findings, summarizes risk, and leaves final code changes under human control.",
+    ownership: "creator",
+    sources: ["https://github.com/amanmulani09/codo"],
     keywords: ["AI code review", "GitHub App", "Claude", "application security"]
-  },
-  {
-    id: "pgkhata",
-    title: "PGKhata Full-Stack PWA Case Study | Aman Mulani",
-    description: "Mobile-first tenant management PWA built with React, TypeScript, FastAPI, PostgreSQL, protected routes, tested APIs, and multilingual UI.",
-    keywords: ["full-stack PWA", "React", "FastAPI", "PostgreSQL"]
-  },
-  {
-    id: "shodh",
-    title: "Shodh Python CLI Case Study | Aman Mulani",
-    description: "Published Python CLI and library for crawling websites, detecting broken links, reporting 404s, and exporting results to CSV.",
-    keywords: ["Python CLI", "website crawler", "broken links", "developer tooling"]
   }
 ];
 
@@ -190,10 +214,18 @@ await Promise.all(
       name: page.title.replace(" Case Study | Aman Mulani", ""),
       description: page.description,
       inLanguage: "en-IN",
-      creator: siteUrl
+      author: siteUrl
         ? { "@id": `${siteUrl.toString()}#person` }
         : { "@type": "Person", name: "Aman Mulani" },
+      ...(page.ownership === "creator"
+        ? {
+            creator: siteUrl
+              ? { "@id": `${siteUrl.toString()}#person` }
+              : { "@type": "Person", name: "Aman Mulani" }
+          }
+        : {}),
       ...(pageUrl ? { url: pageUrl } : {}),
+      sameAs: page.sources,
       keywords: page.keywords
     };
     const pageDocument = addPageMetadata(addAbsoluteSiteReferences(baseDocument), {

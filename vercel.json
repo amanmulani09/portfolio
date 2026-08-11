@@ -5,6 +5,18 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/work/thg-commerce",
+      "destination": "/work/thg-commerce/index.html"
+    },
+    {
+      "source": "/work/push-provisioning",
+      "destination": "/work/push-provisioning/index.html"
+    },
+    {
+      "source": "/work/hmx-interactive",
+      "destination": "/work/hmx-interactive/index.html"
+    },
+    {
       "source": "/work/chitra-ai",
       "destination": "/work/chitra-ai/index.html"
     },
@@ -15,14 +27,6 @@
     {
       "source": "/work/codo",
       "destination": "/work/codo/index.html"
-    },
-    {
-      "source": "/work/pgkhata",
-      "destination": "/work/pgkhata/index.html"
-    },
-    {
-      "source": "/work/shodh",
-      "destination": "/work/shodh/index.html"
     },
     {
       "source": "/blog",

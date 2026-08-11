@@ -241,26 +241,26 @@ export const metrics: Metric[] = [
   {
     value: "4+",
     label: "years shipping software",
-    detail: "Frontends, backend services, payment platforms, ecommerce, and production AI systems.",
+    detail: "Building interfaces, backend services, automation, and production systems since 2022.",
     icon: "rocket"
   },
   {
-    value: "~40%",
-    label: "faster discovery",
-    detail: "Information-discovery time reduced by an internal RAG knowledge assistant.",
-    icon: "chart"
+    value: "3",
+    label: "product organizations",
+    detail: "Engineering roles across HMX Media, Razorpay, and THG Ingenuity.",
+    icon: "building"
   },
   {
-    value: "~60%",
-    label: "fewer config incidents",
-    detail: "Schema validation in GitHub Actions blocks invalid configuration before release.",
-    icon: "gauge"
+    value: "4",
+    label: "engineering domains",
+    detail: "Interactive web, payments, ecommerce platforms, and production AI.",
+    icon: "layers"
   },
   {
-    value: "6",
-    label: "selected public systems",
-    detail: "Three employer-backed product stories followed by three inspectable AI projects on GitHub.",
-    icon: "globe"
+    value: "E2E",
+    label: "delivery scope",
+    detail: "Interfaces, APIs, data flows, delivery pipelines, observability, and operations.",
+    icon: "workflow"
   }
 ];
 
@@ -392,7 +392,7 @@ export const experiences: Experience[] = [
   }
 ];
 
-const allProjects: Project[] = [
+export const projects: Project[] = [
   {
     id: "thg-commerce",
     title: "THG Commerce Storefront",
@@ -849,166 +849,7 @@ const allProjects: Project[] = [
       "AI review earns trust by being quiet when uncertain, precise when useful, and constrained by repository permissions.",
     next: "thg-commerce"
   },
-  {
-    id: "pgkhata",
-    title: "PGKhata",
-    eyebrow: "Full-stack tenant management · Public GitHub project",
-    short:
-      "A mobile-first PWA for managing PG properties, tenants, rooms, beds, rent, complaints, and multilingual workflows.",
-    thesis:
-      "Operational software works when the data model, API, authentication, and mobile interface reflect the real workflow together.",
-    outcome:
-      "A complete React, FastAPI, and PostgreSQL application with protected routes, tested APIs, and six-language interface support.",
-    role: "Creator · Full-stack product engineering",
-    timeline: "Open-source project",
-    team: "Solo ownership",
-    status: "Full-stack implementation",
-    sourceUrl: "https://github.com/amanmulani09/pgkhata",
-    sourceLabel: "View source on GitHub",
-    sourceKind: "github",
-    problem:
-      "PG accommodation management spans properties, room and bed inventory, tenants, rent, complaints, user access, and regional language needs that are difficult to manage through disconnected records.",
-    solution:
-      "I built a mobile-first React PWA backed by FastAPI, SQLAlchemy, Pydantic, and PostgreSQL, with protected frontend routes and domain-specific API modules.",
-    impact:
-      "The project demonstrates end-to-end ownership from responsive product UI and localization through authentication, relational models, API tests, and deployment configuration.",
-    constraints: [
-      "Property, room, bed, tenant, and rent records need consistent relationships",
-      "Administrative routes require authentication and authorization boundaries",
-      "Mobile usage should remain primary rather than an afterthought",
-      "Localization must cover interface flows across multiple Indian languages"
-    ],
-    decisions: [
-      {
-        index: "D1",
-        title: "Model the accommodation domain directly",
-        body:
-          "Separate property, room, bed, tenant, rent, and user models keep operational relationships explicit in PostgreSQL.",
-        signal: "Clear domain model"
-      },
-      {
-        index: "D2",
-        title: "Keep frontend and API contracts typed",
-        body:
-          "TypeScript types and Pydantic schemas define the data exchanged between React screens and FastAPI endpoints.",
-        signal: "End-to-end contracts"
-      },
-      {
-        index: "D3",
-        title: "Test at the API boundary",
-        body:
-          "Backend tests cover authentication, properties, tenants, rents, rooms, beds, and users—the workflows most likely to break together.",
-        signal: "Workflow confidence"
-      }
-    ],
-    workflow: ["Property setup", "Tenant and bed allocation", "Rent tracking", "Operational dashboard"],
-    architecture: [
-      "React and TypeScript deliver the mobile-first PWA",
-      "Protected routes and auth context control administrative screens",
-      "FastAPI endpoints expose property, tenant, rent, complaint, and user workflows",
-      "SQLAlchemy models and PostgreSQL preserve relational state",
-      "Pytest exercises domain APIs across authentication and management flows"
-    ],
-    results: [
-      { value: "6", label: "interface languages" },
-      { value: "PWA", label: "mobile-first product" },
-      { value: "Full stack", label: "typed end to end" }
-    ],
-    tech: ["React", "TypeScript", "FastAPI", "PostgreSQL", "SQLAlchemy", "Pydantic", "Tailwind CSS"],
-    accent: "#b99a70",
-    icon: "building",
-    confidentiality:
-      "This case study uses only public repository structure and product documentation. No real tenant, payment, or authentication data is included.",
-    learning:
-      "Full-stack quality comes from treating interface flows, API contracts, and relational state as one product—not three separate codebases.",
-    next: "shodh"
-  },
-  {
-    id: "shodh",
-    title: "Shodh",
-    eyebrow: "Python developer tooling · Public GitHub project",
-    short:
-      "A published Python CLI and library that crawls websites, detects broken links, reports 404s, and exports results to CSV.",
-    thesis:
-      "Developer tools become useful when the default path is fast, quiet, typed, and easy to automate.",
-    outcome:
-      "A lightweight link-checking package available as both a command-line tool and a programmatic Python API.",
-    role: "Creator · Backend and developer-tool engineering",
-    timeline: "Open-source project",
-    team: "Solo ownership",
-    status: "Published package",
-    sourceUrl: "https://github.com/amanmulani09/shodh",
-    sourceLabel: "View source on GitHub",
-    sourceKind: "github",
-    problem:
-      "Broken-link checks often require heavy crawlers or manual inspection when developers need a fast way to scan a site, identify 404s, and export actionable results.",
-    solution:
-      "I built Shodh with requests, selectolax, and Click, exposing the same scanning engine through a concise CLI and a callback-friendly Python API.",
-    impact:
-      "The package provides typed crawling, quiet mode, configurable timeouts, CSV export, tests, linting, and strict type-checking in a small installable tool.",
-    constraints: [
-      "Crawling must avoid URL fragments and repeated work",
-      "Network failures and timeouts need predictable reporting",
-      "CLI output should remain useful in both interactive and automated runs",
-      "The library API should expose results without coupling callers to terminal output"
-    ],
-    decisions: [
-      {
-        index: "D1",
-        title: "Share one engine across CLI and library",
-        body:
-          "The command-line interface and programmatic API call the same scan behavior so features and fixes stay consistent.",
-        signal: "One core"
-      },
-      {
-        index: "D2",
-        title: "Prefer a lightweight parser",
-        body:
-          "Selectolax keeps HTML link extraction fast without pulling in a heavy browser runtime.",
-        signal: "Fast scans"
-      },
-      {
-        index: "D3",
-        title: "Ship quality checks with the package",
-        body:
-          "Pytest, Ruff, and strict mypy settings make typing and behavior part of the package contract.",
-        signal: "Maintainable tool"
-      }
-    ],
-    workflow: ["Website URL", "Crawl and parse", "Detect broken links", "CLI or CSV report"],
-    architecture: [
-      "Click parses CLI options and controls interactive output",
-      "A shared scan API crawls pages with configurable timeout behavior",
-      "Selectolax extracts links while fragment URLs are ignored",
-      "Structured results support callbacks and CSV export",
-      "Tests, Ruff, and mypy verify behavior and type safety"
-    ],
-    results: [
-      { value: "CLI + API", label: "two interfaces" },
-      { value: "CSV", label: "export format" },
-      { value: "Typed", label: "strict Python" }
-    ],
-    tech: ["Python", "Click", "selectolax", "requests", "Pytest", "Ruff", "mypy"],
-    accent: "#859cb5",
-    icon: "globe",
-    confidentiality:
-      "Shodh is an MIT-licensed public repository. Examples use placeholder websites and contain no private crawl data.",
-    learning:
-      "Small developer tools feel polished when automation, library use, testing, and terminal ergonomics share one clear core.",
-    next: "chitra-ai"
-  }
 ];
-
-const featuredProjectIds = new Set<ProjectId>([
-  "thg-commerce",
-  "push-provisioning",
-  "hmx-interactive",
-  "chitra-ai",
-  "rag-architectures",
-  "codo"
-]);
-
-export const projects = allProjects.filter((project) => featuredProjectIds.has(project.id));
 
 const projectsById = new Map(projects.map((project) => [project.id, project]));
 

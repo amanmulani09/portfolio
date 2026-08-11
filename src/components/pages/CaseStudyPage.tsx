@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   CheckCircle2,
   EyeOff,
+  ExternalLink,
   Github,
   Layers3,
   Lightbulb,
@@ -65,11 +66,24 @@ export function CaseStudyPage({ project }: CaseStudyPageProps) {
               <ArrowLeft size={16} aria-hidden="true" />
               All selected work
             </a>
-            <a className="case-source-link" href={project.repository} target="_blank" rel="noopener noreferrer">
-              <Github size={16} aria-hidden="true" />
-              View source on GitHub
-              <ArrowUpRight size={15} aria-hidden="true" />
-            </a>
+            <div className="case-source-links">
+              <a className="case-source-link" href={project.sourceUrl} target="_blank" rel="noopener noreferrer">
+                {project.sourceKind === "github" ? (
+                  <Github size={16} aria-hidden="true" />
+                ) : (
+                  <ExternalLink size={16} aria-hidden="true" />
+                )}
+                {project.sourceLabel}
+                <ArrowUpRight size={15} aria-hidden="true" />
+              </a>
+              {project.additionalSources?.map((source) => (
+                <a className="case-source-link" href={source.url} target="_blank" rel="noopener noreferrer" key={source.url}>
+                  <ExternalLink size={16} aria-hidden="true" />
+                  {source.label}
+                  <ArrowUpRight size={15} aria-hidden="true" />
+                </a>
+              ))}
+            </div>
           </div>
 
           <div className="case-hero-grid">
@@ -200,7 +214,7 @@ export function CaseStudyPage({ project }: CaseStudyPageProps) {
           </div>
 
           <div className="case-workflow">
-            <span>Customer-facing flow</span>
+            <span>System flow</span>
             <ol>
               {project.workflow.map((step) => (
                 <li key={step}>{step}</li>

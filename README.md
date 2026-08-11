@@ -7,7 +7,7 @@ Design and interaction system reproduced from the owner-approved Samkit Kothari 
 ## Experience
 
 - AI + full-stack product system map in the hero.
-- Five public-source case studies: Chitra.ai, RAG Architecture Lab, Codo, PGKhata, and Shodh.
+- Six evidence-backed case studies: THG Commerce Storefront, Razorpay Push Provisioning, HMX Interactive 3D Commerce, Chitra.ai, RAG Architecture Lab, and Codo.
 - Decision logs, simplified system models, constraints, outcomes, and learnings.
 - Professional journey, operating principles, LinkedIn writing, measured impact, and technical toolkit.
 - Separate local blog archive and article routes sourced only from Aman's LinkedIn profile.
