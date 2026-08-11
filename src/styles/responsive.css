@@ -10,6 +10,10 @@
   }
 
   .hero-section {
+    padding-top: 0;
+  }
+
+  .hero-frame {
     padding-top: 108px;
   }
 
@@ -396,8 +400,21 @@
 
   .hero-section {
     width: min(calc(100% - 22px), var(--max-width));
-    padding-top: 82px;
+    padding-top: 0;
     padding-bottom: 64px;
+  }
+
+  .hero-frame {
+    padding-top: 82px;
+  }
+
+  .hero-elastic-mesh {
+    inset: 72px -44% 12%;
+    opacity: 0.14;
+  }
+
+  .hero-below-fold {
+    padding-top: 22px;
   }
 
   .hero-grid {

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +10,7 @@
     <meta name="author" content="Aman Mulani" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="color-scheme" content="dark light" />
-    <meta id="theme-color-meta" name="theme-color" content="#18231e" />
+    <meta id="theme-color-meta" name="theme-color" content="#f0f4e9" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_IN" />
     <meta property="og:title" content="Aman Mulani | AI + Full-Stack Engineer" />
@@ -99,15 +99,13 @@
           const storedTheme = window.localStorage.getItem(key);
           const theme = storedTheme === "dark" || storedTheme === "light"
             ? storedTheme
-            : window.matchMedia("(prefers-color-scheme: light)").matches
-              ? "light"
-              : "dark";
+            : "light";
 
           document.documentElement.dataset.theme = theme;
           document.documentElement.style.colorScheme = theme;
           document.getElementById("theme-color-meta")?.setAttribute("content", theme === "light" ? "#f0f4e9" : "#18231e");
         } catch {
-          document.documentElement.dataset.theme = "dark";
+          document.documentElement.dataset.theme = "light";
         }
       })();
     </script>

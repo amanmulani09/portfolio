@@ -4,15 +4,15 @@ import type { ThemeMode } from "../types/theme";
 const STORAGE_KEY = "aman-ai-portfolio-theme";
 
 function getInitialTheme(): ThemeMode {
-  if (typeof window === "undefined") return "dark";
+  if (typeof window === "undefined") return "light";
 
   try {
     const storedTheme = window.localStorage.getItem(STORAGE_KEY);
     if (storedTheme === "dark" || storedTheme === "light") return storedTheme;
 
-    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    return "light";
   } catch {
-    return "dark";
+    return "light";
   }
 }
 
