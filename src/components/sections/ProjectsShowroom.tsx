@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
 import type { CSSProperties } from "react";
 import { profile, projects } from "../../data/resume";
 import { SpotlightCard } from "../react-bits/SpotlightCard";
@@ -16,7 +16,7 @@ export function ProjectsShowroom() {
         <SectionHeading
           eyebrow="02 / Selected work"
           title="Case studies with decisions and results."
-          description="Four stories about taking AI and full-stack systems from ambiguous requirements to dependable production outcomes."
+          description="Professional product work first—THG Ingenuity, Razorpay, and HMX Media—followed by three focused AI projects with public source."
         />
         <p className="section-aside">
           Original visualizations explain the system boundaries without exposing proprietary interfaces, internal
@@ -60,10 +60,31 @@ export function ProjectsShowroom() {
                       <span key={item}>{item}</span>
                     ))}
                   </div>
-                  <a href={`/work/${project.id}`} aria-label={`Read case study: ${project.title}`}>
-                    Read case study
-                    <ArrowUpRight size={17} aria-hidden="true" />
-                  </a>
+                  <div className="project-card-actions">
+                    <a
+                      className="project-source-action"
+                      href={project.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={
+                        project.sourceKind === "github"
+                          ? `View ${project.title} source code on GitHub`
+                          : `Open public source for ${project.title}`
+                      }
+                    >
+                      {project.sourceKind === "github" ? (
+                        <Github size={16} aria-hidden="true" />
+                      ) : (
+                        <ExternalLink size={16} aria-hidden="true" />
+                      )}
+                      {project.sourceKind === "github" ? "View code" : "Public source"}
+                      <ArrowUpRight size={15} aria-hidden="true" />
+                    </a>
+                    <a className="project-case-action" href={`/work/${project.id}`} aria-label={`Read case study: ${project.title}`}>
+                      Read case study
+                      <ArrowUpRight size={17} aria-hidden="true" />
+                    </a>
+                  </div>
                 </div>
               </div>
             </SpotlightCard>

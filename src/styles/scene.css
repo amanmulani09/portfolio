@@ -470,7 +470,7 @@
 }
 
 .visual-insight-row strong {
-  color: var(--accent);
+  color: color-mix(in srgb, var(--accent) 70%, var(--text-heading));
 }
 
 .insight-live {

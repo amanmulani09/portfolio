@@ -12,7 +12,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 76% 4%, color-mix(in srgb, var(--accent-green) 3.5%, transparent), transparent 29%),
+    radial-gradient(circle at 76% 4%, color-mix(in srgb, var(--accent-green) 5.5%, transparent), transparent 32%),
     var(--page-bg);
   color: var(--text-primary);
 }

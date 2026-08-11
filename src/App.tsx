@@ -1,19 +1,21 @@
 import { useEffect } from "react";
 import { Footer, Header } from "./components/layout";
 import { CaseStudyPage } from "./components/pages/CaseStudyPage";
+import { BlogIndexPage } from "./components/pages/BlogIndexPage";
+import { BlogPostPage } from "./components/pages/BlogPostPage";
 import { NotFoundPage } from "./components/pages/NotFoundPage";
 import {
   AboutSection,
+  BlogSection,
   ContactSection,
   ExperienceTimeline,
-  FieldNotesSection,
   HeroSection,
   LinkedInProofSection,
   PrinciplesSection,
   ProjectsShowroom,
   SkillsConstellation
 } from "./components/sections";
-import { projects } from "./data/resume";
+import { getLinkedInPost, projects } from "./data/resume";
 import { useThemePreference } from "./hooks/useThemePreference";
 import { ScrollProgress } from "./components/ui/ScrollProgress";
 
@@ -24,10 +26,13 @@ function App() {
   const isHome = pathname === "/";
   const isCaseStudyRoute = pathParts[0] === "work" && pathParts.length === 2;
   const project = isCaseStudyRoute ? projects.find((item) => item.id === pathParts[1]) : undefined;
-  const isNotFound = !isHome && !project;
+  const isBlogIndex = pathname === "/blog";
+  const isBlogPostRoute = pathParts[0] === "blog" && pathParts.length === 2;
+  const blogPost = isBlogPostRoute ? getLinkedInPost(pathParts[1]) : undefined;
+  const isNotFound = !isHome && !project && !isBlogIndex && !blogPost;
 
   useEffect(() => {
-    if (project || isNotFound) return;
+    if (project || blogPost || isBlogIndex || isNotFound) return;
 
     const scrollToHash = () => {
       const targetId = decodeURIComponent(window.location.hash.slice(1));
@@ -41,7 +46,7 @@ function App() {
     scrollToHash();
     window.addEventListener("hashchange", scrollToHash);
     return () => window.removeEventListener("hashchange", scrollToHash);
-  }, [isNotFound, project]);
+  }, [blogPost, isBlogIndex, isNotFound, project]);
 
   useEffect(() => {
     if (!isNotFound) return;
@@ -65,6 +70,10 @@ function App() {
         <NotFoundPage />
       ) : project ? (
         <CaseStudyPage project={project} />
+      ) : isBlogIndex ? (
+        <BlogIndexPage />
+      ) : blogPost ? (
+        <BlogPostPage post={blogPost} />
       ) : (
         <main id="main-content">
           <HeroSection />
@@ -73,7 +82,7 @@ function App() {
           <SkillsConstellation />
           <AboutSection />
           <PrinciplesSection />
-          <FieldNotesSection />
+          <BlogSection />
           <LinkedInProofSection />
           <ContactSection />
         </main>

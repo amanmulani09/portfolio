@@ -1,4 +1,5 @@
 export { AboutSection } from "./AboutSection";
+export { BlogSection } from "./BlogSection";
 export { ContactSection } from "./ContactSection";
 export { ExperienceTimeline } from "./ExperienceTimeline";
 export { FieldNotesSection } from "./FieldNotesSection";

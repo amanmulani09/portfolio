@@ -17,9 +17,9 @@ export function HeroSection() {
           </div>
 
           <h1>
-            AI gets <em>complicated.</em>
+            AI should do <em>real work.</em>
             <br />
-            I make the product feel <span>reliable.</span>
+            I build the product that makes it <span>happen.</span>
           </h1>
 
           <p className="hero-summary">{profile.introduction}</p>
@@ -38,7 +38,7 @@ export function HeroSection() {
           </div>
 
           <p className="hero-cta-note">
-            Looking for an AI engineer who owns delivery end to end? <a href={`mailto:${profile.email}`}>Let&apos;s talk.</a>
+            Looking for an AI + full-stack engineer who owns delivery end to end? <a href={`mailto:${profile.email}`}>Let&apos;s talk.</a>
           </p>
 
           <div className="hero-location">

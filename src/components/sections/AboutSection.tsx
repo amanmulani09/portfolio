@@ -10,12 +10,12 @@ export function AboutSection() {
           <SectionHeading eyebrow="04 / The person in the system" title="I like the messy middle." />
           <div className="about-statement">
             <p>
-              I am drawn to ambiguous product problems where models, retrieval, tools, APIs, interfaces, and operations
-              all need to become one dependable system.
+              I am drawn to ambiguous product problems where interfaces, APIs, data, models, tools, and operations all
+              need to become one dependable system.
             </p>
             <p>
-              That is where production AI engineering matters. I turn the moving parts into reliable products that
-              remain simple to use and practical to operate at scale.
+              I build AI systems as complete products, not isolated model demos. That means owning the full-stack
+              services, interfaces, data contracts, security boundaries, and operations that make intelligence useful.
             </p>
           </div>
         </div>
@@ -47,7 +47,7 @@ export function AboutSection() {
             </span>
             <span>
               <Sparkles size={15} aria-hidden="true" />
-              Production AI · full-stack · end to end
+              Product UI · backend · AI · operations
             </span>
           </div>
           <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
@@ -60,8 +60,8 @@ export function AboutSection() {
       <div className="about-footnote">
         <span>What connects the work</span>
         <p>
-          I care about the handoff between engineering and business: how retrieval quality affects trust, how system
-          design affects operating cost, and how automation gives teams useful time back without weakening control.
+          I care about the handoff between engineering and business: how interface choices affect adoption, how system
+          design affects operating cost, how retrieval affects trust, and how automation saves time without weakening control.
         </p>
       </div>
     </section>

@@ -1,4 +1,12 @@
-export type ProjectId = "shopping-assistant" | "rag-assistant" | "chitra-ai" | "codo";
+export type ProjectId =
+  | "thg-commerce"
+  | "push-provisioning"
+  | "hmx-interactive"
+  | "chitra-ai"
+  | "rag-architectures"
+  | "codo"
+  | "pgkhata"
+  | "shodh";
 
 export type PortfolioIconName =
   | "bot"
@@ -6,6 +14,7 @@ export type PortfolioIconName =
   | "building"
   | "chart"
   | "code"
+  | "credit-card"
   | "gauge"
   | "globe"
   | "layers"
@@ -65,6 +74,13 @@ export type Project = {
   timeline: string;
   team: string;
   status: string;
+  sourceUrl: string;
+  sourceLabel: string;
+  sourceKind: "github" | "public";
+  additionalSources?: Array<{
+    label: string;
+    url: string;
+  }>;
   problem: string;
   solution: string;
   impact: string;
@@ -115,4 +131,21 @@ export type Testimonial = {
   quote: string;
   name: string;
   context: string;
+};
+
+export type LinkedInPost = {
+  slug: string;
+  category: "AI" | "Engineering";
+  title: string;
+  excerpt: string;
+  readTime: string;
+  sections: Array<{
+    heading: string;
+    paragraphs: string[];
+  }>;
+  takeaways: string[];
+  url: string;
+  linkedInReactions: number | null;
+  linkedInComments: number | null;
+  engagementAsOf: string;
 };

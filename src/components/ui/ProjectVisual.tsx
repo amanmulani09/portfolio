@@ -2,16 +2,17 @@ import {
   Bell,
   Bot,
   Check,
+  CreditCard,
+  Database,
   Globe2,
   Image as ImageIcon,
-  Languages,
   Mail,
-  MapPin,
   MessageSquare,
   MousePointer2,
   Play,
   Search,
-  Send,
+  Settings2,
+  ShieldCheck,
   Sparkles,
   Users,
   Video
@@ -23,12 +24,12 @@ type ProjectVisualProps = {
   large?: boolean;
 };
 
-function ShoppingAssistantVisual() {
+function CodoVisual() {
   return (
     <div className="visual-board personify-board">
       <div className="visual-window-bar">
-        <span className="visual-window-title">Shopping session / discovery</span>
-        <span className="visual-status-pill">Live</span>
+        <span className="visual-window-title">Pull request / automated review</span>
+        <span className="visual-status-pill">GitHub App</span>
       </div>
       <div className="journey-surface">
         <span className="journey-connector connector-a" />
@@ -36,18 +37,18 @@ function ShoppingAssistantVisual() {
         <span className="journey-connector connector-c" />
         <div className="journey-step journey-trigger">
           <MousePointer2 size={14} aria-hidden="true" />
-          <span>Product question</span>
-          <small>User intent</small>
+          <span>Pull request</span>
+          <small>Webhook event</small>
         </div>
         <div className="journey-step journey-audience">
           <Users size={14} aria-hidden="true" />
-          <span>Session context</span>
-          <small>Memory loaded</small>
+          <span>Diff context</span>
+          <small>Scoped access</small>
         </div>
         <div className="journey-step journey-agent">
           <Bot size={14} aria-hidden="true" />
-          <span>Agent response</span>
-          <small>Tools grounded</small>
+          <span>AI review</span>
+          <small>Findings ranked</small>
         </div>
         <div className="journey-channels">
           <span>
@@ -62,22 +63,22 @@ function ShoppingAssistantVisual() {
         </div>
       </div>
       <div className="visual-insight-row">
-        <span>Tool calling</span>
-        <span>Session memory</span>
+        <span>Correctness</span>
+        <span>Security</span>
         <span className="insight-live">
           <i />
-          Valid
+          Human decides
         </span>
       </div>
     </div>
   );
 }
 
-function RagAssistantVisual() {
+function RagArchitecturesVisual() {
   return (
     <div className="visual-board storefront-board">
       <div className="visual-window-bar">
-        <span className="visual-window-title">Knowledge retrieval</span>
+        <span className="visual-window-title">RAG architecture / retrieval lab</span>
         <span className="tenant-switcher">
           <i className="tenant-one" />
           <i className="tenant-two" />
@@ -112,8 +113,8 @@ function RagAssistantVisual() {
       </div>
       <div className="performance-chip">
         <Globe2 size={13} aria-hidden="true" />
-        Pinecone indexed
-        <strong>~40% faster</strong>
+          Retrieval pipeline
+        <strong>Hybrid + reranked</strong>
       </div>
     </div>
   );
@@ -187,22 +188,22 @@ function ChitraVisual() {
   );
 }
 
-function CodoVisual() {
+function PgKhataVisual() {
   return (
     <div className="visual-board hydrafacial-board">
       <div className="visual-window-bar">
-        <span className="visual-window-title">Pull request / review</span>
+        <span className="visual-window-title">PG operations / mobile PWA</span>
         <span className="visual-status-pill location-pill">
-          <Languages size={11} aria-hidden="true" />
-          PR / 128
+          <Settings2 size={11} aria-hidden="true" />
+          PWA / online
         </span>
       </div>
       <div className="locator-shell">
         <div className="locator-search">
-          <Search size={13} aria-hidden="true" />
-          <span>auth.py · checkout</span>
+          <CreditCard size={13} aria-hidden="true" />
+          <span>tenant · room · rent</span>
           <span className="visual-button icon-only">
-            <Send size={12} aria-hidden="true" />
+            <ShieldCheck size={12} aria-hidden="true" />
           </span>
         </div>
         <div className="map-art">
@@ -213,30 +214,72 @@ function CodoVisual() {
           <span className="map-block block-two" />
           <span className="map-block block-three" />
           <span className="map-pin pin-one">
-            <MapPin size={13} fill="currentColor" aria-hidden="true" />
+            <Database size={13} aria-hidden="true" />
           </span>
           <span className="map-pin pin-two">
-            <MapPin size={13} fill="currentColor" aria-hidden="true" />
+            <Database size={13} aria-hidden="true" />
           </span>
           <span className="map-pin pin-three">
-            <MapPin size={13} fill="currentColor" aria-hidden="true" />
+            <Database size={13} aria-hidden="true" />
           </span>
         </div>
         <div className="provider-card">
           <span className="provider-image" />
           <span>
-            <strong>Security risk</strong>
-            <small>auth.py:87 · high confidence</small>
+            <strong>Tenant record</strong>
+            <small>typed · protected</small>
           </span>
           <span className="visual-button">
-            Inspect
+            Ready
           </span>
         </div>
       </div>
       <div className="visual-insight-row">
-        <span>Correctness</span>
-        <span>Security</span>
-        <strong>Human review</strong>
+        <span>React</span>
+        <span>FastAPI</span>
+        <strong>PostgreSQL</strong>
+      </div>
+    </div>
+  );
+}
+
+function ShodhVisual() {
+  return (
+    <div className="visual-board storefront-board">
+      <div className="visual-window-bar">
+        <span className="visual-window-title">shodh / website scan</span>
+        <span className="visual-status-pill">CLI</span>
+      </div>
+      <div className="storefront-shell">
+        <div className="storefront-nav">
+          <span className="storefront-logo">404</span>
+          <span>Pages</span>
+          <span>Links</span>
+          <span>CSV</span>
+          <Search size={13} aria-hidden="true" />
+        </div>
+        <div className="storefront-hero">
+          <div>
+            <small>WEBSITE SCANNER</small>
+            <strong>Find broken links.</strong>
+            <span>Scan</span>
+          </div>
+          <div className="product-silhouette">
+            <i />
+            <i />
+            <i />
+          </div>
+        </div>
+        <div className="storefront-products">
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
+      <div className="performance-chip">
+        <Globe2 size={13} aria-hidden="true" />
+        Crawl complete
+        <strong>CSV ready</strong>
       </div>
     </div>
   );
@@ -249,10 +292,11 @@ export function ProjectVisual({ projectId, large = false }: ProjectVisualProps) 
       role="img"
       aria-label={`Abstract interface visualization for the ${projectId} case study`}
     >
-      {projectId === "shopping-assistant" ? <ShoppingAssistantVisual /> : null}
-      {projectId === "rag-assistant" ? <RagAssistantVisual /> : null}
       {projectId === "chitra-ai" ? <ChitraVisual /> : null}
+      {projectId === "rag-architectures" ? <RagArchitecturesVisual /> : null}
       {projectId === "codo" ? <CodoVisual /> : null}
+      {projectId === "pgkhata" ? <PgKhataVisual /> : null}
+      {projectId === "shodh" ? <ShodhVisual /> : null}
     </div>
   );
 }

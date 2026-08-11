@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   CheckCircle2,
   EyeOff,
+  Github,
   Layers3,
   Lightbulb,
   ShieldCheck
@@ -21,9 +22,9 @@ export function CaseStudyPage({ project }: CaseStudyPageProps) {
   const nextProject = getProjectById(project.next as Project["id"]);
 
   useEffect(() => {
-    const siteTitle = `${profile.name} | AI Engineer · Agents & Production RAG`;
+    const siteTitle = `${profile.name} | AI + Full-Stack Engineer`;
     const siteDescription =
-      "Aman Mulani is an AI Engineer building production LLM products, RAG pipelines, autonomous agents, and full-stack systems.";
+      "Aman Mulani is an AI + Full-Stack Engineer building multi-agent systems, RAG architectures, backend services, and product interfaces.";
     const siteUrl = window.location.origin + "/";
     const pageTitle = `${project.title} Case Study | ${profile.name}`;
     const pageUrl = `${window.location.origin}/work/${project.id}`;
@@ -46,11 +47,11 @@ export function CaseStudyPage({ project }: CaseStudyPageProps) {
       setMeta('meta[name="description"]', siteDescription);
       setMeta('meta[property="og:title"]', siteTitle);
       setMeta('meta[property="og:description"]',
-        "AI gets complicated. I make the product reliable. Explore production work across agents, RAG, multimodal analysis, and secure automation."
+        "From interface to intelligence. Explore full-stack products, backend platforms, production AI, RAG, and secure automation."
       );
       setMeta('meta[property="og:url"]', siteUrl);
       setMeta('meta[name="twitter:title"]', siteTitle);
-      setMeta('meta[name="twitter:description"]', "AI gets complicated. I make the product reliable.");
+      setMeta('meta[name="twitter:description"]', "AI systems with full-stack product depth.");
       document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute("href", siteUrl);
     };
   }, [project]);
@@ -59,10 +60,17 @@ export function CaseStudyPage({ project }: CaseStudyPageProps) {
     <main className="case-study-page" id="main-content">
       <section className="case-hero" style={{ "--case-accent": project.accent } as React.CSSProperties}>
         <div className="case-hero-inner">
-          <a className="case-back-link" href="/#work">
-            <ArrowLeft size={16} aria-hidden="true" />
-            All selected work
-          </a>
+          <div className="case-hero-links">
+            <a className="case-back-link" href="/#work">
+              <ArrowLeft size={16} aria-hidden="true" />
+              All selected work
+            </a>
+            <a className="case-source-link" href={project.repository} target="_blank" rel="noopener noreferrer">
+              <Github size={16} aria-hidden="true" />
+              View source on GitHub
+              <ArrowUpRight size={15} aria-hidden="true" />
+            </a>
+          </div>
 
           <div className="case-hero-grid">
             <div className="case-hero-copy">

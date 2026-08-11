@@ -5,20 +5,48 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/work/shopping-assistant",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/work/rag-assistant",
-      "destination": "/index.html"
-    },
-    {
       "source": "/work/chitra-ai",
-      "destination": "/index.html"
+      "destination": "/work/chitra-ai/index.html"
+    },
+    {
+      "source": "/work/rag-architectures",
+      "destination": "/work/rag-architectures/index.html"
     },
     {
       "source": "/work/codo",
-      "destination": "/index.html"
+      "destination": "/work/codo/index.html"
+    },
+    {
+      "source": "/work/pgkhata",
+      "destination": "/work/pgkhata/index.html"
+    },
+    {
+      "source": "/work/shodh",
+      "destination": "/work/shodh/index.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/llms-align-more-than-they-decide",
+      "destination": "/blog/llms-align-more-than-they-decide/index.html"
+    },
+    {
+      "source": "/blog/tdd-for-ai-agents",
+      "destination": "/blog/tdd-for-ai-agents/index.html"
+    },
+    {
+      "source": "/blog/inside-an-ai-coding-tool",
+      "destination": "/blog/inside-an-ai-coding-tool/index.html"
+    },
+    {
+      "source": "/blog/when-sse-beats-websockets",
+      "destination": "/blog/when-sse-beats-websockets/index.html"
+    },
+    {
+      "source": "/blog/isolating-python-dependency-conflicts",
+      "destination": "/blog/isolating-python-dependency-conflicts/index.html"
     }
   ]
 }

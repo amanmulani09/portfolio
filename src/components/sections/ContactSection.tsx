@@ -10,13 +10,13 @@ export function ContactSection() {
           {profile.availability}
         </div>
         <h2>
-          Shipping AI with
+          Building product systems with
           <br />
           <span>real production stakes?</span>
         </h2>
         <p>
-          I am always ready to discuss LLM products, production RAG, agent systems, full-stack delivery, observability,
-          or security-sensitive automation.
+          I am always ready to discuss full-stack products, frontend and backend platforms, LLM workflows, production
+          RAG, observability, or security-sensitive automation.
         </p>
 
         <div className="contact-primary-row">

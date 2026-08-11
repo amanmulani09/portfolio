@@ -1,11 +1,11 @@
-import { Bot, Mail, MessageSquare, Radio, Users } from "lucide-react";
+import { Braces, Cloud, Database, PanelsTopLeft, Sparkles } from "lucide-react";
 
 export function SignalMap() {
   return (
     <div
       className="signal-map"
       role="img"
-      aria-label="An AI system map connecting user intent, retrieval context, agent tools, and production outcomes"
+      aria-label="A product system map connecting frontend interfaces, backend services, data, multi-agent capabilities, and production operations"
     >
       <div className="signal-map-toolbar">
         <span className="window-dots" aria-hidden="true">
@@ -13,7 +13,7 @@ export function SignalMap() {
           <i />
           <i />
         </span>
-        <span>llm_system.map</span>
+        <span>product_system.map</span>
         <span className="live-indicator">
           <i />
           Live
@@ -27,36 +27,36 @@ export function SignalMap() {
         <div className="signal-beam beam-two" />
 
         <div className="signal-node node-source">
-          <Radio size={16} aria-hidden="true" />
-          <span>User intent</span>
-          <small>query · goal</small>
+          <PanelsTopLeft size={16} aria-hidden="true" />
+          <span>Interface</span>
+          <small>React · Lit</small>
         </div>
 
         <div className="signal-node node-segment">
-          <Users size={16} aria-hidden="true" />
-          <span>Context</span>
-          <small>retrieve · rank</small>
+          <Database size={16} aria-hidden="true" />
+          <span>Data</span>
+          <small>SQL · retrieval</small>
         </div>
 
         <div className="signal-core">
           <span>AM</span>
-          <small>AI systems</small>
+          <small>Product systems</small>
           <i />
         </div>
 
         <div className="signal-node node-journey">
-          <Bot size={16} aria-hidden="true" />
-          <span>Agents</span>
-          <small>tools · memory</small>
+          <Sparkles size={16} aria-hidden="true" />
+          <span>Multi-agent</span>
+          <small>agents · tools</small>
         </div>
 
         <div className="signal-node node-channel">
           <span className="channel-icons">
-            <Mail size={14} aria-hidden="true" />
-            <MessageSquare size={14} aria-hidden="true" />
+            <Braces size={14} aria-hidden="true" />
+            <Cloud size={14} aria-hidden="true" />
           </span>
-          <span>Production</span>
-          <small>API · app · ops</small>
+          <span>Services</span>
+          <small>API · cloud · ops</small>
         </div>
       </div>
 

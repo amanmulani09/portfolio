@@ -9,8 +9,8 @@ export function SkillsConstellation() {
           <span>03 / Working toolkit</span>
           <h2 id="toolkit-title">Tools are choices, not identity.</h2>
           <p>
-            I choose technology around evidence quality, permission boundaries, latency, operating cost, and the team
-            that will own the system in production.
+            I choose technology around user experience, system boundaries, data quality, permission scope, latency,
+            operating cost, and the team that will own it in production.
           </p>
         </div>
         <div className="toolkit-groups">

@@ -9,11 +9,11 @@ export function FieldNotesSection() {
         <SectionHeading
           eyebrow="06 / Operator's notes"
           title="What I am thinking about."
-          description="Short notes from production RAG, agent systems, observability, and secure AI delivery."
+          description="Short notes from platform engineering, production RAG, observability, secure delivery, and product systems."
         />
         <a
           className="notes-linkedin-link"
-          href="https://www.linkedin.com/in/aman-mulani-6b122314b/"
+          href="https://www.linkedin.com/in/aman-mulani/"
           target="_blank"
           rel="noopener noreferrer"
         >
