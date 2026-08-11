@@ -2,7 +2,9 @@
 
 ## React Bits
 
-`src/components/react-bits/SpotlightCard.tsx` and `src/components/react-bits/Magnet.tsx` are adapted from React Bits by David Haz.
+`src/components/react-bits/SpotlightCard.tsx`, `src/components/react-bits/Magnet.tsx`,
+`src/components/react-bits/ClickSpark.tsx`, `src/components/react-bits/CurvedInput/CurvedInput.tsx`,
+and `src/components/react-bits/ElasticMesh/ElasticMesh.tsx` are adapted from React Bits by David Haz.
 
 MIT + Commons Clause License Condition v1.0
 

@@ -590,6 +590,17 @@
     font-size: clamp(3.2rem, 15vw, 5.3rem);
   }
 
+  .contact-composer {
+    margin-top: 28px;
+  }
+
+  .contact-elastic-mesh {
+    inset: -4% -42%;
+    opacity: 0.3;
+    -webkit-mask-image: linear-gradient(180deg, transparent, black 34%, black 100%);
+    mask-image: linear-gradient(180deg, transparent, black 34%, black 100%);
+  }
+
   .contact-primary-row {
     display: grid;
   }
@@ -710,6 +721,11 @@
 }
 
 @media (max-width: 520px) {
+  .contact-composer .curved-input {
+    width: calc(100% + 8px) !important;
+    margin-left: -4px;
+  }
+
   .hero-location {
     align-items: flex-start;
   }

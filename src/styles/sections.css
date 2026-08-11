@@ -1403,8 +1403,27 @@
 .contact-section {
   position: relative;
   border-top: 1px solid var(--border-subtle);
-  background: var(--surface);
+  background:
+    radial-gradient(circle at 84% 44%, color-mix(in srgb, var(--accent-green) 7%, transparent), transparent 34%),
+    var(--surface);
   overflow: hidden;
+}
+
+.contact-elastic-mesh {
+  --mesh-glow: color-mix(in srgb, var(--accent-green) 14%, transparent);
+  --mesh-line: color-mix(in srgb, var(--accent-green) 17%, transparent);
+
+  position: absolute;
+  inset: -12% -4%;
+  opacity: 0.42;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 2%, black 42%, black 100%);
+  mask-image: linear-gradient(90deg, transparent 2%, black 42%, black 100%);
+}
+
+.contact-spark-shell {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-section::after {
@@ -1449,6 +1468,29 @@
   line-height: 1.68;
 }
 
+.contact-composer {
+  display: grid;
+  max-width: 850px;
+  gap: 7px;
+  margin-top: 34px;
+}
+
+.contact-composer .curved-input {
+  transform-origin: left center;
+  transition: transform var(--motion-standard) var(--ease-out);
+}
+
+.contact-composer .curved-input:focus-within {
+  transform: translateY(-2px);
+}
+
+.contact-composer-status {
+  color: var(--text-soft);
+  font-family: var(--mono);
+  font-size: 0.61rem;
+  line-height: 1.5;
+}
+
 .contact-primary-row {
   display: flex;
   max-width: 850px;
@@ -1478,6 +1520,16 @@
 .contact-email:hover {
   background: color-mix(in srgb, var(--accent-green) 7%, var(--surface-2));
   transform: translateY(-1px);
+}
+
+.contact-email > svg:last-child,
+.contact-links a svg:last-child {
+  transition: transform var(--motion-standard) var(--ease-out);
+}
+
+.contact-email:hover > svg:last-child,
+.contact-links a:hover svg:last-child {
+  transform: translate(2px, -2px);
 }
 
 .contact-email > svg {
@@ -1531,6 +1583,32 @@
   padding: 0 11px;
   font-size: 0.72rem;
   font-weight: 800;
+  transition:
+    border-color var(--motion-fast) ease,
+    background var(--motion-fast) ease,
+    transform var(--motion-standard) var(--ease-out);
+}
+
+.contact-links a:hover {
+  border-color: var(--border-strong);
+  background: color-mix(in srgb, var(--accent-green) 5%, transparent);
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-composer .curved-input,
+  .contact-email > svg:last-child,
+  .contact-links a,
+  .contact-links a svg:last-child {
+    transition: none;
+  }
+
+  .contact-composer .curved-input:focus-within,
+  .contact-email:hover > svg:last-child,
+  .contact-links a:hover,
+  .contact-links a:hover svg:last-child {
+    transform: none;
+  }
 }
 
 .contact-links a svg:last-child {
