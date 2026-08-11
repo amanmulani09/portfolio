@@ -8,7 +8,7 @@ export function LinkedInProofSection() {
       <div className="content-section">
         <div className="proof-heading-row">
           <SectionHeading
-            eyebrow="05 / Measured impact"
+            eyebrow="07 / Measured impact"
             title="What changed after shipping."
             description="Selected outcomes from production systems described in my résumé."
           />

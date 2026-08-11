@@ -7,7 +7,7 @@ export function PrinciplesSection() {
       <div className="content-section">
         <div className="section-intro-grid">
           <SectionHeading
-            eyebrow="03 / How I work"
+            eyebrow="05 / How I work"
             title="A small operating system for building."
             description="These are not abstract values. They are the checks I use when a project becomes noisy, urgent, or difficult to reason about."
           />

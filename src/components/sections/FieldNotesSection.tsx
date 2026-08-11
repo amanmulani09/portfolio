@@ -7,7 +7,7 @@ export function FieldNotesSection() {
     <section className="content-section notes-section" id="notes">
       <div className="section-intro-grid">
         <SectionHeading
-          eyebrow="04 / Operator's notes"
+          eyebrow="06 / Operator's notes"
           title="What I am thinking about."
           description="Short notes from production RAG, agent systems, observability, and secure AI delivery."
         />

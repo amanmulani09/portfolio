@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import type { CSSProperties } from "react";
 import { profile, projects } from "../../data/resume";
+import { SpotlightCard } from "../react-bits/SpotlightCard";
 import { ProjectVisual } from "../ui/ProjectVisual";
 import { SectionHeading } from "../ui/SectionHeading";
 
@@ -13,7 +14,7 @@ export function ProjectsShowroom() {
     <section className="content-section project-band" id="work">
       <div className="section-intro-grid">
         <SectionHeading
-          eyebrow="01 / Selected work"
+          eyebrow="02 / Selected work"
           title="Case studies with decisions and results."
           description="Four stories about taking AI and full-stack systems from ambiguous requirements to dependable production outcomes."
         />
@@ -28,9 +29,11 @@ export function ProjectsShowroom() {
           const accentStyle: AccentStyle = { "--accent": project.accent };
 
           return (
-            <article
+            <SpotlightCard
+              as="article"
               className={`project-card project-card-${project.id}${index === 0 ? " project-card-featured" : ""}`}
               key={project.id}
+              spotlightColor={`color-mix(in srgb, ${project.accent} 22%, transparent)`}
               style={accentStyle}
             >
               <ProjectVisual projectId={project.id} large={index === 0} />
@@ -63,7 +66,7 @@ export function ProjectsShowroom() {
                   </a>
                 </div>
               </div>
-            </article>
+            </SpotlightCard>
           );
         })}
       </div>

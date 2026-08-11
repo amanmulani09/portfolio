@@ -273,6 +273,10 @@
     display: none;
   }
 
+  .header-magnet {
+    display: none;
+  }
+
   .menu-toggle {
     display: inline-flex;
   }
@@ -322,6 +326,11 @@
 
   .primary-action,
   .secondary-action {
+    width: 100%;
+  }
+
+  .hero-action-magnet,
+  .hero-action-magnet .magnet-inner {
     width: 100%;
   }
 

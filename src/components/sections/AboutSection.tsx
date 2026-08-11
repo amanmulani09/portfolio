@@ -7,7 +7,7 @@ export function AboutSection() {
     <section className="content-section about-section" id="about">
       <div className="about-layout">
         <div>
-          <SectionHeading eyebrow="02 / The person in the system" title="I like the messy middle." />
+          <SectionHeading eyebrow="04 / The person in the system" title="I like the messy middle." />
           <div className="about-statement">
             <p>
               I am drawn to ambiguous product problems where models, retrieval, tools, APIs, interfaces, and operations

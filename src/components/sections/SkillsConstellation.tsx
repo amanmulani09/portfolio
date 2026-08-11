@@ -3,10 +3,10 @@ import { getPortfolioIcon } from "../ui/portfolioIcons";
 
 export function SkillsConstellation() {
   return (
-    <section className="toolkit-section" aria-labelledby="toolkit-title">
+    <section className="toolkit-section" id="toolkit" aria-labelledby="toolkit-title">
       <div className="content-section toolkit-layout">
         <div className="toolkit-intro">
-          <span>Working toolkit</span>
+          <span>03 / Working toolkit</span>
           <h2 id="toolkit-title">Tools are choices, not identity.</h2>
           <p>
             I choose technology around evidence quality, permission boundaries, latency, operating cost, and the team

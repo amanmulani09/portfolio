@@ -1,5 +1,6 @@
 import { ArrowDownRight, ArrowUpRight, FileText, MapPin } from "lucide-react";
 import { profile } from "../../data/resume";
+import { Magnet } from "../react-bits/Magnet";
 import { SignalMap } from "../ui/SignalMap";
 import { ImpactMetrics } from "./ImpactMetrics";
 
@@ -24,10 +25,12 @@ export function HeroSection() {
           <p className="hero-summary">{profile.introduction}</p>
 
           <div className="hero-actions">
-            <a className="primary-action" href="#work">
-              View selected work
-              <ArrowDownRight size={18} aria-hidden="true" />
-            </a>
+            <Magnet padding={64} magnetStrength={8} wrapperClassName="hero-action-magnet">
+              <a className="primary-action" href="#work">
+                View selected work
+                <ArrowDownRight size={18} aria-hidden="true" />
+              </a>
+            </Magnet>
             <a className="secondary-action" href={profile.resume} target="_blank" rel="noopener noreferrer">
               <FileText size={17} aria-hidden="true" />
               Open résumé

@@ -11,6 +11,8 @@ Design and interaction system reproduced from the owner-approved Samkit Kothari 
 - Decision logs, simplified system models, constraints, outcomes, and learnings.
 - Professional journey, operating principles, field notes, measured impact, and technical toolkit.
 - Light and dark themes, responsive layouts, reduced-motion behavior, and keyboard-accessible interactions.
+- React Bits spotlight and magnetic interactions, active-section navigation, and scroll progress.
+- Credibility-first homepage order: experience, selected work, toolkit, then supporting story and principles.
 
 ## Stack
 
@@ -19,6 +21,7 @@ Design and interaction system reproduced from the owner-approved Samkit Kothari 
 - Vite
 - CSS
 - Lucide React
+- React Bits source components (licensed notice in `THIRD_PARTY_NOTICES.md`)
 
 ## Local development
 

@@ -7,10 +7,10 @@ export function ExperienceTimeline() {
   const education = experiences.filter((experience) => experience.kind === "education");
 
   return (
-    <section className="content-section journey-section" id="journey">
+    <section className="content-section journey-section" id="experience">
       <div className="section-intro-grid">
         <SectionHeading
-          eyebrow="06 / Journey"
+          eyebrow="01 / Experience"
           title="Growing from full-stack delivery into production AI."
           description="A progression through interactive web systems, security-sensitive payments, agentic products, production RAG, and end-to-end ownership."
         />

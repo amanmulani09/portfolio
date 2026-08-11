@@ -1,12 +1,11 @@
 // Adapted from React Bits SpotlightCard by David Haz.
 // License notice: /THIRD_PARTY_NOTICES.md
-import type { ElementType, MouseEventHandler, PropsWithChildren } from "react";
+import type { ElementType, HTMLAttributes, MouseEventHandler, PropsWithChildren } from "react";
 import { useRef } from "react";
 import "./reactBits.css";
 
-type SpotlightCardProps = PropsWithChildren<{
+type SpotlightCardProps = PropsWithChildren<HTMLAttributes<HTMLElement> & {
   as?: "article" | "div";
-  className?: string;
   spotlightColor?: string;
 }>;
 
@@ -14,7 +13,8 @@ export function SpotlightCard({
   as = "div",
   children,
   className = "",
-  spotlightColor = "rgba(182, 220, 123, 0.14)"
+  spotlightColor = "rgba(182, 220, 123, 0.14)",
+  ...props
 }: SpotlightCardProps) {
   const cardRef = useRef<HTMLElement>(null);
   const Component = as as ElementType;
@@ -29,7 +29,7 @@ export function SpotlightCard({
   };
 
   return (
-    <Component ref={cardRef} onMouseMove={handleMouseMove} className={`card-spotlight ${className}`}>
+    <Component ref={cardRef} onMouseMove={handleMouseMove} className={`card-spotlight ${className}`} {...props}>
       {children}
     </Component>
   );

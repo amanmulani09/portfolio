@@ -15,6 +15,7 @@ import {
 } from "./components/sections";
 import { projects } from "./data/resume";
 import { useThemePreference } from "./hooks/useThemePreference";
+import { ScrollProgress } from "./components/ui/ScrollProgress";
 
 function App() {
   const { theme, toggleTheme } = useThemePreference();
@@ -54,6 +55,7 @@ function App() {
 
   return (
     <div className="app-shell" data-theme={theme} id="top">
+      <ScrollProgress />
       <a className="skip-link" href="#main-content">
         Skip to main content
       </a>
@@ -66,13 +68,13 @@ function App() {
       ) : (
         <main id="main-content">
           <HeroSection />
+          <ExperienceTimeline />
           <ProjectsShowroom />
+          <SkillsConstellation />
           <AboutSection />
           <PrinciplesSection />
           <FieldNotesSection />
           <LinkedInProofSection />
-          <ExperienceTimeline />
-          <SkillsConstellation />
           <ContactSection />
         </main>
       )}
