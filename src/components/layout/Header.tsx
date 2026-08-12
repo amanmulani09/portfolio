@@ -14,6 +14,7 @@ const navigation = [
   { label: "Experience", href: "/#experience", section: "experience" },
   { label: "Work", href: "/#work", section: "work" },
   { label: "Toolkit", href: "/#toolkit", section: "toolkit" },
+  { label: "About", href: "/#about", section: "about" },
   { label: "Approach", href: "/#approach", section: "approach" },
   { label: "Blog", href: "/blog", section: "blog" },
   { label: "Contact", href: "/#contact", section: "contact" }
@@ -69,7 +70,9 @@ export function Header({ theme, onToggleTheme }: HeaderProps) {
         className="brand-lockup"
         aria-label={`${profile.name} · full-stack and AI engineering · portfolio home`}
       >
-        <span className="brand-mark">AM</span>
+        <span className="brand-mark header-profile-mark">
+          <img src="/aman-mulani-profile.png" alt="" width="88" height="88" decoding="async" />
+        </span>
         <span className="brand-copy">
           <strong>{profile.name}</strong>
           <small>AI + full-stack · {profile.location}</small>

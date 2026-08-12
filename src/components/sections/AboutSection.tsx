@@ -23,7 +23,14 @@ export function AboutSection() {
         <aside className="operator-card" aria-label={`About ${profile.name}`}>
           <div className="operator-card-top">
             <div className="operator-avatar">
-              <span>AM</span>
+              <img
+                src="/aman-mulani-profile.png"
+                alt={profile.name}
+                width="156"
+                height="156"
+                loading="lazy"
+                decoding="async"
+              />
               <i />
             </div>
             <div>
