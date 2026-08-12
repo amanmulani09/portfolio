@@ -7,10 +7,10 @@ export function SkillsConstellation() {
       <div className="content-section toolkit-layout">
         <div className="toolkit-intro">
           <span>03 / Working toolkit</span>
-          <h2 id="toolkit-title">Tools are choices, not identity.</h2>
+          <h2 id="toolkit-title">Tools I use to build and ship.</h2>
           <p>
-            I choose technology around user experience, system boundaries, data quality, permission scope, latency,
-            operating cost, and the team that will own it in production.
+            I choose technology based on the user need, data quality, security requirements, speed, cost, and long-term
+            ownership.
           </p>
         </div>
         <div className="toolkit-groups">

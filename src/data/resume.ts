@@ -225,20 +225,20 @@ export function getLinkedInPost(slug: string) {
 
 export const profile: Profile = {
   name: "Aman Mulani",
-  role: "AI + Full-Stack Engineer · Multi-Agent Systems",
-  headline: "I turn AI capability into full-stack products people can depend on.",
+  role: "AI + Full-Stack Engineer",
+  headline: "I build practical AI products from idea to production.",
   introduction:
-    "I design and ship multi-agent systems, RAG architectures, and AI workflows—backed by Python and FastAPI services, React and TypeScript interfaces, data platforms, and production operations.",
+    "I build AI features, RAG systems, backend services, and React interfaces that are simple to use and reliable in production.",
   location: "India",
   email: "mulaniaman0504@gmail.com",
   linkedin: "https://www.linkedin.com/in/aman-mulani/",
   github: "https://github.com/amanmulani09",
   resume: "/Aman-Mulani-Full-Stack-AI-Resume.pdf",
-  availability: "Open to AI, multi-agent, and full-stack product engineering conversations",
+  availability: "Open to AI and full-stack product engineering roles",
   currently: [
-    { label: "Building", value: "Multi-agent analysis and AI product systems" },
-    { label: "Shipping", value: "RAG architectures, APIs, and full-stack tools" },
-    { label: "Optimizing", value: "Reliability, security, latency, and cost" }
+    { label: "Building", value: "AI product features and agent workflows" },
+    { label: "Shipping", value: "RAG systems, APIs, and web tools" },
+    { label: "Improving", value: "Reliability, security, speed, and cost" }
   ]
 };
 
@@ -246,25 +246,25 @@ export const metrics: Metric[] = [
   {
     value: "4+",
     label: "years shipping software",
-    detail: "Building interfaces, backend services, automation, and production systems since 2022.",
+    detail: "Building web apps, backend services, automation, and AI features since 2022.",
     icon: "rocket"
   },
   {
     value: "3",
     label: "product organizations",
-    detail: "Engineering roles across HMX Media, Razorpay, and THG Ingenuity.",
+    detail: "Professional engineering roles at HMX Media, Razorpay, and THG Ingenuity.",
     icon: "building"
   },
   {
     value: "4",
     label: "engineering domains",
-    detail: "Interactive web, payments, ecommerce platforms, and production AI.",
+    detail: "Interactive web, payments, ecommerce, and AI systems.",
     icon: "layers"
   },
   {
     value: "E2E",
     label: "delivery scope",
-    detail: "Interfaces, APIs, data flows, delivery pipelines, observability, and operations.",
+    detail: "From user interface and API design to release, monitoring, and support.",
     icon: "workflow"
   }
 ];
@@ -272,23 +272,23 @@ export const metrics: Metric[] = [
 export const principles: Principle[] = [
   {
     index: "01",
-    title: "Production before prototype theater",
-    body: "Useful software needs dependable interfaces, APIs, data flows, observability, and failure handling—not only a convincing demo."
+    title: "Build for real users",
+    body: "A good demo is not enough. I focus on clear user flows, reliable APIs, useful data, and graceful failure handling."
   },
   {
     index: "02",
-    title: "Retrieval is a product decision",
-    body: "Embedding models, chunking, ranking, latency, and cost shape what users experience. I treat those trade-offs as product work."
+    title: "Make AI answers trustworthy",
+    body: "For RAG systems, I care about the source data, retrieval quality, citations, speed, and cost behind every answer."
   },
   {
     index: "03",
-    title: "Security is part of correctness",
-    body: "Payments, agents, and automation all cross privilege boundaries. Auditability, validation, and controlled actions belong in the design."
+    title: "Keep actions controlled",
+    body: "Payments, agents, and automation need clear permissions, validation, logs, and human-visible boundaries."
   },
   {
     index: "04",
-    title: "Own the whole outcome",
-    body: "I take ambiguous problems from architecture through delivery, measurement, and operation while keeping the product simple to use."
+    title: "Own the result",
+    body: "I like taking unclear problems through design, implementation, release, and improvement while keeping the product easy to use."
   }
 ];
 
@@ -337,13 +337,13 @@ export const fieldNotes: FieldNote[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "An internal RAG assistant reduced information-discovery time by approximately 40% while deflecting repetitive support queries.",
+      "An internal RAG assistant helped teams find information about 40% faster and reduced repeated support questions.",
     name: "Information discovery",
     context: "THG Ingenuity · Production RAG outcome"
   },
   {
     quote:
-      "Schema-validation pipelines now block invalid configuration before release, cutting configuration-related production incidents by approximately 60%.",
+      "Release-time schema validation caught bad configuration earlier and reduced related production incidents by about 60%.",
     name: "Release safety",
     context: "THG Ingenuity · Production engineering outcome"
   }
@@ -356,10 +356,10 @@ export const experiences: Experience[] = [
     role: "Software Engineer, AI & Full-Stack",
     period: "Aug 2025 — Present",
     summary:
-      "Production RAG, automation, and full-stack ecommerce systems across customer-facing and internal products.",
+      "Building AI, automation, and full-stack ecommerce tools for customer-facing and internal products.",
     highlights: [
-      "Build AI and full-stack systems across Python services, TypeScript interfaces, automation, and production operations.",
-      "Shipped an internal RAG knowledge assistant that reduced information-discovery time by ~40%, plus schema validation that cut config incidents by ~60%."
+      "Build Python services, TypeScript interfaces, automation, and production workflows.",
+      "Shipped an internal RAG assistant that made information discovery ~40% faster, plus schema validation that cut config incidents by ~60%."
     ]
   },
   {
@@ -368,10 +368,10 @@ export const experiences: Experience[] = [
     role: "Product Engineer, Full-Stack",
     period: "Apr 2024 — Aug 2025",
     summary:
-      "Config-driven Push Provisioning, card tokenization services, lifecycle management, and observability for security-sensitive payment workflows.",
+      "Built secure payment workflows for Push Provisioning, card tokenization, lifecycle events, and monitoring.",
     highlights: [
-      "Led a white-labeled platform that turned new banking integrations from custom builds into repeatable configuration.",
-      "Built Python and FastAPI services where correctness, auditability, structured logging, monitoring, and alerting were hard requirements."
+      "Led a white-labeled platform that made new banking integrations repeatable through configuration.",
+      "Built Python and FastAPI services with strong validation, audit trails, monitoring, and alerts."
     ]
   },
   {
@@ -380,9 +380,9 @@ export const experiences: Experience[] = [
     role: "Web Developer",
     period: "Aug 2022 — Mar 2024",
     summary:
-      "Automation, interactive web experiences, and shared frontend systems using React, TypeScript, Node.js, Canvas, and WebGL.",
+      "Built automation, interactive web experiences, and shared frontend tools with React, TypeScript, Canvas, and WebGL.",
     highlights: [
-      "Built an internal CLI automation tool that replaced a manual per-asset content-localization process.",
+      "Built an internal CLI tool that replaced a manual content-localization workflow.",
       "Delivered performance-sensitive Canvas and WebGL experiences and contributed to shared UI libraries."
     ]
   },
@@ -403,11 +403,11 @@ export const projects: Project[] = [
     title: "THG Commerce Storefront",
     eyebrow: "THG Ingenuity · Current experience · Public platform context",
     short:
-      "Storefront and platform engineering across customer-facing ecommerce, internal knowledge retrieval, release validation, and production operations.",
+      "Ecommerce engineering across storefront work, internal knowledge search, release validation, and production support.",
     thesis:
-      "Global commerce stays dependable when storefront delivery, platform configuration, internal knowledge, and operational feedback work as one system.",
+      "Commerce platforms work best when teams can ship safely, find answers quickly, and catch bad configuration before release.",
     outcome:
-      "Production full-stack delivery backed by an internal RAG assistant and release-time schema validation, with contribution claims limited to résumé-backed work.",
+      "Full-stack delivery supported by an internal RAG assistant and release-time schema validation.",
     role: "Software Engineer · AI and full-stack",
     timeline: "Aug 2025 — Present",
     team: "THG Ingenuity product teams",
@@ -416,15 +416,15 @@ export const projects: Project[] = [
     sourceLabel: "THG Commerce overview",
     sourceKind: "public",
     problem:
-      "Enterprise commerce spans storefront experiences, shared platform capabilities, brand configuration, knowledge access, and release operations. Small errors can propagate across customer-facing journeys, while fragmented internal information slows diagnosis and delivery.",
+      "Enterprise commerce teams manage many storefronts, shared platform features, brand settings, and release paths. Small configuration mistakes can affect customer journeys, and scattered internal knowledge slows delivery.",
     solution:
-      "At THG Ingenuity, I contribute across TypeScript interfaces, Python services, automation, and production operations. My résumé-backed work includes an internal RAG knowledge assistant and schema-validation pipelines that block invalid configuration before release.",
+      "At THG Ingenuity, I work across TypeScript interfaces, Python services, automation, and release workflows. My work includes an internal RAG assistant and schema-validation pipelines that block invalid configuration before release.",
     impact:
-      "The knowledge assistant reduced information-discovery time by approximately 40%, while validation automation reduced configuration-related production incidents by approximately 60%.",
+      "The RAG assistant helped teams find information about 40% faster, while validation automation reduced configuration-related incidents by about 60%.",
     constraints: [
-      "Storefront behavior must remain reliable across brands, regions, and device sizes",
+      "Storefronts must work across brands, regions, and device sizes",
       "Configuration changes need validation before reaching production",
-      "Internal knowledge sources require grounded retrieval and controlled access",
+      "Internal knowledge needs grounded answers and controlled access",
       "Public discussion must not expose proprietary architecture, customer data, or private repositories"
     ],
     decisions: [
@@ -432,31 +432,31 @@ export const projects: Project[] = [
         index: "D1",
         title: "Validate configuration before release",
         body:
-          "Schema checks move configuration failures into CI, where teams can correct them before customer-facing systems are affected.",
+          "Schema checks catch configuration mistakes during delivery, before they can affect customers.",
         signal: "Release safety"
       },
       {
         index: "D2",
-        title: "Ground internal answers in source material",
+        title: "Ground answers in source material",
         body:
-          "The knowledge assistant retrieves relevant internal evidence before producing an answer, reducing time spent searching across fragmented documentation.",
+          "The assistant retrieves relevant internal evidence before answering, which reduces time spent searching through scattered documentation.",
         signal: "Faster discovery"
       },
       {
         index: "D3",
-        title: "Own delivery across layers",
+        title: "Connect the layers",
         body:
-          "Interface, service, automation, and operational concerns stay connected so issues can be traced to the layer that owns them.",
+          "Interface, service, automation, and release work stay connected so issues are easier to trace and fix.",
         signal: "End-to-end delivery"
       }
     ],
-    workflow: ["Storefront need", "Platform and service change", "Validation and review", "Production observation"],
+    workflow: ["Storefront need", "Service or UI change", "Validation and review", "Production feedback"],
     architecture: [
-      "Customer-facing storefronts sit on THG Commerce platform capabilities",
+      "Customer-facing storefronts run on shared commerce platform capabilities",
       "TypeScript interfaces and Python services support product workflows",
-      "Configuration contracts are checked during automated delivery pipelines",
-      "Internal RAG retrieval helps teams find grounded operational knowledge",
-      "Logs, monitoring, and production feedback guide diagnosis and iteration"
+      "Schema checks validate configuration during delivery",
+      "Internal RAG retrieval helps teams find trusted knowledge",
+      "Logs, monitoring, and feedback guide fixes and improvements"
     ],
     results: [
       { value: "~40%", label: "faster discovery" },
@@ -469,7 +469,7 @@ export const projects: Project[] = [
     confidentiality:
       "THG Commerce platform context comes from the linked public overview. Personal contribution and outcomes come from Aman’s résumé; implementation details, clients, data, and internal systems remain intentionally abstracted.",
     learning:
-      "Commerce reliability improves when product delivery, internal knowledge, validation, and operations are treated as connected engineering work.",
+      "Commerce reliability improves when product delivery, internal knowledge, validation, and support are treated as connected work.",
     next: "push-provisioning"
   },
   {
@@ -477,11 +477,11 @@ export const projects: Project[] = [
     title: "Push Provisioning",
     eyebrow: "Razorpay · Card tokenization · Public product context",
     short:
-      "A config-driven, white-labelled platform for bank-led card activation, multi-merchant token provisioning, lifecycle workflows, and operational visibility.",
+      "A configurable platform for bank-led card activation, merchant token provisioning, lifecycle workflows, and monitoring.",
     thesis:
-      "Regulated payment platforms scale when new integrations become controlled configuration—not repeated custom builds.",
+      "Regulated payment products scale better when new bank integrations use controlled configuration instead of repeated custom builds.",
     outcome:
-      "A reusable full-stack integration model for security-sensitive bank, merchant, and tokenization workflows with observability built into delivery.",
+      "A reusable full-stack integration model for secure bank, merchant, and tokenization workflows.",
     role: "Product Engineer · Full-stack platform",
     timeline: "Apr 2024 — Aug 2025",
     team: "Razorpay product and payments teams",
@@ -496,15 +496,15 @@ export const projects: Project[] = [
       }
     ],
     problem:
-      "RBI card-tokenization rules changed how saved-card experiences could work. Banks needed a secure way to activate and provision cards across merchants, while every integration introduced branding, configuration, network, lifecycle, and operational requirements.",
+      "Card-tokenization rules changed how saved-card experiences worked. Banks needed a secure way to activate and provision cards across merchants, while each integration had its own branding, settings, network rules, and lifecycle events.",
     solution:
-      "I led a white-labelled, config-driven Push Provisioning platform and built Python and FastAPI services around card tokenization and lifecycle workflows. Structured logs, monitoring, alerts, and controlled integration boundaries were treated as product requirements.",
+      "I led a white-labeled, config-driven Push Provisioning platform and built Python and FastAPI services for tokenization and lifecycle workflows. Logging, monitoring, alerts, and clear integration boundaries were part of the product design.",
     impact:
-      "New bank journeys could be expressed through repeatable configuration and shared platform behavior instead of separate product builds. Public Razorpay material documents the broader Push Provisioning and TokenHQ capabilities; private implementation metrics remain undisclosed.",
+      "New bank journeys could be handled through repeatable configuration and shared platform behavior instead of separate custom builds. Public Razorpay material describes the broader Push Provisioning and TokenHQ products; private metrics are not disclosed.",
     constraints: [
-      "Card and identity workflows cross strict security and regulatory boundaries",
-      "Banks require distinct branding and journey configuration without platform forks",
-      "Token lifecycle events must remain observable and recoverable",
+      "Card and identity workflows must follow strict security and regulatory rules",
+      "Banks need distinct branding and journey settings without platform forks",
+      "Token lifecycle events need monitoring and recovery paths",
       "Public case-study content cannot reveal partner data, credentials, or internal payment architecture"
     ],
     decisions: [
@@ -512,7 +512,7 @@ export const projects: Project[] = [
         index: "D1",
         title: "Turn integrations into configuration",
         body:
-          "Typed configuration captured bank-specific branding and behavior while shared services preserved one platform path.",
+          "Typed configuration captured bank-specific branding and behavior while shared services kept one reusable platform path.",
         signal: "Repeatable onboarding"
       },
       {
@@ -524,19 +524,19 @@ export const projects: Project[] = [
       },
       {
         index: "D3",
-        title: "Build operations into the product",
+        title: "Make failures visible",
         body:
-          "Structured logging, monitoring, and alerting made integration failures diagnosable without exposing sensitive payment data.",
+          "Structured logging, monitoring, and alerts made integration failures easier to diagnose without exposing sensitive payment data.",
         signal: "Operational visibility"
       }
     ],
     workflow: ["Bank card activation", "Customer verification", "Merchant selection", "Token provisioning"],
     architecture: [
-      "A white-labelled interface adapts bank-specific content and configuration",
+      "A white-labeled interface adapts bank-specific content and configuration",
       "FastAPI services validate requests and coordinate provisioning workflows",
       "TokenHQ capabilities connect merchant and card-network tokenization paths",
       "Webhook and lifecycle handling keep card state changes synchronized",
-      "Structured telemetry supports audit, monitoring, and incident response"
+      "Structured logs and alerts support audit, monitoring, and incident response"
     ],
     results: [
       { value: "Config", label: "bank integrations" },
@@ -549,7 +549,7 @@ export const projects: Project[] = [
     confidentiality:
       "Product behavior is summarized from Razorpay’s public Push Provisioning and TokenHQ articles. Personal contribution comes from Aman’s résumé. Partner integrations, internal architecture, credentials, and card data are excluded.",
     learning:
-      "Security-sensitive platforms become easier to scale when variability is modeled explicitly and every privileged transition remains observable.",
+      "Security-sensitive platforms are easier to scale when variation is modeled clearly and every privileged action is visible.",
     next: "hmx-interactive"
   },
   {
@@ -557,11 +557,11 @@ export const projects: Project[] = [
     title: "Interactive 3D Commerce",
     eyebrow: "HMX Media · Sharp Kitchen + Royal Enfield · Public case studies",
     short:
-      "Mobile-first WebGL product experiences that let customers explore, configure, and understand complex products directly in the browser.",
+      "Mobile-first WebGL experiences that let customers explore and configure complex products in the browser.",
     thesis:
-      "Immersive product interfaces only work when visual quality, input responsiveness, and download cost are engineered together.",
+      "Immersive product interfaces only work when visuals, speed, and touch interaction are engineered together.",
     outcome:
-      "Performance-sensitive web experiences and shared frontend systems supporting browser-based 3D configuration across appliance and automotive products.",
+      "Browser-based 3D product experiences and shared frontend systems for appliance and automotive products.",
     role: "Web Developer · Interactive frontend",
     timeline: "Aug 2022 — Mar 2024",
     team: "HMX Media interactive teams",
@@ -576,14 +576,14 @@ export const projects: Project[] = [
       }
     ],
     problem:
-      "Photorealistic 3D product configuration must remain responsive on mobile browsers and slower connections while supporting product swaps, options, camera interaction, and rich visual states.",
+      "Photorealistic 3D product configuration must stay responsive on mobile browsers and slower connections while supporting product options, camera movement, and rich visual states.",
     solution:
-      "During my HMX Media role, I delivered performance-sensitive React, TypeScript, Canvas, and WebGL experiences and contributed to shared UI systems. Sharp Kitchen and Royal Enfield are public examples of the browser-based configuration work represented here.",
+      "At HMX Media, I delivered React, TypeScript, Canvas, and WebGL experiences and contributed to shared UI systems. Sharp Kitchen and Royal Enfield are public examples of this type of browser-based configuration work.",
     impact:
-      "The experiences made detailed appliance and motorcycle exploration available from consumer devices without requiring a native application. Individual contribution is described only at résumé level; HMX’s linked pages document complete team outcomes.",
+      "These experiences made detailed appliance and motorcycle exploration available on consumer devices without requiring a native app. My individual contribution is described at résumé level; HMX’s linked pages show the complete team outcomes.",
     constraints: [
-      "High-quality 3D assets must load within browser and mobile performance budgets",
-      "Interaction needs to remain responsive across pointer and touch input",
+      "High-quality 3D assets must load within mobile performance budgets",
+      "Interactions need to stay smooth across pointer and touch input",
       "Product variants and visual state require predictable frontend contracts",
       "Client assets, project ownership boundaries, and proprietary engine details remain confidential"
     ],
@@ -592,14 +592,14 @@ export const projects: Project[] = [
         index: "D1",
         title: "Design mobile-first interaction",
         body:
-          "Controls, camera movement, and configuration states were built around touch constraints rather than adapted after desktop delivery.",
+          "Controls, camera movement, and configuration states were built for touch constraints from the start.",
         signal: "Any-device access"
       },
       {
         index: "D2",
         title: "Treat asset weight as product behavior",
         body:
-          "Loading and runtime performance shaped how scenes, materials, and interface states were delivered to the browser.",
+          "Loading speed and runtime performance shaped how scenes, materials, and interface states were delivered.",
         signal: "Fast loading"
       },
       {
@@ -614,7 +614,7 @@ export const projects: Project[] = [
     architecture: [
       "React and TypeScript manage interface and configuration state",
       "Canvas and WebGL render interactive product scenes in the browser",
-      "Optimized assets and data handling protect mobile load performance",
+      "Optimized assets and data handling protect mobile performance",
       "Shared UI components connect controls to visual scene state",
       "Responsive input handling supports touch, pointer, and device variation"
     ],
@@ -629,7 +629,7 @@ export const projects: Project[] = [
     confidentiality:
       "Product capabilities come from HMX Media’s public Sharp Kitchen and Royal Enfield case studies. This page avoids client assets, proprietary engine details, private code, and unverified claims of sole ownership.",
     learning:
-      "Visual fidelity has product value only when asset delivery, runtime performance, and interaction remain dependable on real devices.",
+      "High-quality visuals matter only when loading, performance, and interaction stay dependable on real devices.",
     next: "chitra-ai"
   },
   {
@@ -637,11 +637,11 @@ export const projects: Project[] = [
     title: "Chitra.ai",
     eyebrow: "Multi-agent video analysis · Public GitHub project",
     short:
-      "A stateless multi-agent pipeline that combines audio transcription, visual analysis, scoring, and report delivery behind a FastAPI service.",
+      "A FastAPI service that analyzes video and audio through focused agents, then scores the result and sends a report.",
     thesis:
-      "Multi-agent systems stay understandable when each agent owns one capability and typed contracts connect the pipeline.",
+      "Multi-agent systems are easier to trust when each agent has one clear job.",
     outcome:
-      "An end-to-end video and audio analysis architecture with isolated agents, Docker packaging, tests, and staged CI/CD.",
+      "An end-to-end video analysis project with isolated agents, typed handoffs, Docker packaging, tests, and staged CI/CD.",
     role: "Creator · AI and backend architecture",
     timeline: "Open-source project",
     team: "Solo ownership",
@@ -650,14 +650,14 @@ export const projects: Project[] = [
     sourceLabel: "View source on GitHub",
     sourceKind: "github",
     problem:
-      "Video analysis spans multiple concerns—audio transcription, image understanding, scoring, reporting, external APIs, and long-running failure paths—that become difficult to test when packed into one model call.",
+      "Video analysis combines audio transcription, image understanding, scoring, reporting, external APIs, and long-running failures. It becomes hard to test when everything is packed into one model call.",
     solution:
-      "I built a layered FastAPI service where Data Capture, Analysis, and Report agents each own one stage. Pydantic contracts connect the agents, while a service layer orchestrates the stateless pipeline.",
+      "I built a layered FastAPI service where Data Capture, Analysis, and Report agents each own one stage. Pydantic contracts connect the stages, and a service layer runs the stateless pipeline.",
     impact:
-      "The project demonstrates a multi-agent system that remains testable, container-ready, and separable from its HTTP interface.",
+      "The project shows a multi-agent system that is testable, container-ready, and separate from its API layer.",
     constraints: [
       "Video and audio require different extraction and model capabilities",
-      "External AI and email services introduce latency, cost, and failure boundaries",
+      "External AI and email services introduce latency, cost, and failure points",
       "Secrets must enter at runtime rather than being baked into images",
       "The pipeline should scale horizontally without local session state"
     ],
@@ -666,14 +666,14 @@ export const projects: Project[] = [
         index: "D1",
         title: "Give every agent one responsibility",
         body:
-          "Data Capture validates and transcribes, Analysis interprets and scores, and Report formats and delivers. Each external capability has a clear owner.",
+          "Data Capture validates and transcribes, Analysis interprets and scores, and Report formats and delivers. Each capability has a clear owner.",
         signal: "Focused agents"
       },
       {
         index: "D2",
         title: "Connect stages with typed contracts",
         body:
-          "Pydantic models define the shapes passed between agents so invalid data fails at a known boundary instead of leaking through the pipeline.",
+          "Pydantic models define what moves between agents, so invalid data fails at a clear boundary.",
         signal: "Explicit handoffs"
       },
       {
@@ -687,8 +687,8 @@ export const projects: Project[] = [
     workflow: ["Video and audio", "Capture agent", "Analysis agent", "Report agent"],
     architecture: [
       "FastAPI validates requests and delegates through a thin API layer",
-      "AnalysisService coordinates three dependency-injected agents",
-      "Whisper transcribes audio while GPT-4o analyses visual and text evidence",
+      "A service layer coordinates three dependency-injected agents",
+      "Whisper transcribes audio while GPT-4o analyzes visual and text evidence",
       "SendGrid delivers the generated report after scoring and prioritization",
       "Docker and GitHub Actions support test, UAT, and production promotion"
     ],
@@ -703,7 +703,7 @@ export const projects: Project[] = [
     confidentiality:
       "This case study uses only architecture and behavior documented in the public repository. No API keys, private media, or production data are included.",
     learning:
-      "Multi-agent architecture adds value when it creates clean capability boundaries—not when it only adds more model calls.",
+      "Multi-agent architecture adds value when it creates clear responsibility boundaries, not just more model calls.",
     next: "rag-architectures"
   },
   {
@@ -711,11 +711,11 @@ export const projects: Project[] = [
     title: "RAG Architecture Lab",
     eyebrow: "Retrieval engineering · Public GitHub project",
     short:
-      "A collection of practical RAG implementations covering hybrid search, reranking, prompt-injection handling, and layered service architecture.",
+      "A practical RAG lab covering hybrid search, reranking, prompt-injection handling, and layered service design.",
     thesis:
-      "RAG quality depends on retrieval architecture, data boundaries, and evaluation—not only on the language model.",
+      "RAG quality depends on the retrieval design, not just the language model.",
     outcome:
-      "A public implementation lab comparing basic retrieval patterns with a layered, service-oriented RAG application.",
+      "A public code lab comparing simple retrieval patterns with a layered RAG application.",
     role: "Creator · Retrieval and system design",
     timeline: "Open-source project",
     team: "Solo ownership",
@@ -724,13 +724,13 @@ export const projects: Project[] = [
     sourceLabel: "View source on GitHub",
     sourceKind: "github",
     problem:
-      "Simple RAG demos hide the decisions that matter in production: retrieval strategy, reranking, injection boundaries, document APIs, vector repositories, and separation between model and application logic.",
+      "Simple RAG demos often hide the decisions that matter: search strategy, reranking, prompt-injection handling, document APIs, vector storage, and separation between model and application code.",
     solution:
-      "I implemented focused examples for hybrid search, reranking, retrieval, and injection handling, then a layered application separating API routes, models, RAG services, repositories, and chat orchestration.",
+      "I implemented focused examples for hybrid search, reranking, retrieval, and injection handling, plus a layered app that separates API routes, models, RAG services, repositories, and chat orchestration.",
     impact:
-      "The repository turns RAG patterns into inspectable code paths that can be compared, tested, and extended independently.",
+      "The repository turns RAG concepts into code paths that can be compared, tested, and extended.",
     constraints: [
-      "Retrieval experiments need comparable boundaries and repeatable inputs",
+      "Retrieval experiments need repeatable inputs and comparable boundaries",
       "Prompt injection must be treated as untrusted data behavior",
       "Vector storage should remain behind a repository abstraction",
       "HTTP, retrieval, and model concerns should not collapse into one module"
@@ -740,21 +740,21 @@ export const projects: Project[] = [
         index: "D1",
         title: "Compare retrieval patterns directly",
         body:
-          "Basic, hybrid, and reranked retrieval live as explicit implementations so trade-offs remain visible instead of hidden behind a framework default.",
+          "Basic, hybrid, and reranked retrieval are separate implementations, so trade-offs stay visible.",
         signal: "Comparable retrieval"
       },
       {
         index: "D2",
         title: "Layer the application",
         body:
-          "API, service, RAG, model, and repository modules keep web concerns separate from retrieval and language-model behavior.",
+          "API, service, RAG, model, and repository modules keep web code separate from retrieval and model behavior.",
         signal: "Replaceable layers"
       },
       {
         index: "D3",
         title: "Model injection as a system risk",
         body:
-          "Injection handling is represented as its own implementation concern rather than relying on prompt wording as the only control.",
+          "Injection handling is treated as a system concern, not only a prompt-writing concern.",
         signal: "Safer context"
       }
     ],
@@ -764,7 +764,7 @@ export const projects: Project[] = [
       "Chunking and embedding services prepare searchable context",
       "A vector repository isolates persistence from retrieval logic",
       "Retrieval services select and rank relevant evidence",
-      "Chat and LLM services compose answers through stable application boundaries"
+      "Chat and LLM services compose answers through clear application boundaries"
     ],
     results: [
       { value: "2", label: "architecture tracks" },
@@ -777,7 +777,7 @@ export const projects: Project[] = [
     confidentiality:
       "Examples, documents, and architecture come from the public repository. No internal knowledge base or private retrieval data is represented.",
     learning:
-      "Useful RAG work starts with evidence flow: what enters the index, what gets retrieved, and which boundaries keep untrusted context controlled.",
+      "Useful RAG work starts with evidence flow: what enters the index, what gets retrieved, and how untrusted context is controlled.",
     next: "codo"
   },
   {
@@ -785,11 +785,11 @@ export const projects: Project[] = [
     title: "Codo",
     eyebrow: "AI code review · Public GitHub project",
     short:
-      "A GitHub App that reviews pull requests automatically, posts focused inline findings, summarizes risk, and reports a status check.",
+      "A GitHub App that reviews pull requests, posts focused inline findings, summarizes risk, and reports a status check.",
     thesis:
-      "AI review should narrow human attention while keeping repository permissions and final code changes under human control.",
+      "AI code review should help humans focus without taking control away from them.",
     outcome:
-      "An automated pull-request review workflow focused on correctness, security, resource leaks, and broken error handling.",
+      "An automated pull-request review workflow focused on correctness, security, resource leaks, and error handling.",
     role: "Creator · Agent and platform engineering",
     timeline: "Open-source project",
     team: "Solo ownership",
@@ -798,23 +798,23 @@ export const projects: Project[] = [
     sourceLabel: "View source on GitHub",
     sourceKind: "github",
     problem:
-      "Pull requests can hide correctness defects and security risks, but automated review becomes counterproductive when it floods developers with style noise or gains unnecessary repository authority.",
+      "Pull requests can hide bugs and security risks, but automated review becomes counterproductive when it floods developers with style comments or asks for too much repository access.",
     solution:
-      "I built a GitHub App that reacts to pull-request events, analyses the diff, posts inline comments and a summary, and exposes repository-level controls through a small YAML configuration.",
+      "I built a GitHub App that reacts to pull-request events, analyzes the diff, posts inline comments and a summary, and exposes repository-level controls through a small YAML configuration.",
     impact:
-      "Codo demonstrates an AI review product designed around actionable findings, scoped access, repeat reviews, and human-applied fixes.",
+      "Codo shows an AI review product designed around useful findings, scoped access, repeat reviews, and human-applied fixes.",
     constraints: [
-      "Pull-request code and comments are untrusted model input",
+      "Pull-request code and comments are untrusted model inputs",
       "Repository permissions must stay limited to review needs",
       "Findings must prioritize signal over speculative noise",
-      "Repeated reviews should update prior output instead of spamming a pull request"
+      "Repeated reviews should update prior output instead of spamming the pull request"
     ],
     decisions: [
       {
         index: "D1",
         title: "Integrate through a scoped GitHub App",
         body:
-          "The app requests read access to code and pull requests plus permission to post review comments and status checks—nothing broader.",
+          "The app requests only the access needed to read pull requests, post review comments, and report status checks.",
         signal: "Least privilege"
       },
       {
@@ -836,7 +836,7 @@ export const projects: Project[] = [
     architecture: [
       "GitHub App events enter a Python application through webhook handling",
       "Repository configuration controls review scope and severity",
-      "A review worker analyses the diff and produces structured findings",
+      "A review worker analyzes the diff and produces structured findings",
       "GitHub API calls publish summaries, inline comments, and status checks",
       "Human reviewers decide whether suggested fixes are applied"
     ],
@@ -851,7 +851,7 @@ export const projects: Project[] = [
     confidentiality:
       "The case study describes the public repository and README. No private source code, installation tokens, or customer pull requests are shown.",
     learning:
-      "AI review earns trust by being quiet when uncertain, precise when useful, and constrained by repository permissions.",
+      "AI review earns trust by staying quiet when uncertain, being precise when useful, and respecting repository permissions.",
     next: "thg-commerce"
   },
 ];

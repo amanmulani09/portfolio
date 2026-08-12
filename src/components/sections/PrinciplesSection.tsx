@@ -8,8 +8,8 @@ export function PrinciplesSection() {
         <div className="section-intro-grid">
           <SectionHeading
             eyebrow="05 / How I work"
-            title="A small operating system for building."
-            description="These are not abstract values. They are the checks I use when a project becomes noisy, urgent, or difficult to reason about."
+            title="How I make the work dependable."
+            description="These are the checks I use when a project becomes urgent, unclear, or difficult to reason about."
           />
           <div className="approach-manifesto" aria-label="Aman's engineering manifesto">
             <span>Make it fast.</span>

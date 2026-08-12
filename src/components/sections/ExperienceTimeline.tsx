@@ -11,8 +11,8 @@ export function ExperienceTimeline() {
       <div className="section-intro-grid">
         <SectionHeading
           eyebrow="01 / Experience"
-          title="Full-stack foundations. AI product depth."
-          description="Four years across interactive web systems, security-sensitive payment platforms, backend services, agentic products, production RAG, and end-to-end ownership."
+          title="Experience across web, payments, and AI."
+          description="Four years building production software across interactive web apps, secure payment systems, backend services, RAG, and AI product features."
         />
         <a className="journey-resume-link" href={profile.resume} target="_blank" rel="noopener noreferrer">
           Open the full résumé

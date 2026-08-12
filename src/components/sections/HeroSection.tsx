@@ -41,7 +41,7 @@ export function HeroSection() {
             </div>
 
             <p className="hero-cta-note">
-              Looking for an AI + full-stack engineer who owns delivery end to end?{" "}
+              Looking for an engineer who can build AI features and the product around them?{" "}
               <a href={`mailto:${profile.email}`}>Let&apos;s talk.</a>
             </p>
           </div>

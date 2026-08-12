@@ -7,15 +7,15 @@ export function AboutSection() {
     <section className="content-section about-section" id="about">
       <div className="about-layout">
         <div>
-          <SectionHeading eyebrow="04 / The person in the system" title="I like the messy middle." />
+          <SectionHeading eyebrow="04 / About" title="I like turning unclear problems into working products." />
           <div className="about-statement">
             <p>
-              I am drawn to ambiguous product problems where interfaces, APIs, data, models, tools, and operations all
-              need to become one dependable system.
+              I am drawn to product problems where the user experience, API, data, AI model, and release process all
+              need to work together.
             </p>
             <p>
-              I build AI systems as complete products, not isolated model demos. That means owning the full-stack
-              services, interfaces, data contracts, security boundaries, and operations that make intelligence useful.
+              I build AI systems as complete products, not isolated model demos. That means owning the interface,
+              backend, data contracts, security checks, and production behavior.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ export function AboutSection() {
             </span>
             <span>
               <BrainCircuit size={15} aria-hidden="true" />
-              Builder · systems thinker · product owner
+              Builder · systems thinker · product-minded engineer
             </span>
             <span>
               <BookOpen size={15} aria-hidden="true" />
@@ -60,8 +60,8 @@ export function AboutSection() {
       <div className="about-footnote">
         <span>What connects the work</span>
         <p>
-          I care about the handoff between engineering and business: how interface choices affect adoption, how system
-          design affects operating cost, how retrieval affects trust, and how automation saves time without weakening control.
+          I care about how engineering choices affect the business: whether users adopt the interface, whether systems
+          stay affordable, whether AI answers can be trusted, and whether automation saves time without weakening control.
         </p>
       </div>
     </section>

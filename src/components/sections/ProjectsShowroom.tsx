@@ -15,12 +15,12 @@ export function ProjectsShowroom() {
       <div className="section-intro-grid">
         <SectionHeading
           eyebrow="02 / Selected work"
-          title="Case studies with decisions and results."
-          description="Professional product work first—THG Ingenuity, Razorpay, and HMX Media—followed by three focused AI projects with public source."
+          title="Selected work with clear outcomes."
+          description="Professional work at THG Ingenuity, Razorpay, and HMX Media, followed by focused AI projects with public source code."
         />
         <p className="section-aside">
-          Original visualizations explain the system boundaries without exposing proprietary interfaces, internal
-          documents, customer data, or private repositories.
+          Each case study keeps the useful story visible while protecting private architecture, customer data, and
+          company-owned code.
         </p>
       </div>
 
@@ -94,7 +94,7 @@ export function ProjectsShowroom() {
 
       <div className="projects-cta">
         <span>Want the quick version?</span>
-        <p>Start with the résumé, or reach out if you want to talk through the decisions behind the work.</p>
+        <p>Start with the résumé, or reach out to discuss the role, team, and problems you are hiring for.</p>
         <div>
           <a href={profile.resume} target="_blank" rel="noopener noreferrer">
             Open résumé

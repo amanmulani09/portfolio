@@ -8,7 +8,7 @@ export function Footer() {
         <span className="brand-mark">AM</span>
         <div>
           <strong>Designed around the work. Written from experience.</strong>
-          <p>Built by {profile.name} with React, TypeScript, CSS, and production-minded detail.</p>
+          <p>Built by {profile.name} with React, TypeScript, CSS, and care for the details that matter.</p>
         </div>
       </div>
       <div className="footer-links" aria-label="Footer links">

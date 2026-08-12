@@ -10,7 +10,7 @@ export function LinkedInProofSection() {
           <SectionHeading
             eyebrow="07 / Measured impact"
             title="What changed after shipping."
-            description="Selected outcomes from production systems described in my résumé."
+            description="Selected outcomes from work described in my résumé."
           />
           <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
             View full profile on LinkedIn

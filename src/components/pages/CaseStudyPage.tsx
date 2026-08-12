@@ -25,7 +25,7 @@ export function CaseStudyPage({ project }: CaseStudyPageProps) {
   useEffect(() => {
     const siteTitle = `${profile.name} | AI + Full-Stack Engineer`;
     const siteDescription =
-      "Aman Mulani is an AI + Full-Stack Engineer building multi-agent systems, RAG architectures, backend services, and product interfaces.";
+      "Aman Mulani is an AI + Full-Stack Engineer building practical AI features, RAG systems, backend services, and React interfaces.";
     const siteUrl = window.location.origin + "/";
     const pageTitle = `${project.title} Case Study | ${profile.name}`;
     const pageUrl = `${window.location.origin}/work/${project.id}`;
@@ -48,11 +48,11 @@ export function CaseStudyPage({ project }: CaseStudyPageProps) {
       setMeta('meta[name="description"]', siteDescription);
       setMeta('meta[property="og:title"]', siteTitle);
       setMeta('meta[property="og:description"]',
-        "From interface to intelligence. Explore full-stack products, backend platforms, production AI, RAG, and secure automation."
+        "Explore clear case studies across full-stack products, AI features, RAG, payments, and secure automation."
       );
       setMeta('meta[property="og:url"]', siteUrl);
       setMeta('meta[name="twitter:title"]', siteTitle);
-      setMeta('meta[name="twitter:description"]', "AI systems with full-stack product depth.");
+      setMeta('meta[name="twitter:description"]', "Practical AI and full-stack product engineering.");
       document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute("href", siteUrl);
     };
   }, [project]);

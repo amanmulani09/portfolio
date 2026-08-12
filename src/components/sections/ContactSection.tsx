@@ -31,13 +31,13 @@ export function ContactSection() {
             {profile.availability}
           </div>
           <h2>
-            Building product systems with
+            Building an AI product with
             <br />
             <span>real production stakes?</span>
           </h2>
           <p>
-            I am always ready to discuss full-stack products, frontend and backend platforms, LLM workflows, production
-            RAG, observability, or security-sensitive automation.
+            I am happy to discuss full-stack products, AI workflows, RAG, backend services, observability, or
+            security-sensitive automation.
           </p>
 
           <div className="contact-composer">
