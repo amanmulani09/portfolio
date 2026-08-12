@@ -10,7 +10,6 @@ import {
   ContactSection,
   ExperienceTimeline,
   HeroSection,
-  LinkedInProofSection,
   PrinciplesSection,
   ProjectsShowroom,
   SkillsConstellation
@@ -92,7 +91,6 @@ function App() {
           <AboutSection />
           <PrinciplesSection />
           <BlogSection />
-          <LinkedInProofSection />
           <ContactSection />
         </main>
       )}
