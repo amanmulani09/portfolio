@@ -225,10 +225,10 @@ export function getLinkedInPost(slug: string) {
 
 export const profile: Profile = {
   name: "Aman Mulani",
-  role: "AI + Full-Stack Engineer",
-  headline: "I build practical AI products from idea to production.",
+  role: "Full-Stack & AI Engineer",
+  headline: "I build production web applications and AI-powered products across ecommerce and payments.",
   introduction:
-    "I build AI features, RAG systems, backend services, and React interfaces that are simple to use and reliable in production.",
+    "I work across frontend, backend, AI integrations, system design, deployment, and production support—taking features from requirements and architecture through release and iteration.",
   location: "India",
   email: "mulaniaman0504@gmail.com",
   linkedin: "https://www.linkedin.com/in/aman-mulani/",
@@ -236,9 +236,9 @@ export const profile: Profile = {
   resume: "/Aman-Mulani-Full-Stack-AI-Resume.pdf",
   availability: "Open to AI and full-stack product engineering roles",
   currently: [
-    { label: "Building", value: "AI product features and agent workflows" },
-    { label: "Shipping", value: "RAG systems, APIs, and web tools" },
-    { label: "Improving", value: "Reliability, security, speed, and cost" }
+    { label: "Building", value: "AI shopping assistants and product experiences" },
+    { label: "Shipping", value: "RAG apps, multi-tenant systems, APIs, and automation" },
+    { label: "Improving", value: "Reliability, security, latency, and cost" }
   ]
 };
 
@@ -251,14 +251,14 @@ export const metrics: Metric[] = [
   },
   {
     value: "3",
-    label: "product organizations",
-    detail: "Professional engineering roles at HMX Media, Razorpay, and THG Ingenuity.",
+    label: "engineering teams",
+    detail: "Professional engineering roles at THG Ingenuity, Razorpay, and HMX Media.",
     icon: "building"
   },
   {
-    value: "4",
-    label: "engineering domains",
-    detail: "Interactive web, payments, ecommerce, and AI systems.",
+    value: "2",
+    label: "product domains",
+    detail: "Production engineering across ecommerce and payments.",
     icon: "layers"
   },
   {
@@ -277,13 +277,13 @@ export const principles: Principle[] = [
   },
   {
     index: "02",
-    title: "Make AI answers trustworthy",
-    body: "For RAG systems, I care about the source data, retrieval quality, citations, speed, and cost behind every answer."
+    title: "Make AI useful in context",
+    body: "AI should fit an existing customer journey or workflow, with practical retrieval quality, latency, cost, and observable failure modes."
   },
   {
     index: "03",
-    title: "Keep actions controlled",
-    body: "Payments, agents, and automation need clear permissions, validation, logs, and human-visible boundaries."
+    title: "Keep systems controlled",
+    body: "Payments, agents, and automation need clear permissions, validation, logs, testing, and human-visible boundaries."
   },
   {
     index: "04",
@@ -337,15 +337,15 @@ export const fieldNotes: FieldNote[] = [
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "An internal RAG assistant helped teams find information about 40% faster and reduced repeated support questions.",
-    name: "Information discovery",
-    context: "THG Ingenuity · Production RAG outcome"
+      "Practical AI belongs inside real customer journeys, with retrieval quality, latency, cost, and production monitoring treated as product concerns.",
+    name: "Production AI",
+    context: "Full-stack delivery · Ecommerce systems"
   },
   {
     quote:
-      "Release-time schema validation caught bad configuration earlier and reduced related production incidents by about 60%.",
-    name: "Release safety",
-    context: "THG Ingenuity · Production engineering outcome"
+      "Security-sensitive systems need validation, auditability, testing, and clear ownership from request to release.",
+    name: "Engineering discipline",
+    context: "Payments and platform work"
   }
 ];
 
@@ -356,10 +356,10 @@ export const experiences: Experience[] = [
     role: "Software Engineer, AI & Full-Stack",
     period: "Aug 2025 — Present",
     summary:
-      "Building AI, automation, and full-stack ecommerce tools for customer-facing and internal products.",
+      "Building AI-powered products, multi-tenant platforms, automation, and full-stack ecommerce features.",
     highlights: [
-      "Build Python services, TypeScript interfaces, automation, and production workflows.",
-      "Shipped an internal RAG assistant that made information discovery ~40% faster, plus schema validation that cut config incidents by ~60%."
+      "Built and maintained an AI Shopping Assistant across ecommerce brands, spanning frontend, FastAPI, LLM integrations, tool calling, retrieval, and production monitoring.",
+      "Architected an in-house multi-tenant CMS and ship Astro.js, FastAPI, GraphQL, RAG, multimodal AI Stylist, and Python/n8n/LLM automation work end to end."
     ]
   },
   {
@@ -368,10 +368,10 @@ export const experiences: Experience[] = [
     role: "Product Engineer, Full-Stack",
     period: "Apr 2024 — Aug 2025",
     summary:
-      "Built secure payment workflows for Push Provisioning, card tokenization, lifecycle events, and monitoring.",
+      "Built secure, configuration-driven payment workflows for Push Provisioning, card tokenization, lifecycle events, and monitoring.",
     highlights: [
-      "Led a white-labeled platform that made new banking integrations repeatable through configuration.",
-      "Built Python and FastAPI services with strong validation, audit trails, monitoring, and alerts."
+      "Designed and built a configuration-driven platform that simplified partner integrations through a common architecture.",
+      "Delivered React, TypeScript, Python, API, database, testing, CI/CD, monitoring, code review, and documentation work with product, QA, and platform teams."
     ]
   },
   {
@@ -380,17 +380,17 @@ export const experiences: Experience[] = [
     role: "Web Developer",
     period: "Aug 2022 — Mar 2024",
     summary:
-      "Built automation, interactive web experiences, and shared frontend tools with React, TypeScript, Canvas, and WebGL.",
+      "Built internal automation, reusable frontend systems, and performance-sensitive interactive web experiences.",
     highlights: [
-      "Built an internal CLI tool that replaced a manual content-localization workflow.",
-      "Delivered performance-sensitive Canvas and WebGL experiences and contributed to shared UI libraries."
+      "Built an internal CLI tool that automated content-localization workflows.",
+      "Developed reusable UI libraries and interactive Canvas/WebGL experiences with React and JavaScript."
     ]
   },
   {
     kind: "education",
     company: "College of Computer Science and Information Technology",
     role: "Bachelor of Computer Applications (BCA)",
-    period: "Degree",
+    period: "2020 — 2023",
     summary:
       "Foundation in computer applications, software development, and computing systems.",
     highlights: []
@@ -400,14 +400,14 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     id: "thg-commerce",
-    title: "THG Commerce Storefront",
-    eyebrow: "THG Ingenuity · Current experience · Public platform context",
+    title: "THG AI Commerce Platform",
+    eyebrow: "THG Ingenuity · AI + full-stack production work",
     short:
-      "Ecommerce engineering across storefront work, internal knowledge search, release validation, and production support.",
+      "AI shopping, multi-tenant CMS, ecommerce widgets, RAG applications, and automation across THG brands.",
     thesis:
-      "Commerce platforms work best when teams can ship safely, find answers quickly, and catch bad configuration before release.",
+      "Production AI works best when it fits customer journeys, shares reliable platform foundations, and stays observable after release.",
     outcome:
-      "Full-stack delivery supported by an internal RAG assistant and release-time schema validation.",
+      "AI Shopping Assistant, multi-tenant CMS, reusable storefront widgets, RAG applications, multimodal AI Stylist, and support automation.",
     role: "Software Engineer · AI and full-stack",
     timeline: "Aug 2025 — Present",
     team: "THG Ingenuity product teams",
@@ -416,72 +416,72 @@ export const projects: Project[] = [
     sourceLabel: "THG Commerce overview",
     sourceKind: "public",
     problem:
-      "Enterprise commerce teams manage many storefronts, shared platform features, brand settings, and release paths. Small configuration mistakes can affect customer journeys, and scattered internal knowledge slows delivery.",
+      "Commerce teams need customer-facing AI and reusable storefront features without fragmenting platform behavior across brands. Internal knowledge, support work, content operations, and release paths also create repeated manual effort.",
     solution:
-      "At THG Ingenuity, I work across TypeScript interfaces, Python services, automation, and release workflows. My work includes an internal RAG assistant and schema-validation pipelines that block invalid configuration before release.",
+      "At THG Ingenuity, I work across frontend interfaces, FastAPI services, LLM integrations, tool calling, retrieval, GraphQL, automation, and production monitoring. I built and maintained an AI Shopping Assistant, architected a multi-tenant CMS, shipped reusable Astro.js storefront widgets, built RAG-based internal applications, delivered a multimodal AI Stylist, and automated support workflows with Python, APIs, n8n, and LLMs.",
     impact:
-      "The RAG assistant helped teams find information about 40% faster, while validation automation reduced configuration-related incidents by about 60%.",
+      "The work connects customer-facing AI, shared platform foundations, internal knowledge, and operational automation into production ecommerce delivery.",
     constraints: [
       "Storefronts must work across brands, regions, and device sizes",
-      "Configuration changes need validation before reaching production",
-      "Internal knowledge needs grounded answers and controlled access",
+      "AI features need useful retrieval, controlled tool access, and production monitoring",
+      "Multi-tenant services must share infrastructure without leaking tenant data",
       "Public discussion must not expose proprietary architecture, customer data, or private repositories"
     ],
     decisions: [
       {
         index: "D1",
-        title: "Validate configuration before release",
+        title: "Fit AI into existing journeys",
         body:
-          "Schema checks catch configuration mistakes during delivery, before they can affect customers.",
-        signal: "Release safety"
+          "The Shopping Assistant and AI Stylist extend existing ecommerce flows instead of creating disconnected AI demos.",
+        signal: "Customer fit"
       },
       {
         index: "D2",
-        title: "Ground answers in source material",
+        title: "Share platform foundations",
         body:
-          "The assistant retrieves relevant internal evidence before answering, which reduces time spent searching through scattered documentation.",
-        signal: "Faster discovery"
+          "The CMS and reusable storefront widgets keep common services, components, and deployment practices reusable across business websites.",
+        signal: "Multi-tenant reuse"
       },
       {
         index: "D3",
-        title: "Connect the layers",
+        title: "Treat retrieval and automation as systems",
         body:
-          "Interface, service, automation, and release work stay connected so issues are easier to trace and fix.",
-        signal: "End-to-end delivery"
+          "RAG quality, tool calling, monitoring, n8n workflows, and release practices need explicit boundaries and feedback loops.",
+        signal: "Operational quality"
       }
     ],
-    workflow: ["Storefront need", "Service or UI change", "Validation and review", "Production feedback"],
+    workflow: ["Customer or team need", "UI, service, or AI change", "Testing and review", "Production feedback"],
     architecture: [
-      "Customer-facing storefronts run on shared commerce platform capabilities",
-      "TypeScript interfaces and Python services support product workflows",
-      "Schema checks validate configuration during delivery",
-      "Internal RAG retrieval helps teams find trusted knowledge",
-      "Logs, monitoring, and feedback guide fixes and improvements"
+      "Astro.js storefronts and reusable widgets serve multi-tenant ecommerce journeys",
+      "FastAPI and GraphQL services support product and content workflows",
+      "LLM integrations, tool calling, and retrieval power customer-facing and internal AI features",
+      "Python, APIs, n8n, and LLMs automate support and operational work",
+      "Testing, reviews, releases, monitoring, and feedback guide production delivery"
     ],
     results: [
-      { value: "~40%", label: "faster discovery" },
-      { value: "~60%", label: "fewer config incidents" },
-      { value: "Production", label: "commerce delivery" }
+      { value: "AI", label: "customer journeys" },
+      { value: "Multi-tenant", label: "platform foundation" },
+      { value: "E2E", label: "production delivery" }
     ],
-    tech: ["TypeScript", "React", "Python", "RAG", "Schema validation", "CI/CD", "Observability"],
+    tech: ["Astro.js", "TypeScript", "Python", "FastAPI", "GraphQL", "RAG", "n8n", "LLM APIs"],
     accent: "#b6dc7b",
     icon: "globe",
     confidentiality:
-      "THG Commerce platform context comes from the linked public overview. Personal contribution and outcomes come from Aman’s résumé; implementation details, clients, data, and internal systems remain intentionally abstracted.",
+      "THG Commerce platform context comes from the linked public overview. Personal contribution comes from Aman’s résumé; implementation details, clients, data, and internal systems remain intentionally abstracted.",
     learning:
-      "Commerce reliability improves when product delivery, internal knowledge, validation, and support are treated as connected work.",
+      "Commerce reliability improves when customer-facing AI, shared platform foundations, retrieval, automation, and production support are treated as connected work.",
     next: "push-provisioning"
   },
   {
     id: "push-provisioning",
     title: "Push Provisioning",
-    eyebrow: "Razorpay · Card tokenization · Public product context",
+    eyebrow: "Razorpay · Secure payments · Public product context",
     short:
-      "A configurable platform for bank-led card activation, merchant token provisioning, lifecycle workflows, and monitoring.",
+      "A configuration-driven platform for partner integrations, card tokenization, lifecycle workflows, and production monitoring.",
     thesis:
-      "Regulated payment products scale better when new bank integrations use controlled configuration instead of repeated custom builds.",
+      "Security-sensitive payment products scale better when partner variation uses controlled configuration instead of repeated custom builds.",
     outcome:
-      "A reusable full-stack integration model for secure bank, merchant, and tokenization workflows.",
+      "A common architecture for secure partner integrations, card tokenization, lifecycle management, and full-stack product delivery.",
     role: "Product Engineer · Full-stack platform",
     timeline: "Apr 2024 — Aug 2025",
     team: "Razorpay product and payments teams",
@@ -496,15 +496,15 @@ export const projects: Project[] = [
       }
     ],
     problem:
-      "Card-tokenization rules changed how saved-card experiences worked. Banks needed a secure way to activate and provision cards across merchants, while each integration had its own branding, settings, network rules, and lifecycle events.",
+      "Partner integrations had different requirements, while card activation, tokenization, and lifecycle management demanded reliable and auditable security-sensitive workflows.",
     solution:
-      "I led a white-labeled, config-driven Push Provisioning platform and built Python and FastAPI services for tokenization and lifecycle workflows. Logging, monitoring, alerts, and clear integration boundaries were part of the product design.",
+      "I designed and built a configuration-driven Push Provisioning platform and developed Python/FastAPI services for secure card tokenization and lifecycle management. Validation, automated testing, integration testing, CI/CD, monitoring, alerts, code reviews, and documentation supported production delivery.",
     impact:
-      "New bank journeys could be handled through repeatable configuration and shared platform behavior instead of separate custom builds. Public Razorpay material describes the broader Push Provisioning and TokenHQ products; private metrics are not disclosed.",
+      "New partner requirements could use shared platform behavior and configuration instead of separate custom builds. Public Razorpay material describes the broader product context; private partner details and metrics are not disclosed.",
     constraints: [
       "Card and identity workflows must follow strict security and regulatory rules",
-      "Banks need distinct branding and journey settings without platform forks",
-      "Token lifecycle events need monitoring and recovery paths",
+      "Partners need distinct requirements without platform forks",
+      "Token lifecycle events need validation, testing, monitoring, and recovery paths",
       "Public case-study content cannot reveal partner data, credentials, or internal payment architecture"
     ],
     decisions: [
@@ -512,38 +512,38 @@ export const projects: Project[] = [
         index: "D1",
         title: "Turn integrations into configuration",
         body:
-          "Typed configuration captured bank-specific branding and behavior while shared services kept one reusable platform path.",
-        signal: "Repeatable onboarding"
+          "Configuration captured partner-specific requirements while shared services kept one reusable platform path.",
+        signal: "Common architecture"
       },
       {
         index: "D2",
-        title: "Keep privilege boundaries explicit",
+        title: "Make correctness auditable",
         body:
-          "Verification, tokenization, provisioning, and lifecycle operations stayed separated so sensitive actions could be validated and audited.",
-        signal: "Controlled authority"
+          "Validation, testing, structured service boundaries, and monitoring supported sensitive tokenization and lifecycle operations.",
+        signal: "Reliable workflows"
       },
       {
         index: "D3",
-        title: "Make failures visible",
+        title: "Improve the full delivery loop",
         body:
-          "Structured logging, monitoring, and alerts made integration failures easier to diagnose without exposing sensitive payment data.",
-        signal: "Operational visibility"
+          "Product collaboration, code reviews, CI/CD, documentation, monitoring, and alerts kept implementation connected to production behavior.",
+        signal: "Production ownership"
       }
     ],
-    workflow: ["Bank card activation", "Customer verification", "Merchant selection", "Token provisioning"],
+    workflow: ["Partner requirement", "Configuration", "Validated service flow", "Monitored production behavior"],
     architecture: [
-      "A white-labeled interface adapts bank-specific content and configuration",
-      "FastAPI services validate requests and coordinate provisioning workflows",
-      "TokenHQ capabilities connect merchant and card-network tokenization paths",
-      "Webhook and lifecycle handling keep card state changes synchronized",
-      "Structured logs and alerts support audit, monitoring, and incident response"
+      "Configuration captures partner requirements without creating platform forks",
+      "Python and FastAPI services validate and coordinate tokenization workflows",
+      "React and TypeScript support end-to-end product features and partner journeys",
+      "Automated and integration tests protect behavior across service boundaries",
+      "CI/CD, structured monitoring, and alerts support production reliability"
     ],
     results: [
       { value: "Config", label: "bank integrations" },
       { value: "Multi-party", label: "payment workflow" },
       { value: "Observable", label: "lifecycle operations" }
     ],
-    tech: ["Python", "FastAPI", "TypeScript", "REST APIs", "Webhooks", "Tokenization", "Observability"],
+    tech: ["Python", "FastAPI", "React", "TypeScript", "REST APIs", "Tokenization", "CI/CD", "Monitoring"],
     accent: "#82aaa1",
     icon: "credit-card",
     confidentiality:
@@ -554,14 +554,14 @@ export const projects: Project[] = [
   },
   {
     id: "hmx-interactive",
-    title: "Interactive 3D Commerce",
-    eyebrow: "HMX Media · Sharp Kitchen + Royal Enfield · Public case studies",
+    title: "Interactive Web Experiences",
+    eyebrow: "HMX Media · Frontend systems · Interactive web",
     short:
-      "Mobile-first WebGL experiences that let customers explore and configure complex products in the browser.",
+      "Internal localization automation, reusable UI libraries, and performance-sensitive Canvas/WebGL experiences.",
     thesis:
-      "Immersive product interfaces only work when visuals, speed, and touch interaction are engineered together.",
+      "Interactive frontend work only works when reusable systems, performance, and collaboration are engineered together.",
     outcome:
-      "Browser-based 3D product experiences and shared frontend systems for appliance and automotive products.",
+      "A CLI automation tool, shared frontend components, and production interactive experiences delivered with designers and engineers.",
     role: "Web Developer · Interactive frontend",
     timeline: "Aug 2022 — Mar 2024",
     team: "HMX Media interactive teams",
@@ -576,60 +576,60 @@ export const projects: Project[] = [
       }
     ],
     problem:
-      "Photorealistic 3D product configuration must stay responsive on mobile browsers and slower connections while supporting product options, camera movement, and rich visual states.",
+      "Content-localization workflows created repetitive engineering work, while interactive web experiences needed reusable UI patterns and dependable performance across browsers and devices.",
     solution:
-      "At HMX Media, I delivered React, TypeScript, Canvas, and WebGL experiences and contributed to shared UI systems. Sharp Kitchen and Royal Enfield are public examples of this type of browser-based configuration work.",
+      "At HMX Media, I built an internal CLI automation tool for localization, developed reusable frontend components and shared UI libraries with React and JavaScript, and delivered Canvas/WebGL experiences with designers and engineers.",
     impact:
-      "These experiences made detailed appliance and motorcycle exploration available on consumer devices without requiring a native app. My individual contribution is described at résumé level; HMX’s linked pages show the complete team outcomes.",
+      "The work reduced repetitive engineering effort and supported production interactive experiences through reusable frontend systems and performance-aware implementation.",
     constraints: [
-      "High-quality 3D assets must load within mobile performance budgets",
-      "Interactions need to stay smooth across pointer and touch input",
-      "Product variants and visual state require predictable frontend contracts",
+      "Interactive experiences need predictable performance across browsers and devices",
+      "Shared components must stay reusable without blocking product-specific work",
+      "Automation needs to fit existing content and engineering workflows",
       "Client assets, project ownership boundaries, and proprietary engine details remain confidential"
     ],
     decisions: [
       {
         index: "D1",
-        title: "Design mobile-first interaction",
+        title: "Automate repetitive work",
         body:
-          "Controls, camera movement, and configuration states were built for touch constraints from the start.",
-        signal: "Any-device access"
+          "The internal CLI replaced a manual per-asset localization process with a repeatable engineering workflow.",
+        signal: "Workflow leverage"
       },
       {
         index: "D2",
-        title: "Treat asset weight as product behavior",
+        title: "Build reusable frontend systems",
         body:
-          "Loading speed and runtime performance shaped how scenes, materials, and interface states were delivered.",
-        signal: "Fast loading"
+          "Shared components and UI libraries kept common interaction patterns consistent across product work.",
+        signal: "Shared UI"
       },
       {
         index: "D3",
-        title: "Reuse interaction patterns",
+        title: "Protect runtime performance",
         body:
-          "Shared TypeScript and React components kept controls and feedback consistent across complex product experiences.",
-        signal: "Shared frontend"
+          "Canvas and WebGL experiences were delivered with performance constraints treated as part of product quality.",
+        signal: "Interactive quality"
       }
     ],
-    workflow: ["Choose product", "Load 3D scene", "Configure options", "Inspect final selection"],
+    workflow: ["Content or product need", "Reusable frontend pattern", "Interactive implementation", "Production feedback"],
     architecture: [
-      "React and TypeScript manage interface and configuration state",
-      "Canvas and WebGL render interactive product scenes in the browser",
-      "Optimized assets and data handling protect mobile performance",
-      "Shared UI components connect controls to visual scene state",
-      "Responsive input handling supports touch, pointer, and device variation"
+      "React and JavaScript power reusable frontend components and shared UI libraries",
+      "Canvas and WebGL render interactive experiences in the browser",
+      "A CLI automation tool streamlines content-localization workflows",
+      "Performance-aware implementation keeps rich interactions usable across devices",
+      "Design and engineering collaboration connects patterns to production features"
     ],
     results: [
-      { value: "2", label: "public showcases" },
-      { value: "Mobile-first", label: "browser delivery" },
-      { value: "Real-time 3D", label: "product interaction" }
+      { value: "CLI", label: "workflow automation" },
+      { value: "Shared", label: "frontend systems" },
+      { value: "Canvas + WebGL", label: "interactive delivery" }
     ],
-    tech: ["React", "TypeScript", "WebGL", "Canvas", "Node.js", "3D asset delivery"],
+    tech: ["React", "JavaScript", "Canvas", "WebGL", "UI libraries", "CLI automation"],
     accent: "#b99a70",
     icon: "layers",
     confidentiality:
-      "Product capabilities come from HMX Media’s public Sharp Kitchen and Royal Enfield case studies. This page avoids client assets, proprietary engine details, private code, and unverified claims of sole ownership.",
+      "This case study stays at résumé level and avoids client assets, proprietary engine details, private code, and unverified claims of sole ownership.",
     learning:
-      "High-quality visuals matter only when loading, performance, and interaction stay dependable on real devices.",
+      "Frontend quality includes automation, reuse, collaboration, performance, and dependable behavior on real devices.",
     next: "chitra-ai"
   },
   {
@@ -697,7 +697,7 @@ export const projects: Project[] = [
       { value: "2", label: "modalities analyzed" },
       { value: "UAT→Prod", label: "promotion model" }
     ],
-    tech: ["Python", "FastAPI", "GPT-4o", "Whisper", "Pydantic", "Docker", "GitHub Actions"],
+    tech: ["Python", "FastAPI", "OpenAI", "Whisper", "Pydantic", "Docker", "CI/CD"],
     accent: "#b6dc7b",
     icon: "sparkles",
     confidentiality:
@@ -845,7 +845,7 @@ export const projects: Project[] = [
       { value: "Inline", label: "review findings" },
       { value: "Human", label: "final authority" }
     ],
-    tech: ["Python", "GitHub Apps", "Claude", "Webhooks", "YAML configuration"],
+    tech: ["Python", "LangChain", "FastAPI", "Redis", "GitHub Apps", "LLMs", "Webhooks"],
     accent: "#a98698",
     icon: "bot",
     confidentiality:
@@ -864,28 +864,33 @@ export function getProjectById(projectId: ProjectId): Project {
 
 export const skillGroups: SkillGroup[] = [
   {
-    label: "Agentic AI & LLM",
+    label: "AI / LLM",
     icon: "sparkles",
-    skills: ["Multi-agent systems", "Agent orchestration", "LangGraph", "LangChain", "ReAct", "Google ADK", "Vertex AI", "GPT-4o", "Whisper", "Tool calling", "Memory", "MCP / FastMCP"]
+    skills: ["LLM APIs", "LangGraph", "LangChain", "Google ADK", "Vertex AI", "RAG pipelines", "Agentic systems", "Tool calling", "Memory", "MCP / FastMCP", "Prompt engineering", "Context engineering", "Pinecone", "vLLM"]
   },
   {
-    label: "RAG, Evals & Safety",
+    label: "Evals & Observability",
     icon: "gauge",
-    skills: ["RAG", "Hybrid search", "Reranking", "Embeddings", "Pinecone", "Prompt-injection boundaries", "DeepEval", "Langfuse", "Tracing"]
+    skills: ["DeepEval", "Langfuse", "Grafana", "Sentry", "Structured logging", "Tracing", "Production monitoring"]
   },
   {
-    label: "Backend & Data",
+    label: "Languages & Backend",
     icon: "code",
-    skills: ["Python", "TypeScript", "FastAPI", "Node.js", "SQL", "PostgreSQL", "Redis", "SQLAlchemy", "Pydantic", "REST", "GraphQL"]
+    skills: ["Python", "TypeScript", "JavaScript", "SQL", "FastAPI", "Node.js", "PostgreSQL", "Redis", "REST", "GraphQL"]
   },
   {
-    label: "Frontend & Product UI",
+    label: "Frontend",
     icon: "layers",
-    skills: ["React", "Next.js", "Astro", "Lit", "React Native", "PWA", "Tailwind CSS", "Canvas", "WebGL"]
+    skills: ["React", "Next.js", "React Native", "Astro", "Tailwind CSS", "Playwright"]
   },
   {
-    label: "Cloud, Delivery & Observability",
+    label: "Cloud & Observability",
     icon: "globe",
-    skills: ["AWS", "Docker", "GitHub Actions", "CI/CD", "Gunicorn", "Uvicorn", "Grafana", "Sentry", "Structured logging", "Production operations"]
+    skills: ["AWS (S3, CloudFront, ECS, Route53)", "Docker", "GitHub Actions", "Grafana", "Sentry", "Coralogix"]
+  },
+  {
+    label: "Engineering",
+    icon: "workflow",
+    skills: ["System design", "API design", "Automated testing", "Observability", "Production debugging", "Performance optimization", "Code reviews"]
   }
 ];

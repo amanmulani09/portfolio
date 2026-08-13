@@ -23,9 +23,9 @@ export function CaseStudyPage({ project }: CaseStudyPageProps) {
   const nextProject = getProjectById(project.next as Project["id"]);
 
   useEffect(() => {
-    const siteTitle = `${profile.name} | AI + Full-Stack Engineer`;
+    const siteTitle = `${profile.name} | Full-Stack & AI Engineer`;
     const siteDescription =
-      "Aman Mulani is an AI + Full-Stack Engineer building practical AI features, RAG systems, backend services, and React interfaces.";
+      "Aman Mulani is a Full-Stack & AI Engineer building production web applications and AI-powered products across ecommerce and payments.";
     const siteUrl = window.location.origin + "/";
     const pageTitle = `${project.title} Case Study | ${profile.name}`;
     const pageUrl = `${window.location.origin}/work/${project.id}`;
