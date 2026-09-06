@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
+import { getTransformedRoutes } from "@vercel/routing-utils";
 
 const redirects = JSON.parse(await readFile(new URL("../src/data/redirects.json", import.meta.url), "utf8"));
 const workerSource = (await readFile(new URL("../server/index.js", import.meta.url), "utf8"))
@@ -9,8 +10,14 @@ const { default: worker } = await import(`data:text/javascript;base64,${Buffer.f
 
 test("every legacy route redirects consistently on Sites and Vercel", async () => {
   const config = JSON.parse(await readFile(new URL("../vercel.json", import.meta.url), "utf8"));
+  const { routes: vercelRoutes, error } = getTransformedRoutes(config);
+  assert.equal(error, null, error?.message);
   assert.deepEqual(config.redirects.map(({ source, destination }) => ({ source, destination })), redirects);
   for (const route of redirects) {
+    const vercelRoute = vercelRoutes.find(({ src }) => src && new RegExp(src).test(route.source));
+    assert.ok(vercelRoute, `Missing Vercel redirect for ${route.source}`);
+    assert.equal(vercelRoute.status, 308);
+    assert.equal(vercelRoute.headers.Location, route.destination);
     for (const suffix of ["", "/"]) {
       const response = await worker.fetch(new Request(`https://portfolio.test${route.source}${suffix}`), {});
       assert.equal(response.status, 308);

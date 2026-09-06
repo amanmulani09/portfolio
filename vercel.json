@@ -41,27 +41,27 @@
     },
     {
       "source": "/blog/react-loop-behind-ai-agents",
-      "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7490428946996535296/",
+      "destination": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7490428946996535296/",
       "permanent": true
     },
     {
       "source": "/blog/reliable-rag-starts-outside-the-model",
-      "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7467431422002282496/",
+      "destination": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7467431422002282496/",
       "permanent": true
     },
     {
       "source": "/blog/frontend-production-checklist",
-      "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7427354072929910784/",
+      "destination": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7427354072929910784/",
       "permanent": true
     },
     {
       "source": "/blog/redis-caching-system-design",
-      "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7426844680199229440/",
+      "destination": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7426844680199229440/",
       "permanent": true
     },
     {
       "source": "/blog/when-sse-beats-websockets",
-      "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7424144231608352768/",
+      "destination": "https://www.linkedin.com/feed/update/urn%3Ali%3Aactivity%3A7424144231608352768/",
       "permanent": true
     }
   ]
