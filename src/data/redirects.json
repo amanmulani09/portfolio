@@ -1,0 +1,50 @@
+[
+  {
+    "source": "/work/thg-commerce",
+    "destination": "/#shopping-assistant"
+  },
+  {
+    "source": "/work/push-provisioning",
+    "destination": "/#push-provisioning"
+  },
+  {
+    "source": "/work/hmx-interactive",
+    "destination": "/#experience"
+  },
+  {
+    "source": "/work/chitra-ai",
+    "destination": "/#work"
+  },
+  {
+    "source": "/work/rag-architectures",
+    "destination": "/#work"
+  },
+  {
+    "source": "/work/codo",
+    "destination": "/#codo"
+  },
+  {
+    "source": "/blog",
+    "destination": "/#about"
+  },
+  {
+    "source": "/blog/react-loop-behind-ai-agents",
+    "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7490428946996535296/"
+  },
+  {
+    "source": "/blog/reliable-rag-starts-outside-the-model",
+    "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7467431422002282496/"
+  },
+  {
+    "source": "/blog/frontend-production-checklist",
+    "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7427354072929910784/"
+  },
+  {
+    "source": "/blog/redis-caching-system-design",
+    "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7426844680199229440/"
+  },
+  {
+    "source": "/blog/when-sse-beats-websockets",
+    "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7424144231608352768/"
+  }
+]

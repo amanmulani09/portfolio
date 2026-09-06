@@ -1,4 +1,4 @@
-import { copyFile, mkdir, readFile, readdir, rename, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, rename, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 import { loadEnv } from "vite";
@@ -11,111 +11,6 @@ const serverOutputDirectory = resolve(buildOutputDirectory, "server");
 const buildEnvironment = loadEnv("production", projectDirectory, "");
 const defaultSiteUrl = "https://aman-mulani.vercel.app/";
 const configuredSiteUrl = process.env.VITE_SITE_URL || buildEnvironment.VITE_SITE_URL || defaultSiteUrl;
-
-const caseStudyPages = [
-  {
-    id: "thg-commerce",
-    title: "THG Commerce Storefront Case Study | Aman Mulani",
-    description: "Résumé-backed storefront, RAG knowledge retrieval, release validation, and production engineering work within THG Ingenuity's public commerce platform context.",
-    ownership: "contributor",
-    sources: ["https://www.thgingenuity.com/commerce"],
-    keywords: ["THG Commerce", "ecommerce engineering", "RAG", "release validation"]
-  },
-  {
-    id: "push-provisioning",
-    title: "Razorpay Push Provisioning Case Study | Aman Mulani",
-    description: "Config-driven card activation, token provisioning, lifecycle services, and observability within Razorpay's public Push Provisioning context.",
-    ownership: "contributor",
-    sources: [
-      "https://razorpay.com/blog/push-provisioning-a-new-era-in-card-tokenization/",
-      "https://razorpay.com/blog/razorpay-token-hq-card-tokenisation-solution/"
-    ],
-    keywords: ["Push Provisioning", "card tokenization", "Razorpay", "FastAPI"]
-  },
-  {
-    id: "hmx-interactive",
-    title: "HMX Interactive 3D Commerce Case Study | Aman Mulani",
-    description: "Mobile-first React, TypeScript, Canvas, and WebGL product experiences represented by HMX Media's public Sharp Kitchen and Royal Enfield case studies.",
-    ownership: "contributor",
-    sources: [
-      "https://www.hmxmedia.com/case-studies/sharp-kitchen/",
-      "https://www.hmxmedia.com/case-studies/royal-enfield/"
-    ],
-    keywords: ["WebGL", "3D configurator", "React", "HMX Media"]
-  },
-  {
-    id: "chitra-ai",
-    title: "Chitra.ai Multi-Agent System Case Study | Aman Mulani",
-    description: "Multi-agent video and audio analysis pipeline built with FastAPI, GPT-4o, Whisper, Pydantic, Docker, and staged CI/CD.",
-    ownership: "creator",
-    sources: ["https://github.com/amanmulani09/chitra.ai"],
-    keywords: ["multi-agent systems", "video analysis", "FastAPI", "GPT-4o"]
-  },
-  {
-    id: "rag-architectures",
-    title: "RAG Architecture Lab Case Study | Aman Mulani",
-    description: "Public RAG implementation lab covering hybrid search, reranking, injection boundaries, vector repositories, and layered service design.",
-    ownership: "creator",
-    sources: ["https://github.com/amanmulani09/RAG"],
-    keywords: ["RAG architecture", "hybrid search", "reranking", "retrieval engineering"]
-  },
-  {
-    id: "codo",
-    title: "Codo AI Code Review Case Study | Aman Mulani",
-    description: "GitHub App that reviews pull requests, posts focused inline findings, summarizes risk, and leaves final code changes under human control.",
-    ownership: "creator",
-    sources: ["https://github.com/amanmulani09/codo"],
-    keywords: ["AI code review", "GitHub App", "Claude", "application security"]
-  }
-];
-
-const blogPages = [
-  {
-    slug: "react-loop-behind-ai-agents",
-    title: "The Loop Behind Practical AI Agents | Aman Mulani",
-    description: "How ReAct agents reason, call tools, observe results, and repeat within explicit permission and stopping boundaries.",
-    source: "https://www.linkedin.com/feed/update/urn:li:activity:7490428946996535296/",
-    publishedAt: "2026-08-04T15:30:26.404Z",
-    section: "AI",
-    keywords: ["ReAct agents", "tool calling", "AI agents", "agent architecture"]
-  },
-  {
-    slug: "reliable-rag-starts-outside-the-model",
-    title: "Reliable RAG Starts Outside the Model | Aman Mulani",
-    description: "Why retrieval quality, embeddings, chunking, context management, and visible evidence determine whether a RAG system is trustworthy.",
-    source: "https://www.linkedin.com/feed/update/urn:li:activity:7467431422002282496/",
-    publishedAt: "2026-06-02T04:26:29.172Z",
-    section: "AI",
-    keywords: ["RAG", "retrieval engineering", "embeddings", "grounded AI"]
-  },
-  {
-    slug: "frontend-production-checklist",
-    title: "A Production Checklist for AI-Speed Frontend Work | Aman Mulani",
-    description: "A practical frontend release checklist covering configuration, secrets, performance, accessibility, analytics, feature flags, and fallbacks.",
-    source: "https://www.linkedin.com/feed/update/urn:li:activity:7427354072929910784/",
-    publishedAt: "2026-02-11T14:13:24.552Z",
-    section: "Engineering",
-    keywords: ["frontend production", "release checklist", "web performance", "accessibility"]
-  },
-  {
-    slug: "redis-caching-system-design",
-    title: "Redis Caching as a System Design Choice | Aman Mulani",
-    description: "Server-side Redis caching trade-offs across database load, latency, infrastructure cost, invalidation, authorization, and resilience.",
-    source: "https://www.linkedin.com/feed/update/urn:li:activity:7426844680199229440/",
-    publishedAt: "2026-02-10T04:29:15.861Z",
-    section: "Engineering",
-    keywords: ["Redis", "server-side caching", "system design", "backend performance"]
-  },
-  {
-    slug: "when-sse-beats-websockets",
-    title: "When Server-Sent Events Beat WebSockets | Aman Mulani",
-    description: "Choosing Server-Sent Events for one-way progress, logs, notifications, and AI streaming without unnecessary WebSocket complexity.",
-    source: "https://www.linkedin.com/feed/update/urn:li:activity:7424144231608352768/",
-    publishedAt: "2026-02-02T17:38:38.745Z",
-    section: "Engineering",
-    keywords: ["Server-Sent Events", "WebSockets", "HTTP streaming", "backend architecture"]
-  }
-];
 
 function normalizeSiteUrl(rawSiteUrl) {
   if (!rawSiteUrl) return null;
@@ -227,123 +122,13 @@ let homepageDocument = addAbsoluteSiteReferences(baseDocument);
 if (siteUrl) {
   const homepageUrl = siteUrl.toString();
   homepageDocument = addPageMetadata(homepageDocument, {
-    title: "Aman Mulani | AI + Full-Stack Engineer",
-    description: "Aman Mulani is an AI + Full-Stack Engineer building multi-agent systems, RAG architectures, backend services, and product interfaces.",
+    title: "Aman Mulani | AI & Full-Stack Engineer",
+    description: "Aman Mulani is an AI & Full-Stack Engineer building multi-agent systems, RAG architectures, backend services, and product interfaces.",
     pageUrl: homepageUrl
   });
 }
 
 await writeFile(sourceDocumentPath, homepageDocument);
-
-await Promise.all(
-  caseStudyPages.map(async (page) => {
-    const pageDirectory = resolve(clientOutputDirectory, "work", page.id);
-    const pageUrl = siteUrl ? new URL(`work/${page.id}`, siteUrl).toString() : null;
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "CreativeWork",
-      name: page.title.replace(" Case Study | Aman Mulani", ""),
-      description: page.description,
-      inLanguage: "en-IN",
-      author: siteUrl
-        ? { "@id": `${siteUrl.toString()}#person` }
-        : { "@type": "Person", name: "Aman Mulani" },
-      ...(page.ownership === "creator"
-        ? {
-            creator: siteUrl
-              ? { "@id": `${siteUrl.toString()}#person` }
-              : { "@type": "Person", name: "Aman Mulani" }
-          }
-        : {}),
-      ...(pageUrl ? { url: pageUrl } : {}),
-      ...(pageUrl ? { mainEntityOfPage: pageUrl } : {}),
-      ...(siteUrl ? { isPartOf: { "@id": `${siteUrl.toString()}#website` } } : {}),
-      sameAs: page.sources,
-      keywords: page.keywords
-    };
-    const pageDocument = addPageMetadata(addAbsoluteSiteReferences(baseDocument), {
-      title: page.title,
-      description: page.description,
-      pageUrl,
-      schema,
-      ogType: "article",
-      articleAuthorUrl: siteUrl?.toString(),
-      articleSection: "Case study"
-    });
-    await mkdir(pageDirectory, { recursive: true });
-    await writeFile(resolve(pageDirectory, "index.html"), pageDocument);
-  }),
-);
-
-const blogIndexUrl = siteUrl ? new URL("blog", siteUrl).toString() : null;
-const blogIndexDocument = addPageMetadata(addAbsoluteSiteReferences(baseDocument), {
-  title: "Blog | Aman Mulani",
-  description: "Expanded notes from Aman Mulani's LinkedIn posts on AI agents, RAG, frontend releases, Redis caching, and backend streaming.",
-  pageUrl: blogIndexUrl,
-  schema: {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    name: "Aman Mulani — AI and Engineering Notes",
-    inLanguage: "en-IN",
-    author: siteUrl ? { "@id": `${siteUrl.toString()}#person` } : { "@type": "Person", name: "Aman Mulani" },
-    ...(blogIndexUrl ? { url: blogIndexUrl } : {}),
-    ...(siteUrl
-      ? {
-          isPartOf: { "@id": `${siteUrl.toString()}#website` },
-          blogPost: blogPages.map((page) => ({
-            "@type": "BlogPosting",
-            headline: page.title.replace(" | Aman Mulani", ""),
-            url: new URL(`blog/${page.slug}`, siteUrl).toString(),
-            datePublished: page.publishedAt
-          }))
-        }
-      : {})
-  }
-});
-const blogIndexDirectory = resolve(clientOutputDirectory, "blog");
-await mkdir(blogIndexDirectory, { recursive: true });
-await writeFile(resolve(blogIndexDirectory, "index.html"), blogIndexDocument);
-
-await Promise.all(
-  blogPages.map(async (page) => {
-    const pageDirectory = resolve(clientOutputDirectory, "blog", page.slug);
-    const pageUrl = siteUrl ? new URL(`blog/${page.slug}`, siteUrl).toString() : null;
-    const schema = {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      headline: page.title.replace(" | Aman Mulani", ""),
-      description: page.description,
-      inLanguage: "en-IN",
-      author: siteUrl
-        ? {
-            "@type": "Person",
-            "@id": `${siteUrl.toString()}#person`,
-            name: "Aman Mulani",
-            url: siteUrl.toString(),
-            sameAs: "https://www.linkedin.com/in/aman-mulani/"
-          }
-        : { "@type": "Person", name: "Aman Mulani" },
-      datePublished: page.publishedAt,
-      articleSection: page.section,
-      ...(pageUrl ? { url: pageUrl, mainEntityOfPage: pageUrl } : {}),
-      ...(blogIndexUrl ? { isPartOf: blogIndexUrl } : {}),
-      sameAs: page.source,
-      keywords: page.keywords
-    };
-    const pageDocument = addPageMetadata(addAbsoluteSiteReferences(baseDocument), {
-      title: page.title,
-      description: page.description,
-      pageUrl,
-      schema,
-      ogType: "article",
-      publishedTime: page.publishedAt,
-      articleAuthorUrl: siteUrl?.toString(),
-      articleSection: page.section
-    });
-    await mkdir(pageDirectory, { recursive: true });
-    await writeFile(resolve(pageDirectory, "index.html"), pageDocument);
-  }),
-);
 
 const notFoundDocument = addPageMetadata(addAbsoluteSiteReferences(baseDocument), {
   title: "Page not found | Aman Mulani",
@@ -356,17 +141,12 @@ const notFoundDocument = addPageMetadata(addAbsoluteSiteReferences(baseDocument)
 );
 
 const seoWrites = [
-  copyFile(resolve(projectDirectory, "server", "index.js"), resolve(serverOutputDirectory, "index.js")),
+  writeFile(resolve(serverOutputDirectory, "index.js"), (await readFile(resolve(projectDirectory, "server/index.js"), "utf8")).replace('import redirects from "./redirects.json";', `const redirects = ${await readFile(resolve(projectDirectory, "src/data/redirects.json"), "utf8")};`)),
   writeFile(resolve(clientOutputDirectory, "404.html"), notFoundDocument)
 ];
 
 if (siteUrl) {
-  const sitemapUrls = [
-    siteUrl.toString(),
-    ...caseStudyPages.map((page) => new URL(`work/${page.id}`, siteUrl).toString()),
-    new URL("blog", siteUrl).toString(),
-    ...blogPages.map((page) => new URL(`blog/${page.slug}`, siteUrl).toString())
-  ];
+  const sitemapUrls = [siteUrl.toString()];
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls
     .map((url) => `  <url><loc>${url.replaceAll("&", "&amp;")}</loc></url>`)
     .join("\n")}\n</urlset>\n`;

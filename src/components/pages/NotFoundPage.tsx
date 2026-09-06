@@ -6,10 +6,9 @@ export function NotFoundPage() {
     <main className="not-found-page" id="main-content">
       <div className="not-found-inner">
         <span className="not-found-code">404 / Page not found</span>
-        <h1>This route lost the thread.</h1>
+        <h1>Page not found.</h1>
         <p>
-          The page you requested is not part of the portfolio. Head back to the work, or send me a note if you were
-          looking for something specific.
+          This page isn’t here. Explore my work or get in touch.
         </p>
         <div className="not-found-actions">
           <a className="primary-action" href="/">

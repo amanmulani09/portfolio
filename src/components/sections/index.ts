@@ -1,9 +1,0 @@
-export { AboutSection } from "./AboutSection";
-export { BlogSection } from "./BlogSection";
-export { ContactSection } from "./ContactSection";
-export { ExperienceTimeline } from "./ExperienceTimeline";
-export { FieldNotesSection } from "./FieldNotesSection";
-export { HeroSection } from "./HeroSection";
-export { PrinciplesSection } from "./PrinciplesSection";
-export { ProjectsShowroom } from "./ProjectsShowroom";
-export { SkillsConstellation } from "./SkillsConstellation";

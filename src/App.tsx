@@ -1,103 +1,44 @@
-import { useEffect } from "react";
-import { Footer, Header } from "./components/layout";
-import { CaseStudyPage } from "./components/pages/CaseStudyPage";
-import { BlogIndexPage } from "./components/pages/BlogIndexPage";
-import { BlogPostPage } from "./components/pages/BlogPostPage";
+import { useEffect, useState } from "react";
+import { Header, Footer } from "./components/layout";
+import { PortfolioPage } from "./components/pages/PortfolioPage";
 import { NotFoundPage } from "./components/pages/NotFoundPage";
-import {
-  AboutSection,
-  BlogSection,
-  ContactSection,
-  ExperienceTimeline,
-  HeroSection,
-  PrinciplesSection,
-  ProjectsShowroom,
-  SkillsConstellation
-} from "./components/sections";
-import { getLinkedInPost, profile, projects } from "./data/resume";
+import { AskA } from "./components/ui/AskA";
 import { useThemePreference } from "./hooks/useThemePreference";
-import { ScrollProgress } from "./components/ui/ScrollProgress";
+import redirects from "./data/redirects.json";
 
 function App() {
   const { theme, toggleTheme } = useThemePreference();
+  const [chatOpen, setChatOpen] = useState(false);
   const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
-  const pathParts = pathname.split("/").filter(Boolean);
-  const isHome = pathname === "/";
-  const isCaseStudyRoute = pathParts[0] === "work" && pathParts.length === 2;
-  const project = isCaseStudyRoute ? projects.find((item) => item.id === pathParts[1]) : undefined;
-  const isBlogIndex = pathname === "/blog";
-  const isBlogPostRoute = pathParts[0] === "blog" && pathParts.length === 2;
-  const blogPost = isBlogPostRoute ? getLinkedInPost(pathParts[1]) : undefined;
-  const isNotFound = !isHome && !project && !isBlogIndex && !blogPost;
+  const redirect = redirects.find((route) => route.source === pathname)?.destination;
+  const isHome = pathname === "/" || Boolean(redirect);
 
   useEffect(() => {
-    if (project || blogPost || isBlogIndex || isNotFound) return;
-
+    if (redirect) {
+      if (redirect.startsWith("/")) window.history.replaceState(null, "", redirect);
+      else { window.location.replace(redirect); return; }
+    }
+    if (!isHome) {
+      document.title = "Page not found | Aman Mulani";
+      document.querySelector('meta[name="robots"]')?.setAttribute("content", "noindex, follow");
+      document.querySelector('link[rel="canonical"]')?.remove();
+      return;
+    }
     const scrollToHash = () => {
-      const targetId = decodeURIComponent(window.location.hash.slice(1));
-      if (!targetId) return;
-
-      window.requestAnimationFrame(() => {
-        document.getElementById(targetId)?.scrollIntoView({ block: "start" });
-      });
+      let id;
+      try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
+      if (!id) return;
+      const element = document.getElementById(id);
+      const details = element?.matches("article") ? element.querySelector("details") : null;
+      if (details) details.open = true;
+      requestAnimationFrame(() => element?.scrollIntoView({ block: "start" }));
     };
-
     scrollToHash();
     window.addEventListener("hashchange", scrollToHash);
     return () => window.removeEventListener("hashchange", scrollToHash);
-  }, [blogPost, isBlogIndex, isNotFound, project]);
+  }, [isHome, redirect]);
 
-  useEffect(() => {
-    if (!isNotFound) return;
-
-    const description = "The requested page could not be found on Aman Mulani's portfolio.";
-    const setMeta = (selector: string, value: string) => {
-      document.querySelector<HTMLMetaElement>(selector)?.setAttribute("content", value);
-    };
-
-    document.title = `Page not found | ${profile.name}`;
-    setMeta('meta[name="description"]', description);
-    setMeta('meta[name="robots"]', "noindex, follow");
-    setMeta('meta[property="og:title"]', `Page not found | ${profile.name}`);
-    setMeta('meta[property="og:description"]', description);
-    setMeta('meta[name="twitter:title"]', `Page not found | ${profile.name}`);
-    setMeta('meta[name="twitter:description"]', description);
-    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.remove();
-    document.querySelector<HTMLMetaElement>('meta[property="og:url"]')?.remove();
-  }, [isNotFound]);
-
-  return (
-    <div className="app-shell" data-theme={theme} id="top">
-      <ScrollProgress />
-      <a className="skip-link" href="#main-content">
-        Skip to main content
-      </a>
-      <Header theme={theme} onToggleTheme={toggleTheme} />
-
-      {isNotFound ? (
-        <NotFoundPage />
-      ) : project ? (
-        <CaseStudyPage project={project} />
-      ) : isBlogIndex ? (
-        <BlogIndexPage />
-      ) : blogPost ? (
-        <BlogPostPage post={blogPost} />
-      ) : (
-        <main id="main-content">
-          <HeroSection />
-          <ExperienceTimeline />
-          <ProjectsShowroom />
-          <SkillsConstellation />
-          <AboutSection />
-          <PrinciplesSection />
-          <BlogSection />
-          <ContactSection />
-        </main>
-      )}
-
-      <Footer />
-    </div>
-  );
+  return <div className="app-shell" id="top"><a className="skip-link" href="#main-content">Skip to main content</a><Header theme={theme} onToggleTheme={toggleTheme} />{isHome ? <PortfolioPage onAsk={() => setChatOpen(true)} /> : <NotFoundPage />}<Footer /><AskA open={chatOpen} onOpen={() => setChatOpen(true)} onClose={() => setChatOpen(false)} /></div>;
 }
 
 export default App;

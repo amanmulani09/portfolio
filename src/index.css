@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-offset); }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+button, a, summary { touch-action: manipulation; }
+button { color: inherit; }
+button:disabled { cursor: default; opacity: .45; }
+img { max-width: 100%; display: block; }
+h1, h2, h3, p { margin: 0; }
+::selection { background: var(--accent-soft); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+svg { flex-shrink: 0; }
+section, article[id] { scroll-margin-top: 0; }

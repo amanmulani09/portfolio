@@ -1,8 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Aman Mulani portfolio favicon">
-  <rect width="64" height="64" rx="14" fill="#18231e"/>
-  <circle cx="32" cy="32" r="21" fill="#0d1713" stroke="#5be7d7" stroke-width="1.5"/>
-  <circle cx="32" cy="32" r="14" fill="none" stroke="#b8ff65" stroke-width="1" stroke-dasharray="3 4"/>
-  <path d="M9 32h11M44 32h11M32 9v11M32 44v11" stroke="#5be7d7" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="48" cy="16" r="5" fill="#f578c5"/>
-  <text x="32" y="37" fill="#b8ff65" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" text-anchor="middle">AM</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Aman Mulani">
+  <rect width="64" height="64" rx="18" fill="#171d29" />
+  <path fill="#f5f7fd" fill-rule="evenodd" d="M28 16c-8 0-13 4-13 10h8c0-3 2-4 5-4s5 2 5 5v1h-6c-9 0-14 4-14 10s5 10 11 10c4 0 7-2 9-4v3h8V27c0-7-5-11-13-11Zm5 18v3c0 4-3 6-6 6s-5-1-5-4 2-5 6-5h5Z" />
+  <circle cx="50" cy="43" r="4" fill="#a2bbff" />
 </svg>

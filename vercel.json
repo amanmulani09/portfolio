@@ -3,54 +3,66 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/client",
   "trailingSlash": false,
-  "rewrites": [
+  "redirects": [
     {
       "source": "/work/thg-commerce",
-      "destination": "/work/thg-commerce/index.html"
+      "destination": "/#shopping-assistant",
+      "permanent": true
     },
     {
       "source": "/work/push-provisioning",
-      "destination": "/work/push-provisioning/index.html"
+      "destination": "/#push-provisioning",
+      "permanent": true
     },
     {
       "source": "/work/hmx-interactive",
-      "destination": "/work/hmx-interactive/index.html"
+      "destination": "/#experience",
+      "permanent": true
     },
     {
       "source": "/work/chitra-ai",
-      "destination": "/work/chitra-ai/index.html"
+      "destination": "/#work",
+      "permanent": true
     },
     {
       "source": "/work/rag-architectures",
-      "destination": "/work/rag-architectures/index.html"
+      "destination": "/#work",
+      "permanent": true
     },
     {
       "source": "/work/codo",
-      "destination": "/work/codo/index.html"
+      "destination": "/#codo",
+      "permanent": true
     },
     {
       "source": "/blog",
-      "destination": "/blog/index.html"
+      "destination": "/#about",
+      "permanent": true
     },
     {
       "source": "/blog/react-loop-behind-ai-agents",
-      "destination": "/blog/react-loop-behind-ai-agents/index.html"
+      "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7490428946996535296/",
+      "permanent": true
     },
     {
       "source": "/blog/reliable-rag-starts-outside-the-model",
-      "destination": "/blog/reliable-rag-starts-outside-the-model/index.html"
+      "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7467431422002282496/",
+      "permanent": true
     },
     {
       "source": "/blog/frontend-production-checklist",
-      "destination": "/blog/frontend-production-checklist/index.html"
+      "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7427354072929910784/",
+      "permanent": true
     },
     {
       "source": "/blog/redis-caching-system-design",
-      "destination": "/blog/redis-caching-system-design/index.html"
+      "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7426844680199229440/",
+      "permanent": true
     },
     {
       "source": "/blog/when-sse-beats-websockets",
-      "destination": "/blog/when-sse-beats-websockets/index.html"
+      "destination": "https://www.linkedin.com/feed/update/urn:li:activity:7424144231608352768/",
+      "permanent": true
     }
   ]
 }
