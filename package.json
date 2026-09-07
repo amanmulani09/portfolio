@@ -13,6 +13,7 @@
     "test": "node --experimental-strip-types --test src/lib/askA.test.ts scripts/routes.test.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "2.0.1",
     "lucide-react": "0.468.0",
     "react": "18.3.1",
     "react-dom": "18.3.1"
