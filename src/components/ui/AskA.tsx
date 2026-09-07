@@ -1,11 +1,12 @@
 import { ArrowUp, ArrowUpRight, MessageCircle, RotateCcw, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { getAnswer, type Answer } from "../../lib/askA";
+import { profile } from "../../data/resume";
 
 type Message = { question: string; answer: Answer };
 const suggestions = ["What has Aman built?", "Tell me about his AI work", "What’s his experience?", "How can I contact him?"];
 
-export function AskA({ open, onOpen, onClose }: { open: boolean; onOpen: () => void; onClose: () => void }) {
+export function AskA({ open, onOpen, onClose, onResume }: { open: boolean; onOpen: () => void; onClose: () => void; onResume: () => void }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const input = useRef<HTMLInputElement>(null);
   const conversation = useRef<HTMLDivElement>(null);
@@ -43,7 +44,7 @@ export function AskA({ open, onOpen, onClose }: { open: boolean; onOpen: () => v
       <div className="chat-conversation" ref={conversation}>
         <div className="chat-welcome"><span className="small-label"><span className="status-dot" /> Answers from my résumé</span><h3>Nice to meet you.</h3><p>Looking for a quick overview? Ask about my experience, projects, skills, or how to get in touch.</p></div>
         <div className="chat-suggestions" aria-label="Suggested questions">{suggestions.map((suggestion) => <button key={suggestion} onClick={() => ask(suggestion)}>{suggestion}<ArrowUpRight size={14} aria-hidden="true" /></button>)}</div>
-        <div role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions">{messages.map((message, index) => <div className="chat-exchange" key={index}><div className="chat-question"><span className="sr-only">You: </span>{message.question}</div><div className="chat-answer"><span className="chat-author">Ask A</span><p>{message.answer.text}</p>{message.answer.links.length > 0 && <div className="chat-links">{message.answer.links.map((item) => <a key={item.href} href={item.href} {...(item.href.startsWith("https:") || item.href.endsWith(".pdf") ? { target: "_blank", rel: "noopener noreferrer" } : {})} onClick={onClose}>{item.label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}</div>}</div></div>)}</div>
+        <div role="log" aria-label="Conversation" aria-live="polite" aria-relevant="additions">{messages.map((message, index) => <div className="chat-exchange" key={index}><div className="chat-question"><span className="sr-only">You: </span>{message.question}</div><div className="chat-answer"><span className="chat-author">Ask A</span><p>{message.answer.text}</p>{message.answer.links.length > 0 && <div className="chat-links">{message.answer.links.map((item) => <a key={item.href} href={item.href} {...(item.href.startsWith("https:") ? { target: "_blank", rel: "noopener noreferrer" } : {})} onClick={(event) => { if (item.href === profile.resume) { event.preventDefault(); onResume(); } onClose(); }}>{item.label}<ArrowUpRight size={14} aria-hidden="true" /></a>)}</div>}</div></div>)}</div>
       </div>
       <div className="chat-footer"><form onSubmit={(event) => { event.preventDefault(); ask(question); }}><label className="sr-only" htmlFor="ask-question">Ask about Aman</label><input ref={input} autoFocus autoComplete="off" id="ask-question" name="question" placeholder="Ask about Aman…" maxLength={300} value={question} onChange={(event) => setQuestion(event.target.value)} /><button type="submit" aria-label="Send question" disabled={!question.trim()}><ArrowUp size={20} /></button></form><p>No AI model. Questions stay in this tab.</p></div>
     </dialog>

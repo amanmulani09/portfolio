@@ -3,12 +3,14 @@ import { Header, Footer } from "./components/layout";
 import { PortfolioPage } from "./components/pages/PortfolioPage";
 import { NotFoundPage } from "./components/pages/NotFoundPage";
 import { AskA } from "./components/ui/AskA";
+import { ResumeRequestDialog } from "./components/ui/ResumeRequestDialog";
 import { useThemePreference } from "./hooks/useThemePreference";
 import redirects from "./data/redirects.json";
 
 function App() {
   const { theme, toggleTheme } = useThemePreference();
   const [chatOpen, setChatOpen] = useState(false);
+  const [resumeOpen, setResumeOpen] = useState(false);
   const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
   const redirect = redirects.find((route) => route.source === pathname)?.destination;
   const isHome = pathname === "/" || Boolean(redirect);
@@ -38,7 +40,7 @@ function App() {
     return () => window.removeEventListener("hashchange", scrollToHash);
   }, [isHome, redirect]);
 
-  return <div className="app-shell" id="top"><a className="skip-link" href="#main-content">Skip to main content</a><Header theme={theme} onToggleTheme={toggleTheme} />{isHome ? <PortfolioPage onAsk={() => setChatOpen(true)} /> : <NotFoundPage />}<Footer /><AskA open={chatOpen} onOpen={() => setChatOpen(true)} onClose={() => setChatOpen(false)} /></div>;
+  return <div className="app-shell" id="top"><a className="skip-link" href="#main-content">Skip to main content</a><Header theme={theme} onToggleTheme={toggleTheme} />{isHome ? <PortfolioPage onAsk={() => setChatOpen(true)} onResume={() => setResumeOpen(true)} /> : <NotFoundPage />}<Footer /><AskA open={chatOpen} onOpen={() => setChatOpen(true)} onClose={() => setChatOpen(false)} onResume={() => setResumeOpen(true)} /><ResumeRequestDialog open={resumeOpen} onClose={() => setResumeOpen(false)} /></div>;
 }
 
 export default App;

@@ -12,7 +12,6 @@ ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "output" / "pdf"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT = OUTPUT_DIR / "Aman-Mulani-Full-Stack-AI-Resume.pdf"
-PUBLIC_OUTPUT = ROOT / "public" / "Aman-Mulani-Full-Stack-AI-Resume.pdf"
 
 NAVY = colors.HexColor("#2d4d73")
 INK = colors.HexColor("#202124")
@@ -154,6 +153,4 @@ doc = SimpleDocTemplate(
     author="Aman Mulani",
 )
 doc.build(story)
-PUBLIC_OUTPUT.write_bytes(OUTPUT.read_bytes())
 print(OUTPUT)
-print(PUBLIC_OUTPUT)

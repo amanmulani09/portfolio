@@ -5,7 +5,7 @@ export const profile = {
   email: "mulaniaman0504@gmail.com",
   linkedin: "https://www.linkedin.com/in/aman-mulani/",
   github: "https://github.com/amanmulani09",
-  resume: "/Aman-Mulani-Full-Stack-AI-Resume.pdf",
+  resume: "https://drive.google.com/file/d/1kYkDvaHlf5aIC6p7wbB5iiHYsIIBdmLT/view?usp=drivesdk",
   location: "India",
   headline: "I build AI agents and full-stack products for commerce and payments.",
   introduction: "Hi, I’m Aman. I own the work from interface and backend to deployment and production support.",

@@ -22,6 +22,7 @@ h1 > span { color: var(--text-muted); }
 .button { display: inline-flex; gap: 12px; align-items: center; justify-content: center; padding: 14px 20px; border-radius: 50px; font-size: .875rem; font-weight: 550; border: 1px solid transparent; transition: transform 180ms var(--ease), box-shadow 180ms; }
 .button-primary { color: var(--page-bg); background: var(--text-heading); }
 .button-secondary { border-color: var(--border); background: var(--surface-glass); }
+.text-link { border: 0; background: transparent; padding: 0; }
 .button:hover { transform: translateY(-2px); box-shadow: 0 6px 16px #00000012; }
 .button:active { transform: translateY(0) scale(.98); }
 .button svg, .text-link svg { transition: transform 180ms; }
@@ -141,6 +142,28 @@ h2 { font-size: clamp(1.8rem, 3vw, 2.3rem); font-weight: 550; letter-spacing: -.
   .email-row > a { font-size: .9rem; overflow-wrap: anywhere; }
   .site-footer { flex-direction: column; gap: 14px; }
   .site-footer > div { flex-wrap: wrap; gap: 20px; }
+}
+
+.resume-dialog { position: fixed; inset: 0; margin: auto; padding: 0; width: min(520px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow-y: auto; color: var(--text-primary); border-radius: 28px; box-shadow: 0 25px 90px #00000026, inset 0 1px 0 var(--glass-edge); }
+.resume-dialog[open] { animation: chat-enter 200ms var(--ease); }
+.resume-dialog::backdrop { background: #10192845; backdrop-filter: blur(6px); }
+.resume-dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 28px 28px 0; }
+.resume-dialog-header h2 { margin-top: 10px; font-size: 1.65rem; }
+.resume-dialog-header .icon-button { width: 40px; height: 40px; border: 0; background: transparent; }
+.resume-dialog-intro { padding: 14px 28px 0; color: var(--text-muted); font-size: 1rem; line-height: 1.65; }
+.resume-request-form { display: grid; gap: 17px; padding: 24px 28px 28px; }
+.resume-request-form label { display: grid; gap: 8px; font-size: .875rem; font-weight: 600; }
+.resume-request-form input, .resume-request-form textarea { width: 100%; border: 1px solid var(--border); border-radius: 13px; background: var(--surface); color: var(--text-primary); font: inherit; font-size: 1rem; font-weight: 400; padding: 12px 14px; outline: 0; resize: vertical; }
+.resume-request-form input:focus, .resume-request-form textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.resume-request-form textarea::placeholder { color: var(--text-muted); }
+.resume-request-form .button { width: 100%; margin-top: 2px; }
+.resume-request-help, .resume-request-status { color: var(--text-muted); font-size: .875rem; line-height: 1.55; }
+.resume-request-status { min-height: 1.4em; color: var(--status); }
+@media (max-width: 650px) {
+  .resume-dialog { inset: auto 0 0; width: 100%; max-width: 100%; max-height: 92dvh; margin: 0; border-radius: 25px 25px 0 0; padding-bottom: env(safe-area-inset-bottom); }
+  .resume-dialog-header { padding: 24px 20px 0; }
+  .resume-dialog-intro { padding-inline: 20px; }
+  .resume-request-form { padding: 22px 20px 24px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

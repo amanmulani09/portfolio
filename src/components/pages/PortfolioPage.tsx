@@ -1,10 +1,10 @@
-import { ArrowDown, ArrowDownToLine, ArrowUpRight, Check, Copy, Cpu, Layers3, CreditCard, GitPullRequest, Plus } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Check, Copy, Cpu, Layers3, CreditCard, GitPullRequest, Plus } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { experiences, profile, projects, shoppingCaseStudy, skillGroups } from "../../data/resume";
 
 const projectIcons = [Layers3, CreditCard, GitPullRequest];
 
-export function PortfolioPage({ onAsk }: { onAsk: () => void }) {
+export function PortfolioPage({ onAsk, onResume }: { onAsk: () => void; onResume: () => void }) {
   const [copyStatus, setCopyStatus] = useState("");
   const resetTimer = useRef<ReturnType<typeof setTimeout>>();
   useEffect(() => () => clearTimeout(resetTimer.current), []);
@@ -29,7 +29,7 @@ export function PortfolioPage({ onAsk }: { onAsk: () => void }) {
           <p className="hero-intro">{profile.introduction}</p>
           <div className="hero-actions">
             <a className="button button-primary" href="#shopping-assistant">See flagship project <ArrowDown size={17} /></a>
-            <a className="button button-secondary" href={profile.resume} target="_blank" rel="noopener noreferrer">Résumé <ArrowDownToLine size={17} /></a>
+            <button className="button button-secondary" type="button" onClick={onResume}>Request résumé <ArrowUpRight size={17} aria-hidden="true" /></button>
           </div>
           <div className="hero-footnote">Based in {profile.location}<span>·</span>Building since 2022</div>
         </div>
@@ -81,7 +81,7 @@ export function PortfolioPage({ onAsk }: { onAsk: () => void }) {
           <div className="flagship-footer">
             <div className="tech-tags">{projects[0].tech.map((tech) => <span key={tech}>{tech}</span>)}</div>
             <div className="flagship-links">
-              <a className="text-link" href={profile.resume} target="_blank" rel="noopener noreferrer">View résumé <ArrowUpRight size={15} aria-hidden="true" /></a>
+              <button className="text-link" type="button" onClick={onResume}>Request résumé <ArrowUpRight size={15} aria-hidden="true" /></button>
               <a className="text-link" href={shoppingCaseStudy.sourceUrl} target="_blank" rel="noopener noreferrer">THG public platform overview <ArrowUpRight size={15} aria-hidden="true" /></a>
             </div>
           </div>

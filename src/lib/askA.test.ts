@@ -45,7 +45,8 @@ test("unconfirmed and unknown questions never invent facts", () => {
 test("answers only link to curated portfolio or contact destinations", () => {
   for (const question of ["projects", "Codo", "contact", "resume", "skills", "experience", "unknown"]) {
     for (const { href } of getAnswer(question).links) {
-      assert.match(href, /^(\/#|\/Aman-Mulani-|mailto:mulaniaman0504@gmail\.com$|https:\/\/(github\.com\/amanmulani09|www\.linkedin\.com\/in\/aman-mulani\/))/);
+      if (href === "https://drive.google.com/file/d/1kYkDvaHlf5aIC6p7wbB5iiHYsIIBdmLT/view?usp=drivesdk") continue;
+      assert.match(href, /^(\/#|mailto:mulaniaman0504@gmail\.com$|https:\/\/(github\.com\/amanmulani09|www\.linkedin\.com\/in\/aman-mulani\/))/);
     }
   }
 });
